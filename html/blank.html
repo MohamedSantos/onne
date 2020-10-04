@@ -5,6 +5,7 @@
         
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
         <link rel="stylesheet" href="../css/style.css">
         <title>Onne</title>
     </head>
@@ -33,7 +34,7 @@
                         <div class="center-header settings">
                             <a href="#"><img class="icon-nav" src="../svg/icon/IconLogout.svg"></a>
                         </div>
-                    </div>
+                    </div>\\\
                 </header>
                 <div class="header">
                     <img class="logo" src="../svg/LogoTop.svg" alt="" class="icon-nav">
@@ -187,7 +188,14 @@
                             </div>
                         </div>-->
                     </div>
-                    <div class="box referral-link">
+                    <div class="box bonus-portfolio">
+                        <div>
+                            <p class="font" style="border-bottom: 1px solid gray; padding-bottom: 10px;">Bonus Statistics</p>
+                        </div>
+                        <div class="chartContainer" style="position: relative; width:250px;">
+                            <canvas id="myChart"></canvas>
+                        </div>
+
                         <!--<span class="font">My referral link:</span><br>
                         <a class="font" href="https://www.google.com">https://www.google.com</a>
                         <button class="font button-copy">Copy Link</button>
@@ -199,5 +207,35 @@
                 
             </div>
         </div>
+        <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'doughnut',
+
+                // The data for our dataset
+                data: {
+                    datasets: [{
+                        data: [10, 20, 30],
+                        backgroundColor: [
+                        '#ff6384',
+                        '#36a2eb',
+                        '#cc65fe',
+                        '#ffce56'
+                    ],
+                    borderColor:['#ff6384','#36a2eb','#cc65fe']
+                    }],
+
+                    // These labels appear in the legend and in the tooltips when hovering different arcs
+                    labels: [
+                        'Red',
+                        'Yellow',
+                        'Blue'
+                    ],
+                },
+                // Configuration options go here
+                options: {}
+            });
+        </script>
     </body>
 </html>
