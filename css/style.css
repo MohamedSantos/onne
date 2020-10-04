@@ -309,8 +309,8 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
     justify-content: center;
     flex-direction: column;
     
-    width: 19%;
-    height: 330px;
+    width: 30%;
+    height: 400px;
 }
 
 .button-copy{
