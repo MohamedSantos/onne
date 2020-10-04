@@ -318,8 +318,14 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
 
 }
 
-
-
+.center-header .bef:after{
+    font-family: 'Montserrat';
+    content: '\e803';
+    right: 0;
+    top: 3px;
+    font-size: 10px;
+    color: #828289;
+}
 
 .button-rgb
 {
