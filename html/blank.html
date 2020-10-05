@@ -274,17 +274,59 @@
                     <div class="box chart-box bonus-portfolio ">
                         <div class="row match-height">
                             <div class="col-12">
-                                <div class="">
-                                    <div id="gradient-line-chart1" class="height-250 GradientlineShadow1"></div>
-                                </div>
+                                <canvas id="line-chart" width="800" height="300px"></canvas>
                             </div>
                         </div>
                     </div>
                 </section>
             </div>
         </div>
-        <script src="../js/chartist.min.js" type="text/javascript"></script>
-        <script src="../js/chartistChart.js" type="text/javascript"></script>
+        <script>
+            new Chart(document.getElementById("line-chart"), {
+            type: 'line',
+            data: {
+                labels: [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050],
+                datasets: [{ 
+                    data: [86,114,106,106,107,111,133,221,783,2478],
+                    label: "Africa",
+                    fontColor: '#3e95cd',
+                    borderColor: "#3e95cd",
+                    fill: true,
+                }, { 
+                    data: [282,350,411,502,635,809,947,1402,3700,5267],
+                    label: "Asia",
+                    fontColor: '#3e95cd',
+                    borderColor: "#8e5ea2",
+                    fill: false
+                }, { 
+                    data: [168,170,178,190,203,276,408,547,675,734],
+                    label: "Europe",
+                    fontColor: '#3e95cd',
+                    borderColor: "#3cba9f",
+                    fill: false
+                }, { 
+                    data: [40,20,10,16,24,38,74,167,508,784],
+                    label: "Latin America",
+                    fontColor: '#3e95cd',
+                    borderColor: "#e8c3b9",
+                    fill: false
+                }, { 
+                    data: [6,3,2,2,7,26,82,172,312,433],
+                    label: "North America",
+                    fontColor: '#3e95cd',
+                    borderColor: "#c45850",
+                    fill: false
+                }
+                ]
+            },
+            options: {
+                title: {
+                display: true,
+                text: 'World population per region (in millions)'
+                }
+            }
+            });
+            </script>
         <script>
             var ctx = document.getElementById('myChart').getContext('2d');
             var chart = new Chart(ctx, {
@@ -304,12 +346,7 @@
                     borderColor:['#ff6384','#36a2eb','#cc65fe']
                     }],
 
-                    // These labels appear in the legend and in the tooltips when hovering different arcs
-                    labels: [
-                        'Red',
-                        'Yellow',
-                        'Blue'
-                    ],
+                    
                 },
                 // Configuration options go here
                 options: {}
