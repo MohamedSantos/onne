@@ -125,7 +125,7 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
 
 
 /**/
-.small-col{
+.referral-box{
     height: 400px;
     width: 19%;
 }
@@ -191,7 +191,7 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
     height: 30px;
     margin-left: 50%;
     margin-top: 10px;
-    border-radius: 30px; 
+    border-radius: 5px; 
     transform: translate(-50%,-50%);
     text-align: center;
     color: #fff;
@@ -276,6 +276,8 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
     padding-left: 15px;
     padding-top: 10px;
     padding-bottom: 10px;
+    background: linear-gradient(0deg, rgba(34,0,127,1)0%, rgba(9,9,121,0.41360294117647056) 70%,  rgba(41,87,167,1)100%);
+    border-radius: 10px;
 }
 
 .portfolios .list{
@@ -370,15 +372,17 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
     justify-content: space-between;
     width: 88%;
     height: 90%;
+    overflow: auto;
 }
 
 .bar{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 5%;
+    width: 78%;
+    height: 18px;
     border: 1px solid gray;
     border-radius: 10px;
+    background-image: url("../img/background-progress-bar.png");
 }
 
 .progress{
@@ -392,9 +396,59 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
     animation: animate 8s linear infinite;
 }
 
+.limit-or-profit{
+    margin-top: 20px;
+}
 
+.profit{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
 
+.coin{
+    margin:0;
+    font-size: 20px
+}
 
+.indicator{
+    background-color: #b7d4ff !important;
+}
+
+.container6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.referral-content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 81%;
+    width: 75%;
+}
+
+.link{
+    
+}
+
+.status-border{
+    border-top: 1px solid gray;
+    width: 230px;
+    padding-top: 10px;
+}
+
+.direct-referral{
+    color: white;
+    border-bottom: 1px solid gray;
+    width: 230px;
+    padding-bottom: 10px;
+}
 
 @media only screen and (max-width: 1366px) {
 
