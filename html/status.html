@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/chartist.css">
+        <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../css/dashboard-ecommerce.css">
+        <title>Onne</title>
+    </head>
+
+    <body>
+        <div class="section">
+            <div class="container">
+                <header class="header">
+                    <div class="header-bar">
+                        <img class="logo" src="../svg/Logo ONNE.svg" alt="" class="icon-nav">
+                        <div class="center-header langs">
+                            <p class="font">EN</p>
+                        </div>
+                        <div class="center-header suport">
+                            <p class="font bef">Support</p>
+                        </div>
+                        <div class="center-header">
+                            <p class="font bef">Settings</p>
+                        </div>
+                        <div class="center-header">
+
+                        </div>
+                        <div class="center-header settings">
+                            <a href="#"><img class="icon-nav" src="../svg/icon/IconMessage.svg"></a>
+                        </div>
+                        <div class="center-header settings">
+                            <a href="#"><img class="icon-nav" src="../svg/icon/IconLogout.svg"></a>
+                        </div>
+                    </div>\\\
+                </header>
+                <div class="header">
+                    <div class="nav">
+
+                        <img class="icon-nav first" src="../svg/icon/IconDashboard.svg" alt="">
+                        <a class="font text-nav" href="#">Home</a>
+                        <img src="../svg/Replicar barra.svg" alt="">
+
+                        <!-- |||||||||||||||||||||||||||||||||||||-->
+                        
+                        <img class="icon-nav" src="../svg/icon/IconBinaryTree.svg" alt="">
+                        <a class="font text-nav" href="#">Binary Tree</a>
+                        <img src="../svg/Replicar barra.svg" alt="">
+
+                        <!-- |||||||||||||||||||||||||||||||||||||-->
+
+                        <img class="icon-nav" src="../svg/icon/IconStatus.svg" alt="">
+                        <a class="font text-nav" href="#">Status</a>
+                        <img src="../svg/Replicar barra.svg" alt="">
+
+                        <!-- |||||||||||||||||||||||||||||||||||||-->
+
+                        <img class="icon-nav" src="../svg/icon/IconBank.svg" alt="">
+                        <a class="font text-nav" href="#">Bank</a>
+                        <img src="../svg/Replicar barra.svg" alt="">
+
+                        <!-- |||||||||||||||||||||||||||||||||||||-->
+
+                        <img class="icon-nav" src="../svg/icon/IconUnilevel.svg" alt="">
+                        <a class="font text-nav" href="#">Unilevel</a>
+                        <img src="../svg/Replicar barra.svg" alt="">
+
+                        <!-- |||||||||||||||||||||||||||||||||||||-->
+
+                        <img class="icon-nav" src="../svg/icon/IconPromotion.svg" alt="">
+                        <a class="font text-nav" href="#">Promotion</a>
+                        <img src="../svg/Replicar barra.svg" alt="">
+                        <!-- |||||||||||||||||||||||||||||||||||||-->
+
+                        <img class="icon-nav" src="../svg/icon/IconMaterial.svg" alt="">
+                        <a class="font text-nav" href="#">Material</a>
+                        <img src="../svg/Replicar barra.svg" alt="">
+
+                        <!-- |||||||||||||||||||||||||||||||||||||-->
+
+                        <img class="icon-nav" src="../svg/icon/IconRoadMap.svg" alt="">
+                        <a class="font text-nav last" href="#">Road Map</a>
+
+                    </div> 
+                </div>
+                <div class="box moving-text">
+                    <span class="font span-price">Prices |</span>
+                    <marquee class="font marq" behavior="scroll" direction="right">
+                        <label class="price-up">BTC: $10.576,90</label>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <label class="price-down">ETH: $346,79</label>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <label class="price-up">LTC: $45,69</label>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <label class="price-down">ZEC: $60,61</label>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <label class="price-up">DASH: $66,47</label>
+
+                    </marquee>
+                </div>
+                <section class="flex-section">
+                    <div class="small-col box">
+                        <div class="container3">
+
+                        </div>
+                    </div>
+                    <div class="box bonus-portfolio">
+                        <div class="container4">
+                        </div>
+                    </div>
+                    <div class="bonus-portfolio box">
+                        
+                    </div>
+                </section>
+                <section class="flex-section">
+                    <div class="small-col box">
+                    </div>
+                    
+                    <div class="box chart-box bonus-portfolio ">
+                    </div>
+                </section>
+            </div>
+        </div>
+        <script src="../js/chartist.min.js" type="text/javascript"></script>
+        <script src="../js/chartistChart.js" type="text/javascript"></script>
+        <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'doughnut',
+
+                // The data for our dataset
+                data: {
+                    datasets: [{
+                        data: [10, 20, 30],
+                        backgroundColor: [
+                        '#ff6384',
+                        '#36a2eb',
+                        '#cc65fe',
+                        '#ffce56'
+                    ],
+                    borderColor:['#ff6384','#36a2eb','#cc65fe']
+                    }],
+
+                    // These labels appear in the legend and in the tooltips when hovering different arcs
+                    labels: [
+                        'Red',
+                        'Yellow',
+                        'Blue'
+                    ],
+                },
+                // Configuration options go here
+                options: {}
+            });
+            
+        </script>
+    </body>
+</html>
