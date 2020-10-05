@@ -307,9 +307,9 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
 .bonus-portfolio{
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    
-    width: 30%;
+    flex-direction: row;
+    align-items: center;
+    width: 40%;
     height: 400px;
 }
 
@@ -377,4 +377,34 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
 .center{
     display: flex;
     justify-content: center;
+}
+
+.container4{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 88%;
+    height: 90%;
+}
+
+.div-chart{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chart-size{
+    height: 80%;
+}
+
+.portfolios{
+    overflow: auto;
+}
+
+
+@media only screen and (max-width: 1366px) {
+
 }
