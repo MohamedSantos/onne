@@ -137,139 +137,6 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
     padding: 30px;
     height: 88%;
 }
-/*
-.consolidated-account{
-    display: block;
-    height: 100%;
-    position: relative;
-    padding: 30px;
-    border: 1px solid #3a395b;
-    box-shadow: 0 0 56px 3px rgba(111,89,184,0.1);
-    overflow: hidden;
-    background: linear-gradient(0deg, rgba(34,0,127,1)0%, rgba(9,9,121,0.41360294117647056) 70%,  rgba(41,87,167,1)100%);
-    background: -moz-linear-gradient(top, #323150 0%, #262543 100%);
-    background: -webkit-linear-gradient(top, #323150 0%, #262543 100%);
-    background: linear-gradient(0deg, rgba(34,0,127,1)0%, rgba(9,9,121,0.41360294117647056) 70%,  rgba(41,87,167,1)100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#323150', endColorstr='#262543', GradientType=0);
-}
-
-.consolidated-account:after{
-    content: '';
-    position: absolute;
-    right: -65px;
-    top: -35px;
-    width: 300px;
-    height: 100%;
-    background: url()center no-repeat;
-    background-size: 100%;
-    z-index: 0;
-}
-
-.inner-title{
-    display: flex;
-    justify-content:space-between;
-    flex-wrap: wrap;
-    width: 100%;
-    border-bottom: 1px solid rgba(255,255,255,0.3)
-}
-
-.inner-title p{
-    display: inline-block;
-    font-family: 'Montserrat';
-    font-size: 12px;
-    color: #fff;
-    line-height: 1;
-    padding-bottom: 10px;
-    padding-right: 15px;
-}
-
-.consolidated-account-content{
-    display: block;
-    position: relative;
-    padding: 15px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.3);
-    z-index: 1;
-}
-
-.consolidated-account-content .list{
-    display: block;
-}
-
-.consolidated-account-content .list-item{
-    display: flex;
-    margin-bottom: 15px;
-}
-
-.consolidated-account-content .list-item sup{
-    display: inline-block;
-    font-family: 'Montserrat';
-    font-size: 20px;
-    color: #fff;
-    line-height: 1;
-    padding: 3px 5px 0 0;
-}
-
-.consolidated-account-content .list-item strong{
-    display: inline-block;
-    font-family: 'Montserrat';
-    font-size: 32px;
-    font-weight: 300;
-    line-height: 1;
-}
-
-.consolidated-account-content .list-item span{
-    display: inline-block;
-    font-family: 'Montserrat';
-    font-size: 12px;
-    color: #ffffff;
-    line-height: 1;
-    padding: 6px 5px 0 0;
-}
-
-.consolidated-account-content .list-item b{
-    display: inline-block;
-    font-family: 'Montserrat';
-    font-size: 20px;
-    font-weight: 300;
-    color: #ffffff;
-    line-height: 1;
-}
-
-.consolidated-account .list-item span:last-child{
-    padding: 6px 0 0 5px;
-}
-
-.consolidated-account .list-item:last-child{
-    padding: 6px 0 0 5px;
-}
-
-.consolidated-account .box-btn{
-    display: block;
-    padding-top: 20px;
-}
-
-.consolidated-account .box-btn a{
-    min-width: 200px;
-    width: auto;
-}
-
-.gr-btn{
-    display: inline-flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    height: 30px;
-    padding: 5px 15px;
-    width: 100%;
-    font-family: 'Montserrat';
-    font-size: 12px;
-    z-index: 5;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}*/
 
 .box{
     background: linear-gradient(0deg, rgba(34,0,127,1)0%, rgba(9,9,121,0.41360294117647056) 70%,  rgba(41,87,167,1)100%);
@@ -405,7 +272,7 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
     overflow: auto;
     display:flex;
     width: 100%;
-    height:50%;
+    height:85%;
     padding-left: 15px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -475,6 +342,18 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
 .height-250{
     height: 250px !important;
     width: 250px !important;
+}
+
+.investments{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.list{
+    height: 30%;
 }
 
 @media only screen and (max-width: 1366px) {
