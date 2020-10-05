@@ -43,7 +43,7 @@
                     <div class="nav">
 
                         <img class="icon-nav first" src="../svg/icon/IconDashboard.svg" alt="">
-                        <a class="font text-nav" href="#">Home</a>
+                        <a class="font text-nav" href="blank.html">Home</a>
                         <img src="../svg/Replicar barra.svg" alt="">
 
                         <!-- |||||||||||||||||||||||||||||||||||||-->
@@ -55,7 +55,7 @@
                         <!-- |||||||||||||||||||||||||||||||||||||-->
 
                         <img class="icon-nav" src="../svg/icon/IconStatus.svg" alt="">
-                        <a class="font text-nav" href="#">Status</a>
+                        <a class="font text-nav" href="status.html">Status</a>
                         <img src="../svg/Replicar barra.svg" alt="">
 
                         <!-- |||||||||||||||||||||||||||||||||||||-->
@@ -287,11 +287,11 @@
             data: {
                 labels: [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050],
                 datasets: [{ 
-                    data: [86,114,106,106,107,111,133,221,783,2478],
+                    data: [86,114,106,106,107,420,133,221,783,2478],
                     label: "Africa",
                     fontColor: '#3e95cd',
                     borderColor: "#3e95cd",
-                    fill: true,
+                    fill: false,
                 }, { 
                     data: [282,350,411,502,635,809,947,1402,3700,5267],
                     label: "Asia",
@@ -311,7 +311,7 @@
                     borderColor: "#e8c3b9",
                     fill: false
                 }, { 
-                    data: [6,3,2,2,7,26,82,172,312,433],
+                    data: [2000,247,2314,299,799,2633,824,1723,312,433],
                     label: "North America",
                     fontColor: '#3e95cd',
                     borderColor: "#c45850",
@@ -320,9 +320,8 @@
                 ]
             },
             options: {
-                title: {
-                display: true,
-                text: 'World population per region (in millions)'
+                legend: {
+                    display: false
                 }
             }
             });
@@ -344,9 +343,7 @@
                         '#ffce56'
                     ],
                     borderColor:['#ff6384','#36a2eb','#cc65fe']
-                    }],
-
-                    
+                    }], 
                 },
                 // Configuration options go here
                 options: {}
