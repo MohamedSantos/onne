@@ -40,12 +40,30 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
     padding: 0;
 } 
 
+.main-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 80%;
+}
+
+.main-container{
+    width: 100%;
+    height: 100%;
+}
+
+.login-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-size{
+    max-width: 300px;
+}
+
 @font-face{
     font-family: 'Montserrat';
     src: url('../font/Montserrat-Medium.ttf');
-}
-
-.main-section{
-    width: 70%;
-    height: 80%;
 }
