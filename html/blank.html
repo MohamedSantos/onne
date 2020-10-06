@@ -157,8 +157,8 @@
                             </div>
                             
                             <div>
-                                <sup style="color:white; font-size: 30px;">$</sup>
-                                <strong class="font" style="font-size: 33px;">158,685.20</strong>
+                                <sup class="font" style="color:white; font-size: 30px;">$</sup>
+                                <strong class="font big-number">158,685.20</strong>
                             </div>
     
                             <div>
@@ -233,7 +233,7 @@
                                 </div>
 
                                 <div class="chart-size">
-                                    <div class="chartContainer" style="position: relative; width:400px;">
+                                    <div class="chartContainer" style="position: relative;width: 340px;margin-right: 10px;">
                                         <canvas id="myChart"></canvas>
                                     </div>
                                 </div>
@@ -361,7 +361,7 @@
                     
                     <div class="box chart-box bonus-portfolio ">
                         <div class="container7">
-                            <div class="box-coin">
+                            <div class="box-coin" style="margin-right: 40px; margin-top:-18em">
                                 <div class="box-select">
                                     <select>
                                         <option>USD</option>
@@ -378,9 +378,9 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="row match-height">
-                                <div class="col-12">
-                                    <canvas id="line-chart" width="40%" height="88%"></canvas>
+                            <div class="row match-height" style="width: 100%;height:100%;">
+                                <div class="col-12" style="margin: 20px auto;">
+                                    <canvas id="line-chart" style="height:100%; width:100%"></canvas>
                                 </div>
                             </div>
                         </div> 
@@ -429,9 +429,11 @@
             options: {
                 legend: {
                     display: false
-                }
+                },
+                responsive: false
             }
             });
+
             </script>
         <script>
             var ctx = document.getElementById('myChart').getContext('2d');

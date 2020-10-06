@@ -534,11 +534,19 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
 }
 
 .container7{
-    
     width: 88%;
+    display: flex;
     height: 88%;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-number{
+    font-size: 33px;
 }
 
 @media only screen and (max-width: 1366px) {
-
+    .big-number{
+        font-size: 27px
+    }
 }
