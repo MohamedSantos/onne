@@ -293,8 +293,10 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
 }
 
 .chart-box{
+    display: flex;
+    align-items: center;
     width: 80.4%;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 .row{
     display: -webkit-box;
@@ -529,6 +531,12 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
+}
+
+.container7{
+    
+    width: 88%;
+    height: 88%;
 }
 
 @media only screen and (max-width: 1366px) {
