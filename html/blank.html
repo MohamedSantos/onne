@@ -451,7 +451,7 @@
                         '#cc65fe',
                         "#fc9803"
                     ],
-                    borderColor:['#ff6384','#36a2eb','#cc65fe',"#fc9803"]
+                    borderColor:['#ff6384','#36a2eb','#cc65fe',"#fc9803"],
                     }], 
                     labels: [
                         'BTC',
@@ -459,6 +459,7 @@
                         'BCH',
                         "BTG"
                     ],
+                    
                 },
                     // These labels appear in the legend and in the tooltips when hovering different arcs
 
@@ -466,7 +467,9 @@
                 options: {
                     legend: {
                         display: false
-                    }
+                    },
+                    cutoutPercentage: 80
+                    
                 }
             });
             

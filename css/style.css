@@ -504,9 +504,6 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
     text-align: center;
 }
 
-.drop-down .bef:hover, .drop-down .bef.over .drop{
-    display: flex;
-}
 
 .box-select select{
     background-color: #ffeb3b;
