@@ -13,7 +13,7 @@ a{
 
 ul, li{
     list-style-type: none;
-    line-height: 1;
+    line-height: 2;
 }
 
 canvas, img, footer, header, nav, section, video, audio{
@@ -468,6 +468,38 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
     box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
     margin-top: 5px;
     z-index: 3;
+}
+
+.container-binary{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.list-binary{
+    overflow: auto;
+    display: flex;
+    width: 80%;
+    height: 80%;
+    text-align: center;
+}
+
+.list-binary .list .item .font{
+    color: #fff;
+}
+
+.list-binary .list .item .font:hover{
+    color: #ffeb3b;
+}
+
+.titles{
+    width: 100%;
+    height: 65%;
+    margin-top: 16px;
+    text-align: center;
 }
 
 .drop-down .bef:hover, .drop-down .bef.over .drop{
