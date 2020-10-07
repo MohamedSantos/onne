@@ -12,10 +12,6 @@
   font-family: "Montserrat";
 }
 
-html, body {
-  height: 100%;
-}
-
 body {
   background: url(../img/Background.jpg) no-repeat center fixed;
   background-size: cover;
