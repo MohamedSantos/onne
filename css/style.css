@@ -1,22 +1,22 @@
 @import './default.css';
 
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-}
 header .wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
-  height: 80px;
+  flex-wrap: wrap;
+  padding: 20px 0;
 }
 header .intern-container-header {
   display: flex;
-  gap: 30px;
+  gap: 0 20px;
+}
+
+@media (max-width: 950px) {
+  header .wrapper .intern-container-header {
+    order: 1;
+    width: 100%;
+  }
 }
 
 nav {
@@ -37,10 +37,10 @@ nav ul li {
   min-width: 154px;
   width: 100%;
 }
-nav ul li a{
+nav ul li a {
   margin: 0 auto;
 }
-nav ul li a span{
+nav ul li a span {
   margin-left: 10px;
 }
 
@@ -435,7 +435,6 @@ nav ul li a span{
     text-align: center;
 }
 
-
 .box-select select{
     background-color: #ffeb3b;
     box-shadow: 0 0 15px 5px rgba(228, 227, 227, 0.23);
@@ -477,15 +476,12 @@ nav ul li a span{
     .container{
         width: 800px;
     }
-
     .bonus-portfolio{
         width: 540px;
     }
-
     .progress-bar{
         width: 540px;
     }
-
     .chart-box{
         width: 100%;
     }
@@ -499,7 +495,11 @@ nav ul li a span{
     .bonus-portfolio,.progress-bar,.chart-box, .small-col, .referral-box{
         width: 100%;
     }
-    
+
+    .chart-box{
+        height: 100%;
+        padding: 25px 0;
+    }
     .chart-box > div{
         flex-direction: column;
     }
