@@ -215,8 +215,8 @@ nav ul li a span {
 
 .button-rgb
 {
-  width: 140px;
-  height: 30px;
+    padding: 10px 20px;
+    
 }
 
 @keyframes animate
@@ -584,6 +584,7 @@ nav ul li a span {
 
     .menu-list{
         display: flex;
+        visibility: hidden;
         position: fixed;;
         top: 0;
         left: 0;
@@ -591,10 +592,11 @@ nav ul li a span {
         height: 100vh;
         background: rgba(27,27,27,.95);
         margin-left: 0 ;
-        transform: translateX(100%);
         transition: .5s ease-in;
+        transform: translateX(100%);
     }
     .menu-list.show{
+        visibility: visible;
         transform: translateX(0);
     }
     .menu-list > div {
