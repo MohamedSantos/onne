@@ -1,78 +1,62 @@
-body{
-    background-image: url(../img/Background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    margin: 50px;
+@import './default.css';
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  width: 90%;
+}
+header .intern-container-header {
+  display: flex;
+  gap: 0 20px;
 }
 
-a{
-    text-decoration: none;
-    cursor: pointer;
+@media (max-width: 950px) {
+  header .wrapper .intern-container-header {
+    order: 1;
+    width: 100%;
+  }
 }
 
-ul, li{
-    list-style-type: none;
-    line-height: 2;
+nav {
+  background: linear-gradient(0deg, rgba(34,0,127,1)0%, rgba(9,9,121,0.41360294117647056) 70%,  rgba(41,87,167,1)100%);
+  padding: 10px;
+  width: 100%;
+}
+nav ul,nav ul li ,nav ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav ul li {
+  width: 100%;
+}
+nav ul li a {
+  margin: 0 auto;
+}
+nav ul li a span {
+  margin-left: 10px;
 }
 
-canvas, img, footer, header, nav, section, video, audio{
-    display: block;
-}
-
-div, span, object, iframe, img, table, 
-caption, thead, tbody, tfoot, tr, tr, 
-td, article, aside, canvas, details, figure, hgroup, 
-menu, nav, footer, header, section, summary, mark, audio, video{
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-h1, h2, h3, h4, h5, h6, p, blockquote, 
-pre, a, abbr, address, cit, code, del, dfn, 
-em, ins, q, samp, small, strong, sub, sup, b, 
-i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
-    border: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    margin: 0;
-    padding: 0;
-} 
-
-.section{
-    display: flex;
-    justify-content: center;
+.content {
+  display: flex;
+  gap: 10px 5px;
 }
 
 .container{
-    width: 95%;
-    height: 100%;   
+    width: 90%;
+    margin: 0 auto;
 }
 
-.header{
-    display: flex;
-    justify-content: center;
-}
-
-/*00000000000000000000------------000000000000000000000000000*/
-
-.nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    height: 50px;
-    background: linear-gradient(0deg, rgba(34,0,127,1)0%, rgba(9,9,121,0.41360294117647056) 70%,  rgba(41,87,167,1)100%);
-}
-
-.text-nav{
-    margin-top: 14px;
-}
-
-.first{
-    margin-left: 30px;
-}
 
 .last{
     margin-right: 30px;
@@ -106,7 +90,6 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
     justify-content: space-between;
     width: 100%;
     padding: 2px 0;
-    margin-block-start: 0.48em;
     flex-direction: row;
 }
 
@@ -120,11 +103,6 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
     margin: 0 auto;
 }
 
-.center-header{
-    margin-block-end: 0.76em;
-}
-
-
 /**/
 .referral-box{
     height: 400px;
@@ -132,19 +110,15 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
 }
 
 .container3{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
     padding: 30px;
-    height: 88%;
+}
+
+.container3 div{
+    margin: 14px 0;
 }
 
 .box{
     background: linear-gradient(0deg, rgba(34,0,127,1)0%, rgba(9,9,121,0.41360294117647056) 70%,  rgba(41,87,167,1)100%);
-}
-
-.logo{
-    margin-bottom: 40px;
 }
 
 .span-price{
@@ -167,9 +141,9 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
 
 .moving-text{
     display: flex;
-    flex-direction: row;
-    margin-top: 10px;
+    align-items: center;
     width: 100%;
+    height: 30px;
 }
 
 .bonus-portfolio{
@@ -188,24 +162,8 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
 
 .button-rgb
 {
-    width: 140px;
-    height: 30px;
-    margin-left: 50%;
-    margin-top: 10px;
-    border-radius: 5px; 
-    transform: translate(-50%,-50%);
-    text-align: center;
-    color: #fff;
-    font-family: 'Montserrat', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    box-sizing: border-box;
-    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
-    background-size: 400%;
-    border-width: 0;
-}
-
-.button-rgb:hover
-{
-    animation: animate 8s linear infinite;
+  width: 140px;
+  height: 30px;
 }
 
 @keyframes animate
@@ -218,29 +176,6 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
     {
         background-position: 400%;
     }
-}
-
-.button-rgb:before
-{
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    bottom: -5px;
-    right: -5px;
-    z-index: -1;
-    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
-    background-size: 400%;
-    border-radius: 40px;
-    opacity: 0;
-    transition: 1s;
-}
-
-.button-rgb:hover:before
-{
-    filter: blur(20px);
-    opacity: 1;
-    animation: animate 8s linear infinite;
 }
 
 .center{
@@ -287,7 +222,6 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
 
 .portfolios .list .item{
     position: relative;
-    margin-bottom: 15px;
     padding-left: 15px;
 
 }
@@ -545,4 +479,10 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
     .big-number{
         font-size: 27px
     }
+}
+
+@media (max-width: 1190px){
+  nav ul{
+      overflow-y: auto;
+  }
 }
