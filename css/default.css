@@ -3,10 +3,6 @@
   src: url("../font/Montserrat-Medium.ttf");
 }
 
-body{
-  background: blue;
-}
-
 * {
   margin: 0;
   padding: 0;

@@ -1,16 +1,14 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <link rel="stylesheet" href="../css/login.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Onne - Login</title>
+  <link rel="stylesheet" href="../css/login.css" />
 </head>
 
 <body>
-<<<<<<< HEAD
-    <div class="main-container">
-        <div class="login-header">
-            <img class="logo-size" src="../img/LogoOnneGradiente.png" alt="">
-            <p class="font" style="font-size: 33px">Welcome to ONNE Vip personal area</p>
-=======
   <div class="main-container">
     <div class="login-header">
       <img class="logo-size" src="../img/LogoOnneGradiente.png" />
@@ -28,63 +26,25 @@
             <input type="password" class="input-form" id="password" placeholder="Password" />
             <i class="icon-password"></i>
           </div>
->>>>>>> aae8d14b3e4e171f296e634ae591cbbf929f6b28
         </div>
-        <div class="div-form-login">
-            <form action="#" class="form-login">
-                <div class="input-login"> -
-                    <div class="div-email">
-                        <span class="span-email font">Email</span>
-                        <input type="email" id="email" placeholder="johnsmith@johnwebsite.com" class="transparent-input input-email">
-                    </div>
-
-                    <div class="div-password">
-                        <span class="span-password font">Password</span>
-                        <input type="password" class="input-password transparent-input" id="password" placeholder="Password">
-                    </div>
-                </div>
-
-                <div class="password-options">
-                    <div class="show-password">
-                        <input type="checkbox" onclick="myFunction()"><span class="font">Show password</span>
-                    </div>
-
-                    <div class="div-fgt-password">
-                        <a href="#" class="fgt-password">Forgot the password ?</a>
-                    </div>
-                </div>
-
-                <button type="submit" class="button-rgb">Login</button>
-
-            </form>
-
-            <div>
-                <div>
-                    <p>DON'T HAVE AN ACCOUNT ? <a href="#">SIGN UP !</a></p>
-                </div>
-            </div>
+        <div class="password-options">
+          <a href="#" class="fgt-password">Forgot the password ?</a>
         </div>
-<<<<<<< HEAD
-
-
-=======
         <div class="submit-button-container">
           <button type="submit" class="button-rgb">Login</button>
         </div>
       </form>
       <p class="register-anchor">DON'T HAVE AN ACCOUNT? <a href="#">SIGN UP!</a></p>
->>>>>>> aae8d14b3e4e171f296e634ae591cbbf929f6b28
     </div>
-    <script>
-        function myFunction() {
-            var x = document.getElementById("password");
-            if (x.type === "password") {
-                x.type = "text";
-            } else {
-                x.type = "password";
-            }
-        }
-    </script>
+  </div>
+  <script>
+    const btnPwd = document.querySelector(".icon-password");
+    btnPwd.addEventListener("click", ({ target }) => {
+      target.classList.toggle("active");
+      const input = document.querySelector("#password");
+      input.setAttribute("type", input.type === "password" ? "text" : "password");
+    });
+  </script>
 </body>
 
 </html>
