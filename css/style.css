@@ -1,50 +1,7 @@
 @import './default.css';
 
-body{
-    background-image: url(../img/Background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    margin: 50px;
-}
-
-a{
-    text-decoration: none;
-    cursor: pointer;
-}
-
-ul, li{
-    list-style-type: none;
-    line-height: 2;
-}
-
-canvas, img, footer, header, nav, section, video, audio{
-    display: block;
-}
-
-div, span, object, iframe, img, table, 
-caption, thead, tbody, tfoot, tr, tr, 
-td, article, aside, canvas, details, figure, hgroup, 
-menu, nav, footer, header, section, summary, mark, audio, video{
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-h1, h2, h3, h4, h5, h6, p, blockquote, 
-pre, a, abbr, address, cit, code, del, dfn, 
-em, ins, q, samp, small, strong, sub, sup, b, 
-i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
-    border: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    margin: 0;
-    padding: 0;
-} 
-
 .section{
-    display: flex;
-    justify-content: center;
+    margin: 50px 0;
 }
 
 .container{
@@ -76,6 +33,12 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
 
 .nav ul li a span{
     margin-left: 10px;
+}
+
+@media (max-width: 1190px){
+    .nav ul{
+        overflow-y: scroll;
+    }
 }
 
 .last{
