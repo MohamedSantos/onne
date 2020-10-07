@@ -1,0 +1,21 @@
+.coluns-section{
+    width: 100%;
+    height: 100px;
+}
+
+.div-coluns{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 50px;
+}
+
+.div-legend{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.div-legend span{
+    color: darkmagenta;
+}
