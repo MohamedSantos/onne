@@ -5,7 +5,8 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  margin: auto;
+  width: 550px;
   height: 100%;
 }
 .div-form-login {
@@ -15,7 +16,7 @@
   border-top: 1px solid #aaa;
   padding-top: 20px;
   margin: 20px 0;
-  width: 600px;
+  width: 100%;
 }
 .form-login {
   display: flex;
@@ -100,6 +101,16 @@
 }
 .welcome-message {
   color: #ddd;
-  font-size: 26px;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  .main-container {
+    width: 85%;
+  }
+  .form-login .input-container {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
