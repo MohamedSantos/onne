@@ -12,6 +12,15 @@
   font-family: "Montserrat";
 }
 
+html, body {
+  height: 100%;
+}
+
+body {
+  background: url(../img/Background.jpg) no-repeat center fixed;
+  background-size: cover;
+}
+
 a {
   text-decoration: none;
 }
@@ -20,19 +29,18 @@ ul {
   list-style: none;
 }
 
-body {
-  background: url(../img/Background.jpg) no-repeat center fixed;
-  background-size: cover;
-}
-
 .button-rgb {
+  position: relative;
   background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
   background-size: 400%;
   color: #fff;
   text-align: center;
   border-radius: 5px;
+<<<<<<< HEAD
   position: relative;
   cursor: pointer;
+=======
+>>>>>>> aae8d14b3e4e171f296e634ae591cbbf929f6b28
 }
 .button-rgb:hover {
   animation: animate 8s linear infinite;
