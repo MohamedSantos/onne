@@ -11,12 +11,20 @@ header .wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
   width: 90%;
-  height: 80px;
 }
 header .intern-container-header {
   display: flex;
-  gap: 30px;
+  gap: 0 20px;
+}
+
+@media (max-width: 950px) {
+  header .wrapper .intern-container-header {
+    order: 1;
+    width: 100%;
+  }
 }
 
 nav {
@@ -32,10 +40,10 @@ nav ul,nav ul li ,nav ul li a {
 nav ul li {
   width: 100%;
 }
-nav ul li a{
+nav ul li a {
   margin: 0 auto;
 }
-nav ul li a span{
+nav ul li a span {
   margin-left: 10px;
 }
 

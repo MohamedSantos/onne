@@ -12,6 +12,16 @@
   font-family: "Montserrat";
 }
 
+*::-webkit-scrollbar {
+  background-color: transparent;
+  height: 3px;
+  width: 5px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #6e6e6e;
+  border-radius: 3px;
+}
+
 html, body {
   height: 100%;
 }
