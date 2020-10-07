@@ -6,14 +6,17 @@
 .div-coluns{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    padding: 50px;
 }
 
 .div-legend{
     display: flex;
     justify-content: space-between;
-    
+    padding: 40px 50px;
+}
+
+.div-legend div{
+    width: 100%;
+    font-size: 20px;
 }
 
 .div-legend span{
