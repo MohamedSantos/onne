@@ -95,58 +95,64 @@ nav ul li a span {
     padding: 20px 3px;
     align-items: center;
 }
-
 .menu-list{
-    display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    margin-left: 15px;
+}
+
+
+.menu-list > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
 }
 
-.hamburger{
+.accordion{
     position: relative;
-    transition: transform .3s ;
+    z-index: 3;
+    display: none;
+    cursor: pointer;
 }
-
-.hamburger span{
+.accordion span{
     height: 3px;
     width: 30px;
     background: white;
     position: relative;
-    display: none;
-    transition: .2s;
 }
-
-.hamburger::after, .hamburger::before{
+.accordion::after, .accordion::before{
     content: "";
     width: 30px;
     height: 3px;
     background: white;
     position: absolute;
+    transition: .3s;
 }
-
-.hamburger::after{
+.accordion::after{
     top: 10px;
 }
-
-.hamburger::before{
+.accordion::before{
     bottom: 10px;
 }
-
-.hamburger.active span{
+.accordion.active span{
     opacity: 0;
 }
-
-.hamburger.active::before{
+.accordion.active::before{
     bottom: 0;
+    transform: rotate(135deg);
+}
+.accordion.active::after{
+    top: 0;
     transform: rotate(45deg);
 }
 
-.hamburger.active::after{
-    top: 0;
-    transform: rotate(135deg);
+.accordion.active{
+    position: fixed;
+    right: 40px;
 }
+
 
 /**/
 .referral-box{
@@ -169,7 +175,7 @@ nav ul li a span {
 }
 
 .span-price{
-    width: 65px;
+    width: 80px;
     margin-top: 4px;
     margin-left: 10px;
 }
@@ -309,6 +315,12 @@ nav ul li a span {
     -moz-box-flex: 0;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
+}
+
+.chartContainer{
+    position: relative;
+    width: 340px;
+    margin-right: 10px;
 }
 
 .height-250{
@@ -562,17 +574,72 @@ nav ul li a span {
     }
 
     .menu-list{
-        display: none;
+        display: flex;
+        position: fixed;;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        height: 100vh;
+        background: rgba(27,27,27,.95);
+        margin-left: 0 ;
+        transition: .5s ease-in;
+        transform: translateX(100%);
     }
-    .hamburger span{
-        display: block;
+    .menu-list.show{
+        transform: translateX(0);
+    }
+    .menu-list > div {
+        width: 100%;
+        flex-direction: column;
+    }
+    .menu-list > div > div{
+        padding: 10px 20px;
+        margin: 5px 0;
+    }
+    .menu-list > div > div:nth-child(4){
+        min-width: 250px;
+        text-align: center;
+    }
+    .accordion{
+        display: flex;
+    }
+    .coin{
+        font-size: 16px;
+    }
+
+    .container4{
+        flex-direction: column;
+    }
+
+    .div-chart{
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .investments{
+        width: 100%;
+        max-height: 200px;
+        margin: 20px 0;
+    }
+
+    .investments .font{
+        margin-bottom: 10px;
+    }
+
+    .bonus-portfolio{
+        height:  max-content;
+    }
+
+    .chartContainer{
+        width: 300px;
+        margin: 10px 0;
     }
 }
 
 
 @media (max-width: 460px) {
     .container{
-        width: 320px;
+        width: 300px;
     }
     
 }
