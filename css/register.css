@@ -1,0 +1,110 @@
+@font-face{
+    font-family: 'Montserrat';
+    src: url('../font/Montserrat-Medium.ttf');
+}
+
+body{
+    background-image: url(../img/Background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 50px;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+*{font-family: 'Montserrat';}
+
+input[type="text"], input[type="password"], input[type="submit"], select{
+    background-color: #555252;
+    color: #ffffff;
+    border: none;
+    padding: 9px 9px 9px 15px;
+    width: 300px;
+    margin-left: 50px;
+    border-radius: 3px;
+}
+
+input[type="checkbox"]{
+    margin-top: 18px;
+    width: 27px;
+    height: 19px;
+}
+
+img, section{
+    display: block;
+}
+
+div, span, img, section{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+p, a, label{
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+} 
+
+/*00000000000000000000------------000000000000000000000000000*/
+
+.section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container{
+    width: 95%;
+    height: 100%;   
+}
+
+.font{
+    color:  #b99ac5;
+}
+
+.register-header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: 1px solid gray;
+    width: 623px;
+    padding-bottom: 4px;
+}
+
+.title-container{
+    width: 100%;
+    border-bottom: 1px solid gray;
+    padding-bottom: 4px;
+}
+
+.label-font{
+    margin: 13px;
+    width: 100%;
+    padding-bottom: 4px;
+    color: #dfdbdb;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 623px;
+    padding-bottom: 4px;
+    margin: 5px
+}
+
+.input-pin{
+    width: 38px !important;
+    height: 38px;
+    font-size: 43px;
+    text-align: center;
+}

@@ -504,7 +504,6 @@ i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label{
     text-align: center;
 }
 
-
 .box-select select{
     background-color: #ffeb3b;
     box-shadow: 0 0 15px 5px rgba(228, 227, 227, 0.23);
