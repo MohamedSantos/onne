@@ -1,13 +1,17 @@
 @import "./default.css";
 
-.main-container {
+.login-header {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
-  margin: auto;
-  width: 550px;
-  height: 100%;
+  margin-top: 100px;
+}
+.logo-size {
+  max-width: 300px;
+}
+.welcome-message {
+  color: #ddd;
+  text-align: center;
 }
 .div-form-login {
   display: flex;
@@ -24,27 +28,9 @@
   gap: 20px;
   width: 100%;
 }
-.form-login .input-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
 .label-form {
   color: #eee;
   min-width: 80px;
-}
-.input-form {
-  background: #282363;
-  color: #ddd;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
-  border-radius: 3px;
-  padding: 10px;
-  width: 100%;
-  height: 40px;
-}
-.input-form::placeholder {
-  color: #aaa;
 }
 .input-password-container {
   position: relative;
@@ -89,19 +75,6 @@
   color: #ddd;
   font-size: 14px;
   margin: 30px 0;
-}
-
-.login-header {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.logo-size {
-  max-width: 300px;
-}
-.welcome-message {
-  color: #ddd;
-  text-align: center;
 }
 
 @media (max-width: 600px) {
