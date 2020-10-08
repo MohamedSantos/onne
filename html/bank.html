@@ -156,46 +156,59 @@
           <label class="price-up">DASH: $66,47</label>
         </marquee>
       </div>
-        <section class="flex-section" style="height: 100px">
-            <div class="container-values box" style="width: 100%">
-              <div class="box-select">
-                <select>
-                  <option>USD</option>
-                  <option">BRL</option>
-                    <option>EUR</option>
-                    <option>BTC</option>
-                    <option>CAD</option>
-                    <option>AUS</option>
-                    <option>DNK</option>
-                    <option>UKR</option>
-                    <option>PSA</option>
-                    <option>PSM</option>
-                    <option>XIN</option>
-                </select>
-                <div class="values">
-                  <span class="value">0,00</span>
-                  <span class="value" style="color:#c71caa">5247.00,8247</span>
-                </div>
-              </div>
-              <div class="btns">
-                <a href="#"><button class="btn blue">Deposit</button></a>
-                <a href="#"> <button class="btn green">Whitdraw</button></a>
-              </div>
+      <section class="flex-section" style="height: 100px">
+        <div class="container-values box" style="width: 100%">
+          <div class="box-select">
+            <select>
+              <option>USD</option>
+              <option">BRL</option>
+                <option>EUR</option>
+                <option>BTC</option>
+                <option>CAD</option>
+                <option>AUS</option>
+                <option>DNK</option>
+                <option>UKR</option>
+                <option>PSA</option>
+                <option>PSM</option>
+                <option>XIN</option>
+            </select>
+            <div class="values">
+              <span class="value valueColor">0,00001.235.486</span>
             </div>
-        </section>
-        <section class="flex-section">
-            <div class="container">
-                <div class="div-chart">
-                    <div class="chart-size">
-                        <div class="chartContainer"><canvas id="myChart"></canvas></div>
-                    </div>
-                </div>
+          </div>
+          <div class="btns">
+            <a href="#"><button class="btn blue">Deposit</button></a>
+            <a href="#"> <button class="btn green">Whitdraw</button></a>
+          </div>
+        </div>
+      </section>
+      <section class="flex-section">
+        <div class="container">
+          <div class="div-chart">
+            <div class="chart-size">
+              <div class="chartContainer"><canvas id="myChart"></canvas></div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
   <script>
-
+    let numBranco;
+    let numCor;
+    const color = document.querySelector('.valueColor');
+    color.innerHTML.split('').find((item, index) => {
+      if (item > 0) {
+        numCor = color.innerHTML.substr(index, color.innerHTML.length);
+        numBranco = color.innerHTML.substr(0, index);
+        console.log(numCor);
+        console.log(numBranco);
+      }
+      return item > 0;
+    })
+    let span = document.createElement('span');
+    span.innerHTML = numCor; span.style.color = '#c71caa'; span.classList.add('value');
+    color.innerHTML = numBranco; color.appendChild(span);
   </script>
   <script>
     var ctx = document.getElementById('myChart').getContext('2d');

@@ -1,98 +1,99 @@
-@import './default.css';
+@import "./default.css";
+
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+header .intern-container-header {
+  display: flex;
+  gap: 0 20px;
+}
+
+@media (max-width: 950px) {
+  header .wrapper .intern-container-header {
+    order: 1;
+    width: 100%;
+  }
+}
+
+nav {
+  background: linear-gradient(
+    0deg,
+    rgba(34, 0, 127, 1) 0%,
+    rgba(9, 9, 121, 0.41360294117647056) 70%,
+    rgba(41, 87, 167, 1) 100%
+  );
+  padding: 10px;
+  width: 100%;
+}
+nav ul,
+nav ul li,
+nav ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav ul {
+  overflow-y: auto;
+}
+
+nav ul li {
+  min-width: 154px;
+  width: 100%;
+}
+nav ul li a {
+  margin: 0 auto;
+}
+nav ul li a span {
+  margin-left: 10px;
+}
 
 .content {
   display: flex;
   gap: 10px 5px;
 }
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.last {
+  margin-right: 30px;
+}
+
 .font {
-    color: #08A9B0;
+  font-family: "Montserrat";
+  color: #08a9b0;
 }
 
-.last{
-    margin-right: 30px;
+@font-face {
+  font-samily: "Montserrat";
+  src: url("../font/Montserrat-Medium.ttf");
 }
 
-.page{
-    display: block;
-    min-height: calc(100vh - 295px);
+.page {
+  display: block;
+  min-height: calc(100vh - 295px);
 }
 
-.container1{
-    display: block;
-    max-width: 1140px;
-    width: 100%;
-    padding: 0 15px;
-    margin: 0 auto;
+.container1 {
+  display: block;
+  max-width: 1140px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
-.flex-section{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    flex-direction: row;
-    margin: 8px 0;
-}
-
-
-
-.accordion{
-    position: relative;
-    z-index: 3;
-    display: none;
-    cursor: pointer;
-    height: 24px;
-    width: 32px;
-}
-.accordion span{
-    height: 3px;
-    width: 30px;
-    background: white;
-    position: absolute;
-    align-self: center;
-}
-.accordion::after, .accordion::before{
-    content: "";
-    width: 30px;
-    height: 3px;
-    background: white;
-    position: absolute;
-    transition: .3s;
-}
-.accordion::after{
-    align-self: flex-end;
-}
-.accordion.active span{
-    opacity: 0;
-}
-.accordion.active::before{
-    align-self: center;
-    transform: rotate(135deg);
-}
-.accordion.active::after{
-    align-self: center;
-    transform: rotate(45deg);
-}
-
-.accordion.active{
-    position: fixed;
-    right: 40px;
-}
-
-
-/**/
-.referral-box{
-    height: 400px;
-    width: 250px;
-}
-
-.container3{
-    padding: 30px;
-}
-
-.container3 div{
-    margin: 14px 0;
-    text-align: center;
-    letter-spacing: 1px;
+.flex-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-direction: row;
+  margin: 8px 0;
 }
 
 .marq{
@@ -108,447 +109,391 @@
     height: 400px;
 }
 
-.button-copy{
-    width: 100px;
+.marq {
+  margin-top: 5px;
 }
 
-.button-rgb
-{
-    padding: 10px 20px;
-    
+.price-up {
+  color: lightgreen !important;
 }
 
-@keyframes animate
-{
-    0%
-    {
-        background-position: 0%;
-    }
-    100%
-    {
-        background-position: 400%;
-    }
+.price-down {
+  color: #ee2248 !important;
 }
 
-.center{
-    display: flex;
-    justify-content: center;
+.moving-text {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  margin: 5px 0;
 }
 
-.container4{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 88%;
-    height: 90%;
+.bonus-portfolio {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  width: 450px;
+  height: 400px;
 }
 
-.div-chart{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
+.button-copy {
+  width: 100px;
 }
 
-.chart-size{
-    height: 80%;
+.button-rgb {
+  width: 140px;
+  height: 30px;
 }
 
-.portfolios{
-    overflow: auto;
-    display:flex;
-    width: 100%;
-    height:85%;
-    padding-left: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background: linear-gradient(0deg, rgba(34,0,127,1)0%, rgba(9,9,121,0.41360294117647056) 70%,  rgba(41,87,167,1)100%);
-    border-radius: 10px;
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
 }
 
-.portfolios .list{
-    display	: block;
+.center {
+  display: flex;
+  justify-content: center;
 }
 
-.portfolios .list .item{
-    position: relative;
-    padding-left: 15px;
-    margin: 10px 0;
+.container4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 88%;
+  height: 90%;
 }
 
-.chart-box{
-    display: flex;
-    align-items: center;
-    width: 940px;
-    justify-content: center;
-}
-.row{
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-right: -15px;
-    margin-left: -15px;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+.div-chart {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
 
-.portfolios .list .item .indicator{
-    position: absolute;
-    left: 0;
-    top: 1px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
+.chart-size {
+  height: 80%;
 }
 
-
-.col-12{
-    max-width: 100%;
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 100%;
-    -moz-box-flex: 0;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
+.portfolios {
+  overflow: auto;
+  display: flex;
+  width: 100%;
+  height: 85%;
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: linear-gradient(
+    0deg,
+    rgba(34, 0, 127, 1) 0%,
+    rgba(9, 9, 121, 0.41360294117647056) 70%,
+    rgba(41, 87, 167, 1) 100%
+  );
+  border-radius: 10px;
 }
 
-.chartContainer{
-    position: relative;
-    width: 340px;
-    margin-right: 10px;
+.portfolios .list {
+  display: block;
 }
 
-.height-250{
-    height: 250px !important;
-    width: 250px !important;
+.portfolios .list .item {
+  position: relative;
+  padding-left: 15px;
 }
 
-.investments{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
+.chart-box {
+  display: flex;
+  align-items: center;
+  width: 940px;
+  justify-content: center;
+}
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: -15px;
+  margin-left: -15px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
-.list{
-    height: 30%;
+.portfolios .list .item .indicator {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
 }
 
-.progress-bar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 480px;
-    height: 400px;
+.col-12 {
+  max-width: 100%;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+  -moz-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
 }
 
-.container5{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 88%;
-    height: 90%;
-    overflow: auto;
+.height-250 {
+  height: 250px !important;
+  width: 250px !important;
 }
 
-.bar{
-    display: flex;
-    flex-direction: column;
-    width: 78%;
-    height: 18px;
-    border: 1px solid gray;
-    border-radius: 10px;
-    background-image: url("../img/background-progress-bar.png");
+.investments {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
 }
 
-.progress{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    height: 100%;
-    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
-    background-size: 400%;
-    animation: animate 8s linear infinite;
+.list {
+  height: 30%;
 }
 
-.limit-or-profit{
-    margin-top: 20px;
+.progress-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 480px;
+  height: 400px;
 }
 
-.profit{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+.container5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 88%;
+  height: 90%;
+  overflow: auto;
 }
 
-.coin{
-    margin:0;
-    font-size: 20px
+.bar {
+  display: flex;
+  flex-direction: column;
+  width: 78%;
+  height: 18px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  background-image: url("../img/background-progress-bar.png");
 }
 
-.indicator{
-    background-color: #b7d4ff;
+.progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  height: 100%;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  animation: animate 8s linear infinite;
 }
 
-.container6{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
+.limit-or-profit {
+  margin-top: 20px;
 }
 
-.referral-content{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: column;
-    height: 81%;
-    width: 75%;
+.profit {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
-
-
-.status-border{
-    border-top: 1px solid gray;
-    width: 230px;
-    padding-top: 10px;
+.coin {
+  margin: 0;
+  font-size: 20px;
 }
 
-.direct-referral{
-    color: white;
-    border-bottom: 1px solid gray;
-    width: 230px;
-    padding-bottom: 10px;
+.indicator {
+  background-color: #b7d4ff !important;
 }
 
-.small-col{
-    width: 250px;
-    height: 400px;
+.container6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.referral-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 81%;
+  width: 75%;
+}
+
+.status-border {
+  border-top: 1px solid gray;
+  width: 230px;
+  padding-top: 10px;
+}
+
+.direct-referral {
+  color: white;
+  border-bottom: 1px solid gray;
+  width: 230px;
+  padding-bottom: 10px;
+}
+
+.small-col {
+  width: 250px;
+  height: 400px;
 }
 
 .bef:after {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    width: 0; 
-    height: 0; 
-    margin-left: 6px;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid rgb(71, 70, 70);
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 0;
+  margin-left: 6px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid rgb(71, 70, 70);
 }
 
-.lists{
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 22px;
+.drop-down {
+  flex-direction: column;
+  display: flex;
+  z-index: 3;
 }
 
-.lists .list-left-level .item, .lists .list-right-level .item, .level-max .level-list-max .item{
-    position: relative;
-    padding-left: 16px;
-    margin-top: 10px;
+.drop-down .drop {
+  display: none;
+  flex-direction: column;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#323150', endColorstr='#262543', GradientType=0);
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 5px;
+  z-index: 3;
 }
 
-.lists .list-left-level .item .indicator, .lists .list-right-level .item .indicator, .level-max .level-list-max .item .indicator{
-    position: absolute;
-    left: 0;
-    top: 4px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
+.container-binary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 
-.list-left-level{
-    width: 130px
+.list-binary {
+  overflow: auto;
+  display: flex;
+  width: 80%;
+  height: 80%;
+  text-align: center;
 }
 
-.list-right-level, .list-left-level{
-    padding: 15px 20px 10px 20px;
-    background: url(../img/70%.png)
+.list-binary .list .item .font {
+  color: #fff;
 }
 
-.level-list-max{
-    padding: 5px 15px 15px 15px;
-    background: url(../img/70%.png)
+.list-binary .list .item .font:hover {
+  color: #ffeb3b;
 }
 
-.lists .font, .level-max .font{
-    color: #fff
+.titles {
+  width: 100%;
+  height: 65%;
+  margin-top: 16px;
+  text-align: center;
 }
 
-.titles{
-    width: 100%;
-    height: 65%;
-    margin-top: 10px;
-    text-align: center;
+.box-select select {
+  background-color: #ffeb3b;
+  box-shadow: 0 0 15px 5px rgba(228, 227, 227, 0.23);
+  background-size: 400%;
+  font-family: "Montserrat";
 }
 
-.box-select select{
-    background-color: #ffeb3b;
-    box-shadow: 0 0 15px 5px rgba(228, 227, 227, 0.23);
-    background-size: 400%;
-    font-family: 'Montserrat';
-    color: black;
-    width: 80px;
+.drop-down .drop-item {
+  display: block;
 }
 
-.drop-down .drop-item{
-    display: block;
+.drop-down .drop-item a {
+  display: block;
+  position: relative;
+  font-size: 12px;
+  line-height: 1;
+  padding: 7px 5px;
+  background-color: transparent;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
-.drop-down .drop-item a{
-    display: block;
-    position: relative;
-    font-size: 12px;
-    line-height: 1;
-    padding: 7px 5px;
-    background-color: transparent;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+.container7 {
+  width: 88%;
+  display: flex;
+  height: 88%;
+  justify-content: center;
+  align-items: center;
 }
 
-.container7{
-    width: 88%;
-    display: flex;
-    height: 88%;
-    justify-content: center;
-    align-items: center;
+.big-number {
+  font-size: 27px;
 }
 
-.big-number{
-    font-size: 27px;
+/*three */
+.three {
 }
 
 @media (min-width: 801px) and (max-width: 1220px) {
-    .container{
-        width: 800px;
-    }
-    .bonus-portfolio{
-        width: 540px;
-    }
-    .progress-bar{
-        width: 540px;
-    }
-    .chart-box{
-        width: 100%;
-    }
+  .container {
+    width: 800px;
+  }
+  .bonus-portfolio {
+    width: 540px;
+  }
+  .progress-bar {
+    width: 540px;
+  }
+  .chart-box {
+    width: 100%;
+  }
 }
 
 @media (max-width: 800px) {
-    .container {
-        width: 450px;
-    }
-    .bonus-portfolio,.progress-bar,.chart-box, .small-col, .referral-box{
-        width: 100%;
-    }
-    .chart-box{
-        height: 100%;
-        padding: 25px 0;
-    }
-    .chart-box > div{
-        flex-direction: column;
-    }
-    .box-coin{
-        margin-top: 0 !important;
-        margin-right: 0 !important;
-    }
-    .header-bar{
-        display: flex;
-        justify-content: space-between;
-    }
+  .container {
+    width: 400px;
+  }
+  .bonus-portfolio,
+  .progress-bar,
+  .chart-box,
+  .small-col,
+  .referral-box {
+    width: 100%;
+  }
 
-    .menu-list{
-        display: flex;
-        position: fixed;;
-        top: 0;
-        left: 0;
-        z-index: 2;
-        height: 100vh;
-        background: rgba(27,27,27,.95);
-        margin-left: 0 ;
-        transition: .5s ease-in;
-        left: 100%;
-    }
-    .menu-list.show{
-        left: 0;
-    }
-    .menu-list > div {
-        width: 100%;
-        flex-direction: column;
-    }
-    .menu-list > div > div{
-        padding: 10px 20px;
-        margin: 5px 0;
-    }
-    .menu-list > div > div:nth-child(4){
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        text-align: center;
-        order: -1;
-    }
-    .menu-icons{
-        display: flex;
-        gap: 40px;
-    }
-    .accordion{
-        display: flex;
-    }
-    .coin{
-        font-size: 16px;
-    }
-
-    .container4{
-        flex-direction: column;
-    }
-
-    .div-chart{
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .investments{
-        width: 100%;
-        max-height: 200px;
-        margin: 20px 0;
-    }
-
-    .investments .font{
-        margin-bottom: 10px;
-    }
-
-    .bonus-portfolio{
-        height:  max-content;
-    }
-
-    .chartContainer{
-        width: 300px;
-        margin: 10px 0;
-    }
-
-    .radios{
-        flex-direction: column;
-        gap: 0;
-    }
-    
-}
-
-@media (max-width: 460px) {
-    .container{
-        width: 300px;
-    }
-    
+  .chart-box {
+    height: 100%;
+    padding: 25px 0;
+  }
+  .chart-box > div {
+    flex-direction: column;
+  }
+  .box-coin {
+    margin-top: 0 !important;
+    margin-right: 0 !important;
+  }
 }
