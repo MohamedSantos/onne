@@ -1,0 +1,21 @@
+@import './default.css';
+
+.section-status{
+  display: flex;
+}
+
+
+.section-status > div{
+  background: linear-gradient(0deg, rgba(34,0,127,0.3)0%, rgba(9,9,121,0.5) 70%, rgba(41,87,167,1)100%);
+}
+
+.startDate{
+  padding: 20px;
+  color: #1bc6ce;
+}
+
+.startDate h2{
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
