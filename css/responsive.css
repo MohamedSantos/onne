@@ -1,0 +1,10 @@
+@media (min-width: 801px) and (max-width: 1220px) {
+  .section {
+    width: 800px;
+  }
+  .container-binary {
+  }
+}
+
+@media (max-width: 800px) {
+}
