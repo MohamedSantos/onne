@@ -1,0 +1,52 @@
+@import'./default.css';
+@import'./style.css';
+
+.value{
+    font-family: "DS-DIGITAL BOLD";
+    font-size: 50px;
+    color: #fff;
+}
+
+.btn{
+    border-radius: 30px;
+    padding: 12px;
+    font-size: 14px;
+    width: 150px;
+    cursor: pointer;
+}
+
+.values{
+    display: flex;
+}
+
+.blue{
+    background-color: #2184d4;
+    box-shadow: 5px 5px 10px 0px #2184d4;
+}
+
+.green{
+    background-color: #1ace59;
+    box-shadow: 5px 5px 7px 0px #1ace59;
+}
+
+.container-values{
+    display: flex;
+    flex-direction: row;
+    width: 88%;
+    height: 90%;
+}
+
+.btns{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    flex:1;
+}
+
+.box-select{
+    gap: 20px;
+    display:flex;
+    padding: 25px 25px 25px 25px;
+    align-items:center;
+    flex:1;
+}

@@ -2,6 +2,10 @@
   font-family: "Montserrat";
   src: url("../font/Montserrat-Medium.ttf");
 }
+@font-face{
+  font-family: "DS-DIGITAL BOLD";
+  src: url("../font/DS-DIGIB.TTF")
+}
 
 * {
   margin: 0;
