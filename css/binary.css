@@ -54,4 +54,8 @@
   .tree-container{
     height: 400px;
   }
+
+  .radios{
+    gap: 0;
+  }
 }
