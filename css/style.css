@@ -1,5 +1,4 @@
 @import './default.css';
-@import './binary.css';
 
 .content {
   display: flex;
@@ -34,26 +33,7 @@
     margin: 8px 0;
 }
 
-.header-bar{
-    display: flex;
-    flex-direction: row;
-    padding: 20px 3px;
-    align-items: center;
-}
-.menu-list{
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 15px;
-}
 
-
-.menu-list > div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
 
 .accordion{
     position: relative;
@@ -113,10 +93,6 @@
     margin: 14px 0;
     text-align: center;
     letter-spacing: 1px;
-}
-
-.box{
-    background: linear-gradient(0deg, rgba(34,0,127,0.3)0%, rgba(9,9,121,0.5) 70%,  rgba(41,87,167,1)100%);
 }
 
 .span-price{
@@ -390,27 +366,6 @@
     border-right: 5px solid transparent;
     border-top: 5px solid rgb(71, 70, 70);
 }
-
-.drop-down{
-    display: flex;
-    flex-direction: column;
-    color: #08A9B0;
-    z-index: 3;
-}
-
-.drop-down .drop{
-    display: none;
-    flex-direction: column;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background:rgba(0, 0, 0, 0);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#323150', endColorstr='#262543', GradientType=0);
-    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
-    margin-top: 5px;
-    z-index: 3;
-}
-
 
 .lists{
     display: flex;
