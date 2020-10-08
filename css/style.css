@@ -1,4 +1,5 @@
 @import './default.css';
+@import './binary.css';
 
 header .wrapper {
   display: flex;
@@ -115,12 +116,15 @@ nav ul li a span {
     z-index: 3;
     display: none;
     cursor: pointer;
+    height: 24px;
+    width: 32px;
 }
 .accordion span{
     height: 3px;
     width: 30px;
     background: white;
-    position: relative;
+    position: absolute;
+    align-self: center;
 }
 .accordion::after, .accordion::before{
     content: "";
@@ -131,20 +135,17 @@ nav ul li a span {
     transition: .3s;
 }
 .accordion::after{
-    top: 10px;
-}
-.accordion::before{
-    bottom: 10px;
+    align-self: flex-end;
 }
 .accordion.active span{
     opacity: 0;
 }
 .accordion.active::before{
-    bottom: 0;
+    align-self: center;
     transform: rotate(135deg);
 }
 .accordion.active::after{
-    top: 0;
+    align-self: center;
     transform: rotate(45deg);
 }
 
@@ -210,7 +211,6 @@ nav ul li a span {
 
 .button-copy{
     width: 100px;
-
 }
 
 .button-rgb
@@ -466,50 +466,6 @@ nav ul li a span {
     z-index: 3;
 }
 
-.container-binary{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-}
-
-.form-save .radios div{
-    display: block;
-    margin: 10px 0;
-}
-
-.radios{
-    display: flex;
-    justify-content:center;
-    gap: 70px;
-    height: 70px;
-    padding: 17px;
-    background: url(../img/70%.png)
-}
-
-.list-binary{
-    overflow: auto;
-    display: flex;
-    width: 80%;
-    height: 80%;
-    text-align: center;
-}
-
-.list-binary .list .item .font{
-    color: #fff;
-}
-
-.radios .font{
-    margin-left: 7px;
-    color: #fff
-}
-
-.list-binary .list .item .font:hover{
-    color: #ffeb3b;
-}
 
 .lists{
     display: flex;
@@ -563,6 +519,8 @@ nav ul li a span {
     box-shadow: 0 0 15px 5px rgba(228, 227, 227, 0.23);
     background-size: 400%;
     font-family: 'Montserrat';
+    color: black;
+    width: 80px;
 }
 
 .drop-down .drop-item{
@@ -635,7 +593,6 @@ nav ul li a span {
 
     .menu-list{
         display: flex;
-        visibility: hidden;
         position: fixed;;
         top: 0;
         left: 0;
@@ -644,11 +601,10 @@ nav ul li a span {
         background: rgba(27,27,27,.95);
         margin-left: 0 ;
         transition: .5s ease-in;
-        transform: translateX(100%);
+        left: 100%;
     }
     .menu-list.show{
-        visibility: visible;
-        transform: translateX(0);
+        left: 0;
     }
     .menu-list > div {
         width: 100%;
@@ -659,8 +615,15 @@ nav ul li a span {
         margin: 5px 0;
     }
     .menu-list > div > div:nth-child(4){
-        min-width: 250px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
         text-align: center;
+        order: -1;
+    }
+    .menu-icons{
+        display: flex;
+        gap: 40px;
     }
     .accordion{
         display: flex;
@@ -696,6 +659,12 @@ nav ul li a span {
         width: 300px;
         margin: 10px 0;
     }
+
+    .radios{
+        flex-direction: column;
+        gap: 0;
+    }
+    
 }
 
 @media (max-width: 460px) {
