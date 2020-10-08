@@ -95,29 +95,8 @@
     letter-spacing: 1px;
 }
 
-.span-price{
-    width: 80px;
-    margin-top: 4px;
-    margin-left: 10px;
-}
-
 .marq{
     margin-top: 5px;
-}
-
-.price-up{
-    color: lightgreen !important;
-}
-
-.price-down{
-    color: #EE2248 !important;
-}
-
-.moving-text{
-    display: flex;
-    align-items: center;
-    padding: 5px 0;
-    margin: 5px 0;
 }
 
 .bonus-portfolio{

@@ -2,20 +2,68 @@
 
 .section-status{
   display: flex;
+  gap: 5px;
 }
-
 
 .section-status > div{
   background: linear-gradient(0deg, rgba(34,0,127,0.3)0%, rgba(9,9,121,0.5) 70%, rgba(41,87,167,1)100%);
 }
 
-.startDate{
+.content-status .title {
+  color: #ccc;
+  margin-bottom: 5px;
+}
+.start-date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
   padding: 20px;
-  color: #1bc6ce;
+  flex: 0 0 20%;
+}
+.start-date p, .start-date .title {
+  color: #ccc;
+}
+.start-date .initial-date {
+  text-align: center;
+  font-size: 15px;
+}
+.current-status-container .status-image {
+  background-color: cyan;
+  margin-top: 5px;
+  width: 100%;
+  height: 90px;
+}
+.current-status, .next-status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.current-status::before, .start-date .next-status::before {
+  content: '';
+  display: inline-block;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+.current-status::before {
+  background-color: cyan;
+}
+.start-date .next-status::before {
+  background-color: blue;
+}
+.start-date .next-status-title {
+  text-align: center;
+  font-weight: bold;
+}
+.start-date h2{
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.startDate h2{
-  text-transform: uppercase;
-  font-size: 18px;
-  letter-spacing: 1px;
+.progress, .ranking {
+  height: auto;
+  flex: 1 0 40%;
 }
