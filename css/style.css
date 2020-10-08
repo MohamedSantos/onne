@@ -96,17 +96,43 @@ nav ul li a span {
   margin: 8px 0;
 }
 
-.marq{
-    margin-top: 5px;
+.header-bar {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 60px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.bonus-portfolio{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    width: 450px;
-    height: 400px;
+/**/
+.referral-box {
+  height: 400px;
+  width: 250px;
+}
+
+.container3 {
+  padding: 30px;
+}
+
+.container3 div {
+  margin: 14px 0;
+}
+
+.box {
+  background: linear-gradient(
+    0deg,
+    rgba(34, 0, 127, 1) 0%,
+    rgba(9, 9, 121, 0.41360294117647056) 70%,
+    rgba(41, 87, 167, 1) 100%
+  );
+}
+
+.span-price {
+  width: 65px;
+  margin-top: 4px;
+  margin-left: 10px;
 }
 
 .marq {

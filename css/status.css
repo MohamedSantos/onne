@@ -1,17 +1,22 @@
 @import './default.css';
 
-.section-status{
+.section-status {
   display: flex;
+  flex-wrap: wrap;
   gap: 5px;
 }
 
 .section-status > div{
   background: linear-gradient(0deg, rgba(34,0,127,0.3)0%, rgba(9,9,121,0.5) 70%, rgba(41,87,167,1)100%);
+  min-width: 195px;
 }
 
 .content-status .title {
   color: #ccc;
   margin-bottom: 5px;
+}
+.start-date{
+  flex: 0 0 20%;
 }
 .start-date {
   display: flex;
@@ -19,8 +24,7 @@
   align-items: center;
   flex-direction: column;
   gap: 20px;
-  padding: 20px;
-  flex: 0 0 20%;
+  padding: 20px 15px;
 }
 .start-date p, .start-date .title {
   color: #ccc;
@@ -63,7 +67,22 @@
   letter-spacing: 1px;
 }
 
-.progress, .ranking {
-  height: auto;
-  flex: 1 0 40%;
+.status-progress, .ranking {
+  flex: 1 0 calc(40% - 5px);
+  min-height: 270px;
+}
+
+.partnes {
+  flex: 1 0 20%;
+  min-height: 270px;
+}
+.progress-table {
+  flex: 1 0 50%;
+  min-height: 270px;
+}
+
+@media (max-width: 600px) {
+  .section-status {
+    flex-direction: column;
+  }
 }
