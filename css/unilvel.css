@@ -1,0 +1,61 @@
+.coluns-section{
+    width: 100%;
+    height: 100px;
+}
+
+.div-coluns{
+    display: flex;
+    flex-direction: column;
+}
+
+.div-legend{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 50px;
+}
+
+.div-legend div{
+    width: 100%;
+    font-size: 20px;
+}
+
+.div-legend span{
+    color: darkmagenta;
+}
+
+.div-accordion{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.div-number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(63, 205, 82);
+    border-radius: 5px;
+    box-shadow: 0 0 15px 5px  rgba(63, 205, 82,0.7);
+    height: 50px;
+    width: 50px;
+}
+
+.div-accordion-container{
+    min-height: 600px;
+    padding: 30px;
+}
+
+.outside-li{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 15px;
+}
+
+.number{
+    color: black;
+}
+
+.ul-accordion{
+    border-radius: 5px;
+}

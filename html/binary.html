@@ -6,101 +6,134 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/responsive.css">
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/chartist.css">
-  <link rel="stylesheet" type="text/css" href="../css/dashboard-ecommerce.css">
+  <link rel="stylesheet" href="../css/binary.css">
   <title>Onne</title>
 </head>
 
 <body>
   <div class="container">
     <header class="header">
-      <div class="wrapper">
-        <figure>
-          <img class="logo" src="../svg/Logo ONNE.svg" alt="" class="icon-nav">
-        </figure>
-        <div class="intern-container-header ">
-          <div class="langs">
-            <p class="font">EN</p>
-          </div>
-          <div class="suport">
-            <a class="font bef">Support</a>
-          </div>
-          <div class="center-header">
-            <a class="font bef">Settings</a>
-          </div>
-        </div>
-        <div class="center-header">
-          <span class="font">Be welcome: &nbsp;&nbsp;</span><span class="font" style="color: #fc9803;"><b>Marcio
-              Caldas Vieira</b></span>
-        </div>
-        <div class="intern-container-header">
-          <div class="settings">
-            <a href="#" class=><img class="icon-nav" src="../svg/icon/IconMessage.svg"></a>
-          </div>
-          <div class="intern-container-header">
-            <div class="settings">
-              <a href="#" class=><img class="icon-nav" src="../svg/icon/IconMessage.svg"></a>
+      <div class="header-bar">
+        <img class="logo" src="../svg/Logo ONNE.svg" alt="" class="icon-nav">
+        <div class="menu-list">
+          <div>
+            <div class="center-header drop-down">
+              <a class="font bef">EN</a>
+              <ul class="drop" style="display: none">
+                <li class="drop-item">
+                  <a class="font" href="#">RU</a>
+                </li>
+                <li class="drop-item">
+                  <a class="font" href="#">PT</a>
+                </li>
+                <li class="drop-item">
+                  <a class="font" href="#">MS</a>
+                </li>
+              </ul>
             </div>
-            <div class="settings">
-              <a href="#"><img class="icon-nav" src="../svg/icon/IconLogout.svg"></a>
+            <div class="center-header drop-down">
+              <a class="font bef">Support</a>
+              <ul class="drop" style="display: none">
+                <li class="drop-item">
+                  <a class="font" href="#">FAQ</a>
+                </li>
+                <li class="drop-item">
+                  <a class="font" href="#">Create Tickets</a>
+                </li>
+                <li class="drop-item">
+                  <a class="font" href="#">My Tickets</a>
+                </li>
+              </ul>
             </div>
+            <div class="center-header drop-down">
+              <a class="font bef">Settings</a>
+              <ul class="drop">
+                <li class="drop-item">
+                  <a class="font" href="#">general Settings</a>
+                </li>
+                <li class="drop-item">
+                  <a class="font" href="#">Security</a>
+                </li>
+                <li class="drop-item">
+                  <a class="font" href="#">Verification</a>
+                </li>
+              </ul>
+            </div>
+            <div class="center-header">
+              <span class="font">Be welcome: &nbsp;&nbsp;</span><span class="font" style="color: #fc9803;"><b>Marcio
+                  Caldas Vieira</b></span>
+            </div>
+            <div class="menu-icons">
+              <div class="center-header settings">
+                <a href="#" class=><img class="icon-nav" src="../svg/icon/IconMessage.svg"></a>
+              </div>
+              <div class="center-header settings">
+                <a href="#"><img class="icon-nav" src="../svg/icon/IconLogout.svg"></a>
+              </div>
+            </div>
+
           </div>
         </div>
-        <nav>
-          <ul>
-            <li>
-              <a class="font text-nav" href="blank.html">
-                <img class="icon-nav first" src="../svg/icon/IconDashboard.svg" alt=""><span>Home</span>
-              </a>
-              <img src="../svg/Replicar barra.svg" alt="">
-            </li>
-            <li>
-              <a class="font text-nav" href="binary.html">
-                <img class="icon-nav" src="../svg/icon/IconBinaryTree.svg" alt=""><span>Binary Tree</span>
-              </a>
-              <img src="../svg/Replicar barra.svg" alt="">
-            </li>
-            <li>
-              <a class="font text-nav" href="status.html">
-                <img class="icon-nav" src="../svg/icon/IconStatus.svg" alt=""><span>Status</span>
-              </a>
-              <img src="../svg/Replicar barra.svg" alt="">
-            </li>
-            <li>
-              <a class="font text-nav" href="#">
-                <img class="icon-nav" src="../svg/icon/IconBank.svg" alt="">
-                <span>Bank</span>
-              </a>
-              <img src="../svg/Replicar barra.svg" alt="">
-            </li>
-            <li>
-              <a class="font text-nav" href="#">
-                <img class="icon-nav" src="../svg/icon/IconUnilevel.svg" alt=""><span>Unilevel</span>
-              </a>
-              <img src="../svg/Replicar barra.svg" alt="">
-            </li>
-            <li>
-              <a class="font text-nav" href="#">
-                <img class="icon-nav" src="../svg/icon/IconPromotion.svg" alt=""><span>Promotion</span>
-              </a>
-              <img src="../svg/Replicar barra.svg" alt="">
-            </li>
-            <li>
-              <a class="font text-nav" href="#">
-                <img class="icon-nav" src="../svg/icon/IconMaterial.svg" alt=""><span>Material</span>
-              </a>
-              <img src="../svg/Replicar barra.svg" alt="">
-            </li>
-            <li>
-              <a class="font text-nav last" href="#">
-                <img class="icon-nav" src="../svg/icon/IconRoadMap.svg" alt=""><span>Road Map</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <div class="accordion"><span></span></div>
+      </div>
     </header>
+<<<<<<< HEAD
 
     <!--Price-->
+=======
+    <div class="header">
+      <nav class="nav">
+        <ul>
+          <li> <a class="font text-nav" href="blank.html">
+              <img class="icon-nav first" src="../svg/icon/IconDashboard.svg" alt=""><span>Home</span>
+            </a>
+            <img src="../svg/Replicar barra.svg" alt="">
+          </li>
+          <li> <a class="font text-nav" href="binary.html">
+              <img class="icon-nav" src="../svg/icon/IconBinaryTree.svg" alt=""><span>Binary Tree</span>
+            </a>
+            <img src="../svg/Replicar barra.svg" alt="">
+          </li>
+          <li>
+            <a class="font text-nav" href="status.html">
+              <img class="icon-nav" src="../svg/icon/IconStatus.svg" alt=""><span>Status</span>
+            </a>
+            <img src="../svg/Replicar barra.svg" alt="">
+          </li>
+          <li>
+            <a class="font text-nav" href="#">
+              <img class="icon-nav" src="../svg/icon/IconBank.svg" alt="">
+              <span>Bank</span>
+            </a>
+            <img src="../svg/Replicar barra.svg" alt="">
+          </li>
+          <li>
+            <a class="font text-nav" href="#">
+              <img class="icon-nav" src="../svg/icon/IconUnilevel.svg" alt=""><span>Unilevel</span>
+            </a>
+            <img src="../svg/Replicar barra.svg" alt="">
+          </li>
+          <li>
+            <a class="font text-nav" href="#">
+              <img class="icon-nav" src="../svg/icon/IconPromotion.svg" alt=""><span>Promotion</span>
+            </a>
+            <img src="../svg/Replicar barra.svg" alt="">
+          </li>
+          <li>
+            <a class="font text-nav" href="#">
+              <img class="icon-nav" src="../svg/icon/IconMaterial.svg" alt=""><span>Material</span>
+            </a>
+            <img src="../svg/Replicar barra.svg" alt="">
+          </li>
+          <li>
+            <a class="font text-nav last" href="#">
+              <img class="icon-nav" src="../svg/icon/IconRoadMap.svg" alt=""><span>Road Map</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+>>>>>>> 81a84a41fd6e37128ca0707875cb30da7d156944
     <div class="section">
       <div class="box moving-text">
         <span class="font span-price">Prices |</span>
@@ -132,7 +165,7 @@
 
       <!--BYNARYS-->
       <div class="content">
-        <div class="flex-section" style="width: 40%; flex-direction: column;">
+        <div class="flex-section">
           <div class="small-col box" style="width:100%;height:310px">
             <div class="container-binary">
               <div>
@@ -169,25 +202,33 @@
               </div>
             </div>
           </div>
+<<<<<<< HEAD
 
           <div class="small-col box" style="width:100%;height: 150px; margin-top:5px">
+=======
+          <div class="small-col box" style="width:100%;height: 200px; margin-top:5px">
+>>>>>>> 81a84a41fd6e37128ca0707875cb30da7d156944
             <div class="container-binary">
               <div class="titles">
                 <p class="font">BINARYS</p>
               </div>
-              <form action="" class="form-save" style="width:100%; height:100%; text-align: center;" method="post">
+              <form action="" class="form-save" method="post">
                 <div class="radios">
-                  <input type="radio" value="left" name="direction" id="left"><label class="font" for="left">Left</label>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <input type="radio" value="right" name="direction" id="left"><label class="font" for="right">Right</label>
+                  <div>
+                    <input type="radio" value="left" name="direction" id="left"><label class="font" for="left">Left</label>
+                  </div>
+                  <div>
+                    <input type="radio" value="right" name="direction" id="left"><label class="font" for="right">Right</label>
+                  </div>
                 </div>
                 <br>
-                <div style="text-align: justify; margin-top: 10px;">
+                <div style="display: flex;justify-content: center;">
                   <input class="button-rgb" type="submit" value="SAVE">
                 </div>
               </form>
             </div>
           </div>
+<<<<<<< HEAD
           <div class="small-col box" style="width:100%;height: 290px; margin-top:5px">
 
 
@@ -200,11 +241,72 @@
               <img src="../img/three.svg" alt="arvore gigante">
             </div>
 
+=======
+          <div class="box" style="width:100%; margin-top:5px">
+            <div class="lists">
+              <ul class="list-left-level">
+                <li class="item">
+                  <span class="indicator" style="background-color: #fbff17"></span>
+                  <p class="font">Star</p>
+                </li>
+                <li class="item">
+                  <span class="indicator" style="background-color: #644242"></span>
+                  <p class="font">Bronze</p>
+                </li>
+                <li class="item">
+                  <span class="indicator" style="background-color: #C0C0C0"></span>
+                  <p class="font">Silver</p>
+                </li>
+                <li class="item">
+                  <span class="indicator" style="background-color: #FFD700"></span>
+                  <p class="font">Gold</p>
+                </li>
+                <li class="item">
+                  <span class="indicator" style="background-color: #d62424"></span>
+                  <p class="font">Rubi</p>
+                </li>
+                <li class="item">
+                  <span class="indicator" style="background-color: #26c52e"></span>
+                  <p class="font">Esmeralda</p>
+                </li>
+                <li class="item">
+                  <span class="indicator" style="background-color: #1114ce"></span>
+                  <p class="font">Safira</p>
+                </li>
+                <li class="item">
+                  <span class="indicator" style="background-color: #363636"></span>
+                  <p class="font">Onix</p>
+                </li>
+                <li class="item">
+                  <span class="indicator" style="background-color:#00bfff "></span>
+                  <p class="font">Diamont</p>
+                </li>
+                <li class="item">
+                  <span class="indicator" style="background-color: #0c8add"></span>
+                  <p class="font">Dm Diamon</p>
+                </li>
+              </ul>
+            </div>
+            <div class="level-max" style="display: flex;justify-content: center;margin-top: 16px;">
+              <div class="level-list-max">
+                <div class="item">
+                  <span class="indicator" style="background-color: #03eaee"></span>
+                  <p class="font">Triple Diamon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-section tree-container" style="width: 100%">
+          <div class="box" style="width:100%;height:100%">
+>>>>>>> 81a84a41fd6e37128ca0707875cb30da7d156944
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <script type="module" src="../js/script.js"></script>
 </body>
 
 </html>

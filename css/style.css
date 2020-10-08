@@ -1,5 +1,6 @@
 @import "./default.css";
 
+<<<<<<< HEAD
 header .wrapper {
   display: flex;
   justify-content: space-between;
@@ -51,20 +52,28 @@ nav ul li a span {
   margin-left: 10px;
 }
 
+=======
+>>>>>>> 81a84a41fd6e37128ca0707875cb30da7d156944
 .content {
   display: flex;
   gap: 10px 5px;
 }
+<<<<<<< HEAD
 
 .container {
   width: 1200px;
   margin: 0 auto;
+=======
+.font {
+    color: #08A9B0;
+>>>>>>> 81a84a41fd6e37128ca0707875cb30da7d156944
 }
 
 .last {
   margin-right: 30px;
 }
 
+<<<<<<< HEAD
 .font {
   font-family: "Montserrat";
   color: #08a9b0;
@@ -78,6 +87,11 @@ nav ul li a span {
 .page {
   display: block;
   min-height: calc(100vh - 295px);
+=======
+.page{
+    display: block;
+    min-height: calc(100vh - 295px);
+>>>>>>> 81a84a41fd6e37128ca0707875cb30da7d156944
 }
 
 .container1 {
@@ -96,6 +110,7 @@ nav ul li a span {
   margin: 8px 0;
 }
 
+<<<<<<< HEAD
 .header-bar {
   display: flex;
   align-items: center;
@@ -104,7 +119,53 @@ nav ul li a span {
   height: 60px;
   width: 100%;
   margin: 0 auto;
+=======
+
+
+.accordion{
+    position: relative;
+    z-index: 3;
+    display: none;
+    cursor: pointer;
+    height: 24px;
+    width: 32px;
 }
+.accordion span{
+    height: 3px;
+    width: 30px;
+    background: white;
+    position: absolute;
+    align-self: center;
+}
+.accordion::after, .accordion::before{
+    content: "";
+    width: 30px;
+    height: 3px;
+    background: white;
+    position: absolute;
+    transition: .3s;
+}
+.accordion::after{
+    align-self: flex-end;
+}
+.accordion.active span{
+    opacity: 0;
+}
+.accordion.active::before{
+    align-self: center;
+    transform: rotate(135deg);
+}
+.accordion.active::after{
+    align-self: center;
+    transform: rotate(45deg);
+}
+
+.accordion.active{
+    position: fixed;
+    right: 40px;
+>>>>>>> 81a84a41fd6e37128ca0707875cb30da7d156944
+}
+
 
 /**/
 .referral-box {
@@ -116,6 +177,7 @@ nav ul li a span {
   padding: 30px;
 }
 
+<<<<<<< HEAD
 .container3 div {
   margin: 14px 0;
 }
@@ -133,6 +195,18 @@ nav ul li a span {
   width: 65px;
   margin-top: 4px;
   margin-left: 10px;
+=======
+.container3 div{
+    margin: 14px 0;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.span-price{
+    width: 80px;
+    margin-top: 4px;
+    margin-left: 10px;
+>>>>>>> 81a84a41fd6e37128ca0707875cb30da7d156944
 }
 
 .marq {
@@ -163,6 +237,7 @@ nav ul li a span {
   height: 400px;
 }
 
+<<<<<<< HEAD
 .button-copy {
   width: 100px;
 }
@@ -170,6 +245,16 @@ nav ul li a span {
 .button-rgb {
   width: 140px;
   height: 30px;
+=======
+.button-copy{
+    width: 100px;
+}
+
+.button-rgb
+{
+    padding: 10px 20px;
+    
+>>>>>>> 81a84a41fd6e37128ca0707875cb30da7d156944
 }
 
 @keyframes animate {
@@ -228,9 +313,16 @@ nav ul li a span {
   display: block;
 }
 
+<<<<<<< HEAD
 .portfolios .list .item {
   position: relative;
   padding-left: 15px;
+=======
+.portfolios .list .item{
+    position: relative;
+    padding-left: 15px;
+    margin: 10px 0;
+>>>>>>> 81a84a41fd6e37128ca0707875cb30da7d156944
 }
 
 .chart-box {
@@ -270,9 +362,21 @@ nav ul li a span {
   flex: 0 0 100%;
 }
 
+<<<<<<< HEAD
 .height-250 {
   height: 250px !important;
   width: 250px !important;
+=======
+.chartContainer{
+    position: relative;
+    width: 340px;
+    margin-right: 10px;
+}
+
+.height-250{
+    height: 250px !important;
+    width: 250px !important;
+>>>>>>> 81a84a41fd6e37128ca0707875cb30da7d156944
 }
 
 .investments {
@@ -335,9 +439,14 @@ nav ul li a span {
   flex-direction: row;
 }
 
+<<<<<<< HEAD
 .coin {
   margin: 0;
   font-size: 20px;
+=======
+.indicator{
+    background-color: #b7d4ff;
+>>>>>>> 81a84a41fd6e37128ca0707875cb30da7d156944
 }
 
 .indicator {
@@ -381,6 +490,7 @@ nav ul li a span {
 }
 
 .bef:after {
+<<<<<<< HEAD
   content: "";
   display: inline-block;
   vertical-align: middle;
@@ -448,6 +558,73 @@ nav ul li a span {
   box-shadow: 0 0 15px 5px rgba(228, 227, 227, 0.23);
   background-size: 400%;
   font-family: "Montserrat";
+=======
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 0; 
+    height: 0; 
+    margin-left: 6px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid rgb(71, 70, 70);
+}
+
+.lists{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 22px;
+}
+
+.lists .list-left-level .item, .lists .list-right-level .item, .level-max .level-list-max .item{
+    position: relative;
+    padding-left: 16px;
+    margin-top: 10px;
+}
+
+.lists .list-left-level .item .indicator, .lists .list-right-level .item .indicator, .level-max .level-list-max .item .indicator{
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.list-left-level{
+    width: 130px
+}
+
+.list-right-level, .list-left-level{
+    padding: 15px 20px 10px 20px;
+    background: url(../img/70%.png)
+}
+
+.level-list-max{
+    padding: 5px 15px 15px 15px;
+    background: url(../img/70%.png)
+}
+
+.lists .font, .level-max .font{
+    color: #fff
+}
+
+.titles{
+    width: 100%;
+    height: 65%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.box-select select{
+    background-color: #ffeb3b;
+    box-shadow: 0 0 15px 5px rgba(228, 227, 227, 0.23);
+    background-size: 400%;
+    font-family: 'Montserrat';
+    color: black;
+    width: 80px;
+>>>>>>> 81a84a41fd6e37128ca0707875cb30da7d156944
 }
 
 .drop-down .drop-item {
@@ -484,6 +661,7 @@ nav ul li a span {
 .three {
 }
 
+<<<<<<< HEAD
 @media (min-width: 801px) and (max-width: 1220px) {
   .container {
     width: 800px;
@@ -522,4 +700,110 @@ nav ul li a span {
     margin-top: 0 !important;
     margin-right: 0 !important;
   }
+=======
+@media (max-width: 800px) {
+    .container {
+        width: 450px;
+    }
+    .bonus-portfolio,.progress-bar,.chart-box, .small-col, .referral-box{
+        width: 100%;
+    }
+    .chart-box{
+        height: 100%;
+        padding: 25px 0;
+    }
+    .chart-box > div{
+        flex-direction: column;
+    }
+    .box-coin{
+        margin-top: 0 !important;
+        margin-right: 0 !important;
+    }
+    .header-bar{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu-list{
+        display: flex;
+        position: fixed;;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        height: 100vh;
+        background: rgba(27,27,27,.95);
+        margin-left: 0 ;
+        transition: .5s ease-in;
+        left: 100%;
+    }
+    .menu-list.show{
+        left: 0;
+    }
+    .menu-list > div {
+        width: 100%;
+        flex-direction: column;
+    }
+    .menu-list > div > div{
+        padding: 10px 20px;
+        margin: 5px 0;
+    }
+    .menu-list > div > div:nth-child(4){
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        text-align: center;
+        order: -1;
+    }
+    .menu-icons{
+        display: flex;
+        gap: 40px;
+    }
+    .accordion{
+        display: flex;
+    }
+    .coin{
+        font-size: 16px;
+    }
+
+    .container4{
+        flex-direction: column;
+    }
+
+    .div-chart{
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .investments{
+        width: 100%;
+        max-height: 200px;
+        margin: 20px 0;
+    }
+
+    .investments .font{
+        margin-bottom: 10px;
+    }
+
+    .bonus-portfolio{
+        height:  max-content;
+    }
+
+    .chartContainer{
+        width: 300px;
+        margin: 10px 0;
+    }
+
+    .radios{
+        flex-direction: column;
+        gap: 0;
+    }
+    
+}
+
+@media (max-width: 460px) {
+    .container{
+        width: 300px;
+    }
+    
+>>>>>>> 81a84a41fd6e37128ca0707875cb30da7d156944
 }
