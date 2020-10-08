@@ -210,8 +210,27 @@ nav ul li a span {
   width: 1200px;
   margin: 0 auto;
 }
-.box{
+
+/* Marquee style */
+.box {
   background: linear-gradient(0deg, rgba(34,0,127,0.3)0%, rgba(9,9,121,0.5) 70%,  rgba(41,87,167,1)100%);
+}
+.moving-text {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  margin: 5px 0;
+}
+.span-price {
+  color: #08A9B0;
+  margin-left: 10px;
+  width: 80px;
+}
+.price:nth-child(odd) {
+  color: lightgreen !important;
+}
+.price:nth-child(even) {
+  color: #EE2248 !important;
 }
 
 /* Responsive styles */
