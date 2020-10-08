@@ -39,6 +39,8 @@ ul {
   list-style: none;
 }
 
+
+/* Form styles */
 .button-rgb {
   position: relative;
   background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
@@ -95,6 +97,46 @@ ul {
   color: #aaa;
 }
 
+/* Header styles */
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+header .intern-container-header {
+  display: flex;
+  gap: 0 20px;
+}
+
+nav {
+  background: linear-gradient(0deg, rgba(34,0,127,1)0%, rgba(9,9,121,0.41360294117647056) 70%,  rgba(41,87,167,1)100%);
+  padding: 10px;
+  width: 100%;
+}
+nav ul,nav ul li ,nav ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav ul {
+    overflow-y: auto;
+}
+
+nav ul li {
+  min-width: 154px;
+  width: 100%;
+}
+nav ul li a {
+  margin: 0 auto;
+}
+nav ul li a span {
+  color: #08A9B0;
+  margin-left: 10px;
+}
+
+/* Footer style */
 .company-presentation{
   display: flex;
   flex-direction: column;
@@ -119,4 +161,18 @@ ul {
 .footer-login p span{
   color: #ccc;
   font-weight: bold;
+}
+
+/* Main styles */
+.container{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive styles */
+@media (max-width: 950px) {
+  header .wrapper .intern-container-header {
+    order: 1;
+    width: 100%;
+  }
 }

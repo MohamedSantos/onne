@@ -1,71 +1,15 @@
 @import './default.css';
 
-header .wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 20px 0;
-}
-header .intern-container-header {
-  display: flex;
-  gap: 0 20px;
-}
-
-@media (max-width: 950px) {
-  header .wrapper .intern-container-header {
-    order: 1;
-    width: 100%;
-  }
-}
-
-nav {
-  background: linear-gradient(0deg, rgba(34,0,127,1)0%, rgba(9,9,121,0.41360294117647056) 70%,  rgba(41,87,167,1)100%);
-  padding: 10px;
-  width: 100%;
-}
-nav ul,nav ul li ,nav ul li a {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-nav ul {
-    overflow-y: auto;
-}
-
-nav ul li {
-  min-width: 154px;
-  width: 100%;
-}
-nav ul li a {
-  margin: 0 auto;
-}
-nav ul li a span {
-  margin-left: 10px;
-}
-
 .content {
   display: flex;
   gap: 10px 5px;
 }
-
-.container{
-  width: 1200px;
-  margin: 0 auto;
+.font {
+    color: #08A9B0;
 }
 
 .last{
     margin-right: 30px;
-}
-
-.font{
-    font-family: 'Montserrat';
-    color: #08A9B0;
-}
-
-@font-face{
-    font-family: 'Montserrat';
-    src: url('../font/Montserrat-Medium.ttf');
 }
 
 .page{
@@ -448,9 +392,10 @@ nav ul li a span {
 }
 
 .drop-down{
-    flex-direction: column;
     display: flex;
-    z-index: 3
+    flex-direction: column;
+    color: #08A9B0;
+    z-index: 3;
 }
 
 .drop-down .drop{
