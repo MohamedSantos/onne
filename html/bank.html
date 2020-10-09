@@ -7,8 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <link rel="stylesheet" href="../css/bank.css">
-  <link rel="stylesheet" href="../css/chartist.css">
-  <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
   <link rel="stylesheet" type="text/css" href="../css/dashboard-ecommerce.css">
   <title>Onne</title>
 </head>
@@ -182,11 +180,83 @@
         </div>
       </section>
       <section class="flex-section">
-        <div class="container">
+        <div class="box bonus-portfolio">
           <div class="div-chart">
-            <div class="chart-size">
+            <div class="">
               <div class="chartContainer"><canvas id="myChart"></canvas></div>
             </div>
+          </div>
+          <div class="portfolios">
+            <ul class="list">
+              <li class=" item">
+                <span class="indicator"></span>
+                <p class="font">Amount BTC</p>
+                <span class="font">$ 0.10000</span>
+              </li>
+              <li class=" item">
+                <span class="indicator"></span>
+                <p class="font">Amount BCH</p>
+                <span class="font">$ 0.10000</span>
+              </li>
+              <li class=" item">
+                <span class="indicator"></span>
+                <p class="font">Amount BTG</p>
+                <span class="font">$ 0.10000</span>
+              </li>
+              <li class=" item">
+                <span class="indicator"></span>
+                <p class="font">Amount BTC</p>
+                <span class="font">$ 0.10000</span>
+              </li>
+              <li class=" item">
+                <span class="indicator"></span>
+                <p class="font">Amount BTC</p>
+                <span class="font">$ 0.10000</span>
+              </li>
+              <li class=" item">
+                <span class="indicator"></span>
+                <p class="font">Amount BTCSV</p>
+                <span class="font">$ 0.10000</span>
+              </li>
+              <li class=" item">
+                <span class="indicator"></span>
+                <p class="font">Amount BTC</p>
+                <span class="font">$ 0.10000</span>
+              </li>
+              <li class=" item">
+                <span class="indicator"></span>
+                <p class="font">Amount BTC</p>
+                <span class="font">$ 0.10000</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="box">
+          <div class="container-candle">
+            <div>
+              <canvas id="chart"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="flex-section">
+        <div class="box container-history max-width">
+          <div class="title-box">
+            <p>Transaction history</p>
+          </div>
+          <div class="drop-transaction">
+            <div class="dropdown-trans">
+              <label>Type: </label> 
+              <select>
+                <option value="all">All transactions</option>
+                <option value="all">With</option>
+                <option value="all">Transfer</option>
+                <option value="all">Replenish</option>
+                <option value="all">Share</option>
+                <option value="all">Profit</option>
+              </select>
+            </div>
+            <button class="button-rgb">Apply</button>
           </div>
         </div>
       </section>

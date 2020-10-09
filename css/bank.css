@@ -61,6 +61,53 @@
     flex-wrap: wrap;
 }
 
+.div-chart{
+    height: fit-content;
+}
+
+.bonus-portfolio{
+    height: 265px;
+    padding: 15px
+}
+
+.button-rgb{
+    width: 130px
+}
+
+.container-candle{
+    width: 740px
+}
+
+.container-history{
+    display:flex;
+    flex-direction: column;
+    padding: 20px;
+    color: #fff;
+}
+
+.dropdown-trans{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.title-box{
+    padding: 9px;
+    border-bottom: 1px solid gray;
+}
+
+.drop-transaction{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 10px;
+    align-items: center;
+}
+
+select{
+    width: 240px;
+}
+
 @media (max-width: 1220px){
     .btns{
         justify-content: center;

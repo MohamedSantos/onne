@@ -43,6 +43,10 @@ ul {
   list-style: none;
 }
 
+.max-width{
+  width: 100%;
+}
+
 
 /* Form styles */
 .button-rgb {
