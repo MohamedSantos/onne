@@ -1,25 +1,88 @@
 @import './default.css';
 
-.section-status{
+.section-status {
   display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
 }
-
 
 .section-status > div{
   background: linear-gradient(0deg, rgba(34,0,127,0.3)0%, rgba(9,9,121,0.5) 70%, rgba(41,87,167,1)100%);
+  min-width: 195px;
 }
 
-.startDate{
-  padding: 20px;
-  color: #1bc6ce;
+.content-status .title {
+  color: #ccc;
+  margin-bottom: 5px;
 }
-
-.startDate h2{
-  text-transform: uppercase;
+.start-date{
+  flex: 0 0 20%;
+}
+.start-date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 15px;
+}
+.start-date p, .start-date .title {
+  color: #ccc;
+}
+.start-date .initial-date {
+  text-align: center;
+  font-size: 15px;
+}
+.current-status-container .status-image {
+  background-color: cyan;
+  margin-top: 5px;
+  width: 100%;
+  height: 90px;
+}
+.current-status, .next-status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.current-status::before, .start-date .next-status::before {
+  content: '';
+  display: inline-block;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+.current-status::before {
+  background-color: cyan;
+}
+.start-date .next-status::before {
+  background-color: blue;
+}
+.start-date .next-status-title {
+  text-align: center;
+  font-weight: bold;
+}
+.start-date h2{
   font-size: 18px;
+  text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-.startDate > div{
-  
+.status-progress, .ranking {
+  flex: 1 0 calc(40% - 5px);
+  min-height: 270px;
+}
+
+.partnes {
+  flex: 1 0 20%;
+  min-height: 270px;
+}
+.progress-table {
+  flex: 1 0 50%;
+  min-height: 270px;
+}
+
+@media (max-width: 800px) {
+  .section-status {
+    flex-direction: column;
+  }
 }
