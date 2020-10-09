@@ -19,13 +19,21 @@
   gap: 70px;
   height: 70px;
   padding: 17px;
-  background: url(../img/70%.png)
+  background: url(../img/70%.png);
+}
+
+.level-max{
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
 }
 
 .list-binary{
   overflow: auto;
   display: flex;
   text-align: center;
+  padding: 1px 25px 25px;
+  margin-bottom: 10px;
 }
 
 .list-binary .list .item .font{
