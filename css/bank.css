@@ -104,6 +104,12 @@
     align-items: center;
 }
 
+.transactions{
+    padding: 15px 0;
+    font-size: 14px;
+    border-spacing: 63px 22px;
+}
+
 select{
     width: 240px;
 }
