@@ -1,6 +1,5 @@
 .coluns-section{
     width: 100%;
-    height: 100px;
 }
 
 .div-coluns{
@@ -58,4 +57,14 @@
 
 .ul-accordion{
     border-radius: 5px;
+}
+
+@media (max-width:1220px){
+    .coluns-section{
+        overflow-x: auto;
+    }
+
+    .div-coluns{
+        width: 1000px;
+    }
 }

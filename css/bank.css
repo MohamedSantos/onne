@@ -46,7 +46,50 @@
 .box-select{
     gap: 20px;
     display:flex;
-    padding: 25px 25px 25px 25px;
+    margin-left: 20px;
     align-items:center;
     flex:1;
+}
+
+.bitcoin-value{
+    width: 100%;
+}
+
+.bitcoin-value > div{
+    padding: 20px 0;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1220px){
+    .btns{
+        justify-content: center;
+    }
+    .box-select{
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    .value{
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 460px){
+    .box-select{
+        flex-direction: column;
+        margin-left: 0;
+        gap: 10px;
+    }
+
+    .value{
+        font-size: 35px;
+    }
+
+    .btns{
+        gap: 50px;
+    }
+
+    .btn{
+        width: fit-content;
+    }
 }
