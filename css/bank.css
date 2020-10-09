@@ -110,7 +110,7 @@
     border-spacing: 63px 22px;
 }
 
-select{
+.select-transition{
     width: 240px;
 }
 
@@ -125,9 +125,39 @@ select{
     .value{
         font-size: 41px;
     }
+
+    .bonus-portfolio{
+        width: 100%;
+    }
+
+    .vela-interface{
+        width: 100%;
+    }
+
+    .container-candle{
+        width: 100%;
+    }
+    .table-trans{
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 800px){
+    
+    .drop-transaction{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+   
+
+    .div-chart{
+        width: 220px;
+    }
 }
 
 @media (max-width: 460px){
+    
     .box-select{
         flex-direction: column;
         margin-left: 0;
@@ -144,5 +174,14 @@ select{
 
     .btn{
         width: fit-content;
+    }
+
+    .select-transition {
+        width: 180px;
+    }
+
+    .bonus-portfolio{
+        flex-direction: column;
+        height: 380px;
     }
 }
