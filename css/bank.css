@@ -74,8 +74,11 @@
     width: 130px
 }
 
-.container-candle{
-    width: 740px
+.container-chart{
+    display: flex;
+    align-items: center;
+    width: 740px;
+    height: 100%;
 }
 
 .container-history{

@@ -140,14 +140,14 @@ header .intern-container-header {
   flex-direction: column;
   color: #08A9B0;
   z-index: 3;
+  cursor: pointer;
 }
 .drop-down .drop{
-  display: none;
   flex-direction: column;
   top: 100%;
   left: 0;
   width: 100%;
-  background:rgba(0, 0, 0, 0);
+  background:rgba(51, 49, 49, 0.9);
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
   margin-top: 5px;
   z-index: 3;
