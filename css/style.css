@@ -188,9 +188,11 @@
     display:flex;
     width: 100%;
     height:85%;
-    padding: 10px 15px;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background: linear-gradient(0deg, rgba(34,0,127,1)0%, rgba(9,9,121,0.41360294117647056) 70%,  rgba(41,87,167,1)100%);
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .portfolios .list{
