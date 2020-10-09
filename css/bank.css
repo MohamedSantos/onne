@@ -143,14 +143,10 @@
 }
 
 @media (max-width: 800px){
-    
     .drop-transaction{
         flex-direction: column;
         gap: 15px;
     }
-
-   
-
     .div-chart{
         width: 220px;
     }
