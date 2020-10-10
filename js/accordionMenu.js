@@ -1,17 +1,12 @@
 export default function accordionMenu() {
-  let accordion = document.querySelector('.accordion')
-  let menu = document.querySelector('.menu-list')
+  const accordion = document.querySelector('.accordion');
+  const menu = document.querySelector('.wrapper');
 
   if (menu && accordion) {
     accordion.addEventListener('click', () => {
-      if (menu.classList.contains('show')) {
-        menu.classList.remove('show')
-        accordion.classList.remove('active')
-      } else {
-        menu.classList.add('show');
-        accordion.classList.add('active');
-      }
-    })
+      const hasClass = menu.classList.contains('show');
+      menu.classList[hasClass ? 'remove' : 'add']('show');
+      accordion.classList[hasClass ? 'remove' : 'add']('active');
+    });
   }
-
 }
