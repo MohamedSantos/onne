@@ -372,6 +372,8 @@ nav ul li a span {
     flex-direction: column;
     order: -1;
     text-align: center;
+    flex-grow: 0;
+    flex-basis: auto;
   }
   .accordion {
     display: flex;
