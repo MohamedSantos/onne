@@ -21,7 +21,7 @@
             <div>
               <div class="center-header drop-down">
                 <a class="font bef">EN</a>
-                <ul class="drop" style="display: none">
+                <ul class="drop">
                   <li class="drop-item">
                     <a class="font" href="#">RU</a>
                   </li>
@@ -35,7 +35,7 @@
               </div>
               <div class="center-header drop-down">
                 <a class="font bef">Support</a>
-                <ul class="drop" style="display: none">
+                <ul class="drop">
                   <li class="drop-item">
                     <a class="font" href="#">FAQ</a>
                   </li>
@@ -231,11 +231,11 @@
             </ul>
           </div>
         </div>
-        <div class="box vela-interface">
-          <div class="container-candle">
-            <div>
-              <canvas id="chart"></canvas>
-            </div>
+        <div class="box">
+          <div class="container-chart">
+              <div class="col-12" style="margin: 20px auto;">
+                <canvas id="line-chart" style="height:100%; width:100%"></canvas>
+              </div>
           </div>
         </div>
       </section>
@@ -325,6 +325,53 @@
     span.innerHTML = numCor; span.style.color = '#c71caa'; span.classList.add('value');
     color.innerHTML = numBranco; color.appendChild(span);
   </script>
+    <script>
+      new Chart(document.getElementById("line-chart"), {
+        type: 'line',
+        data: {
+          labels: [1500, 1600, 1700, 1750, 1800, 1850, 1900, 1950, 1999, 2050],
+          datasets: [{
+            data: [86, 114, 106, 106, 107, 420, 133, 221, 783, 2478],
+            label: "Africa",
+            fontColor: '#3e95cd',
+            borderColor: "#3e95cd",
+            fill: false,
+          }, {
+            data: [282, 350, 411, 502, 635, 809, 947, 1402, 3700, 5267],
+            label: "Asia",
+            fontColor: '#3e95cd',
+            borderColor: "#8e5ea2",
+            fill: false
+          }, {
+            data: [168, 170, 178, 190, 203, 276, 408, 547, 675, 734],
+            label: "Europe",
+            fontColor: '#3e95cd',
+            borderColor: "#3cba9f",
+            fill: false
+          }, {
+            data: [40, 20, 10, 16, 24, 38, 74, 167, 508, 784],
+            label: "Latin America",
+            fontColor: '#3e95cd',
+            borderColor: "#e8c3b9",
+            fill: false
+          }, {
+            data: [2000, 247, 2314, 299, 799, 2633, 824, 1723, 312, 433],
+            label: "North America",
+            fontColor: '#3e95cd',
+            borderColor: "#c45850",
+            fill: false
+          }
+          ]
+        },
+        options: {
+          legend: {
+            display: false
+          },
+          responsive: false
+        }
+      });
+  
+    </script>
   <script>
     var ctx = document.getElementById('myChart').getContext('2d');
     var chart = new Chart(ctx, {

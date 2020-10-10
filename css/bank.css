@@ -74,8 +74,11 @@
     width: 130px
 }
 
-.container-candle{
-    width: 740px
+.container-chart{
+    display: flex;
+    align-items: center;
+    width: 740px;
+    height: 100%;
 }
 
 .container-history{
@@ -140,20 +143,29 @@
     .table-trans{
         overflow-x: auto;
     }
+    .container-chart{
+        width: 100%;
+        height: 250px;
+        padding: 10px;
+    }
+
+    .container-chart > div > canvas{
+        height: 200px !important;
+    } 
 }
 
 @media (max-width: 800px){
-    
     .drop-transaction{
         flex-direction: column;
         gap: 15px;
     }
-
-   
-
     .div-chart{
         width: 220px;
     }
+
+    .container-chart > div > canvas{
+        height: 200px !important;
+    } 
 }
 
 @media (max-width: 460px){
@@ -183,5 +195,13 @@
     .bonus-portfolio{
         flex-direction: column;
         height: 380px;
+    }
+    
+    .container-chart{
+        height: 210px;
+    }
+
+    .container-chart > div > canvas{
+        height: 180px !important;
     }
 }

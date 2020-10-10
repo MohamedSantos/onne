@@ -8,9 +8,6 @@
   color: #08a9b0;
 }
 
-.last {
-  margin-right: 30px;
-}
 
 .page {
   display: block;
@@ -460,56 +457,6 @@
   font-size: 27px;
 }
 
-/* tree */
-
-.tree {
-  text-align: center;
-  padding: 100px;
-}
-
-.background {
-  z-index: -1;
-}
-
-.nivel1 {
-  margin-top: -460px;
-  z-index: 1;
-  text-align: center;
-  margin-bottom: 10px;
-}
-.nivel1 img {
-  width: 150px;
-}
-
-.nivel2 {
-  display: flex;
-  gap: 319px;
-  margin-left: 150px;
-  margin-bottom: 20px;
-}
-.nivel2 img {
-  width: 90px;
-}
-
-.nivel3 {
-  display: flex;
-  gap: 133px;
-  margin-left: 67px;
-  margin-bottom: 38px;
-}
-.nivel3 img {
-  width: 70px;
-}
-
-.nivel4 {
-  display: flex;
-  gap: 27px;
-  margin-left: 8px;
-}
-
-.nivel4 img {
-  width: 75px;
-}
 
 @media (min-width: 801px) and (max-width: 1220px) {
   .container {
