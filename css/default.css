@@ -6,6 +6,16 @@
   font-family: "DS-DIGITAL BOLD";
   src: url("../font/DS-DIGIB.TTF")
 }
+@font-face {
+  font-family: "MontserratBold";
+  src: url("../font/Montserrat-Bold.ttf");
+}
+@font-face {
+  font-family: "MontserratLight";
+  src: url("../font/Montserrat-Light.ttf");
+}
+
+
 
 * {
   margin: 0;
