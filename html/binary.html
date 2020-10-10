@@ -7,9 +7,25 @@
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/binary.css">
   <title>Onne - Binary Tree</title>
+  <script src="../js/spinner_picker.js"></script>
+  <script>
+    function init() {
+        var selectBinary = ["BTC","BTC","BTC","BTC","BTC","BTC","BTC","BTC","BTC","BTC","BTC","BTC",];
+        new SpinnerPicker(
+            document.getElementById("binary-select"), 
+            function(index) {
+                // Check if the index is in range of the array - Return null if its not the case
+                if(index < 0 || index >= selectBinary.length) {
+                    return null;
+                }
+                return selectBinary[index];
+            }, { index: 0, selection_color: "#2184d4", font: "Montserrat"}
+        );
+    }
+</script>
 </head>
 
-<body>
+<body onload="init()">
   <div class="container">
     <header class="header">
       <img class="logo" src="../svg/Logo ONNE.svg" alt="" class="icon-nav">
@@ -158,56 +174,7 @@
               </div>
               <br>
               <div class="list-binary">
-                <ul class="list" style="width:100%">
-                  <li class="item">
-                    <p class="font">BTC</p>
-                  </li>
-                  <li class="item">
-                    <p class="font">BCH</p>
-                  </li>
-                  <li class="item">
-                    <p class="font">BTC</p>
-                  </li>
-                  <li class="item">
-                    <p class="font">BTC</p>
-                  </li>
-                  <li class="item">
-                    <p class="font">BTC</p>
-                  </li>
-                  <li class="item">
-                    <p class="font">BTC</p>
-                  </li>
-                  <li class="item">
-                    <p class="font">BTC</p>
-                  </li>
-                  <li class="item">
-                    <p class="font">BTC</p>
-                  </li>
-                  <li class="item">
-                    <p class="font">BTC</p>
-                  </li>
-                  <li class="item">
-                    <p class="font">BTC</p>
-                  </li>
-                  <li class="item">
-                    <p class="font">BTC</p>
-                  </li>
-                  <li class="item">
-                    <p class="font">BTC</p>
-                  </li>
-                  <li class="item">
-                    <p class="font">BTC</p>
-                  </li>
-                  <li class="item">
-                    <p class="font">BTC</p>
-                  </li>
-                  <li class="item">
-                    <p class="font">BTC</p>
-                  </li>
-                  <li class="item">
-                    <p class="font">BTC</p>
-                  </li>
-                </ul>
+                <canvas id="binary-select" style="height: 150px;"></canvas>
               </div>
             </div>
           </div>
