@@ -1,3 +1,5 @@
-import accordionMenu from './accordionMenu.js'
+import accordionMenu from './accordionMenu.js';
+import menuDropdown from './menuDropdown.js';
 
 accordionMenu();
+menuDropdown();
