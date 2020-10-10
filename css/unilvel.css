@@ -51,6 +51,12 @@
     padding: 15px;
 }
 
+.outside-li > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .number{
     color: black;
 }
@@ -61,7 +67,18 @@
 
 .div-data{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.div-data > div{
+    display: flex;
+    justify-content: space-between;
+    width: 68%;
+}
+
+.div-data > div > div:nth-child(2){
+    margin-left: 70px;
 }
 
 @media (max-width:1220px){
