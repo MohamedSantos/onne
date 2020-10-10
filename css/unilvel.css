@@ -25,7 +25,6 @@
 .div-accordion{
     display: flex;
     flex-direction: column;
-    
 }
 
 .div-number{
@@ -50,6 +49,13 @@
     margin-top: 10px;
     flex-direction: column;
     padding: 15px;
+    overflow: hidden; 
+    max-height: 80px;
+    transition: .8s;
+}
+
+.outside-li.active{
+    max-height: 1500px;
 }
 
 .outside-li > div{
@@ -86,6 +92,31 @@
     margin-left: 70px;
 }
 
+.div-data > div > div:last-child{
+    cursor: pointer;
+    position: relative;
+    margin-right: 20px;
+}
+
+.div-data > div > div:last-child::after{
+    content: "⇩";
+    position: absolute;
+    right: -15px;
+    color: chartreuse;
+}
+
+.div-data > div > div.active:last-child::after{
+    content: "⇧";
+}
+
+.div-data > div > div span:first-child {
+   display: none;
+}
+
+.div-data > div > div:last-child span{
+    display: inline;
+ }
+
 .list-dentro{
     margin-top: 20px;
     width: 95%;
@@ -100,7 +131,6 @@
     height: 1px;
     width: 100%;
     background: rgb(190,190,190);
-    display: flex;
     justify-self: center;
     position: absolute;
     top: 0;
@@ -140,22 +170,35 @@
 
 .body-table > ul li{
     font-family: 'MontserratLight';
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.body-table > ul li span:first-child{
+    color: #9491d3;
+    display: none;
 }
 
 .body-table > ul li:nth-child(1){
-    width: 307px;
+    width: 304px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .body-table > ul li:nth-child(2){
     width: 318px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .body-table > ul li:nth-child(3){
     width: 320px;
-}
-
-.body-table > ul li:nth-child(3){
-    width: 320px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .body-table > ul li:nth-child(4){
@@ -163,20 +206,116 @@
     text-align: center;
 }
 
-.body-table > ul li:nth-child(4) span{
-    padding: 3px 8px;
+.body-table > ul li:nth-child(4) span:last-child{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: purple;
     font-family: 'MontserratBold';
+    margin: 0 auto;
 }
 
+.footer-table{
+    margin-top: 20px;
+}
 
+.footer-table div ul{
+    display: flex;
+}
 
-@media (max-width:1220px){
-    .coluns-section{
-        overflow-x: auto;
+.footer-table div ul{
+    display: flex;
+}
+
+.footer-table div ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 25px;
+    margin: 0 5px;
+    background: rgb(63, 205, 82);
+    cursor: pointer;
+}
+
+@media (max-width: 800px){
+    .div-legend{
+        display: none;
+    }
+    .outside-li{
+        overflow: hidden;
+        max-height: 140px;
+    }
+    .outside-li > div:nth-child(1){
+        flex-wrap: wrap;
+    }
+    .div-data > div > div span:first-child {
+        display: block;
+     }
+    .div-number{
+        margin: 0 auto;
+    }
+    .div-data{
+        margin-top: 15px;
+    }
+    .div-data > div{
+        flex-wrap: wrap;
+        width: 100%;
+        align-items: center;
+    }
+    .div-data > div > div{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .div-data > div > div:last-child {
+        margin-right: 18px;
+    }
+    .div-data > div > div span:last-child{
+        margin: 3px 0;
+        text-align: center;
+    }
+    .div-data > div > div:nth-child(2) {
+        margin-left:0;
+    }
+    *::-webkit-scrollbar {
+        background-color: transparent;
+        height: 3px;
+        width: 5px;
+    }
+    *::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        border-radius: 3px;
+    }
+    .list-dentro{
+        overflow: auto;
+    }
+    .head-table{
+        display: none;
+    }
+    .body-table > ul{
+        background: #2e2d4c;
+        padding: 20px;
+        flex-wrap: wrap;
+    }
+    .body-table > ul li{
+        margin: 6px 0;
+    }
+    .body-table > ul li span{
+        white-space: pre-wrap;
+        font-size: 14px;
+    }
+    .body-table > ul li:last-child{
+        text-align: start;
+    }
+    .body-table > ul li span:first-child{
+        color: #9491d3;
+        display: block;
     }
 
-    .div-coluns{
-        width: 1000px;
+    .body-table > ul li:nth-child(4) span:last-child{
+        margin: 4px;
     }
 }
