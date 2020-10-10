@@ -59,6 +59,11 @@
     border-radius: 5px;
 }
 
+.div-data{
+    display: flex;
+    justify-content: center;
+}
+
 @media (max-width:1220px){
     .coluns-section{
         overflow-x: auto;
