@@ -325,6 +325,7 @@
   justify-content: center;
   gap: 30px;
   margin-top: 10px;
+  padding: 10px;
 }
 
 .lists .list-left-level .item,
@@ -391,7 +392,6 @@
 .big-number {
   font-size: 27px;
 }
-
 
 @media (min-width: 801px) and (max-width: 1220px) {
   .bonus-portfolio {

@@ -2,9 +2,9 @@
   font-family: "Montserrat";
   src: url("../font/Montserrat-Medium.ttf");
 }
-@font-face{
+@font-face {
   font-family: "DS-DIGITAL BOLD";
-  src: url("../font/DS-DIGIB.TTF")
+  src: url("../font/DS-DIGIB.TTF");
 }
 @font-face {
   font-family: "MontserratBold";
@@ -15,8 +15,6 @@
   src: url("../font/Montserrat-Light.ttf");
 }
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -26,17 +24,21 @@
   font-family: "Montserrat";
 }
 
+*::-webkit-scrollbar-track {
+  border-radius: 10px;
+  height: 50px;
+}
 *::-webkit-scrollbar {
-  background-color: transparent;
-  height: 3px;
-  width: 5px;
+  background-color: #060422;
+  width: 20px;
 }
 *::-webkit-scrollbar-thumb {
-  background-color: #6e6e6e;
-  border-radius: 3px;
+  border-radius: 10px;
+  background: linear-gradient(orange, #f441a5);
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -53,10 +55,9 @@ ul {
   list-style: none;
 }
 
-.max-width{
+.max-width {
   width: 100%;
 }
-
 
 /* Form styles */
 .button-rgb {
@@ -89,7 +90,7 @@ ul {
   opacity: 1;
   animation: animate 8s linear infinite;
 }
-.main-container{
+.main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,7 +103,8 @@ ul {
   justify-content: space-between;
   gap: 20px;
 }
-.input-form, select {
+.input-form,
+select {
   background: #282363;
   color: #ddd;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
@@ -143,7 +145,7 @@ ul {
   position: relative;
   display: flex;
   flex-direction: column;
-  color: #08A9B0;
+  color: #08a9b0;
   cursor: pointer;
   z-index: 3;
 }
@@ -153,7 +155,7 @@ ul {
 .drop-down .drop {
   position: absolute;
   display: none;
-  background:rgba(51, 49, 49, 0.9);
+  background: rgba(51, 49, 49, 0.9);
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
   white-space: nowrap;
   z-index: 3;
@@ -164,17 +166,17 @@ ul {
 }
 .drop-down.active .drop {
   display: block;
-  animation: show-drop .3s;
+  animation: show-drop 0.3s;
 }
 .welcome-message {
-  color: #08A9B0;
+  color: #08a9b0;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   flex: 1 0 280px;
 }
 .welcome-message span {
-  color: #08A9B0;
+  color: #08a9b0;
 }
 .settings {
   display: flex;
@@ -226,17 +228,24 @@ ul {
 }
 
 nav {
-  background: linear-gradient(0deg, rgba(34,0,127,1)0%, rgba(9,9,121,0.41360294117647056) 70%,  rgba(41,87,167,1)100%);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 0, 127, 1) 0%,
+    rgba(9, 9, 121, 0.41360294117647056) 70%,
+    rgba(41, 87, 167, 1) 100%
+  );
   padding: 10px 5px;
   width: 100%;
 }
-nav ul, nav ul li, nav ul li a {
+nav ul,
+nav ul li,
+nav ul li a {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 nav ul {
-    overflow-y: auto;
+  overflow-y: auto;
 }
 
 nav ul li {
@@ -247,21 +256,21 @@ nav ul li a {
   margin: 0 auto;
 }
 nav ul li a span {
-  color: #08A9B0;
+  color: #08a9b0;
   margin-left: 10px;
 }
 
 /* Footer style */
-.company-presentation{
+.company-presentation {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
 }
-.company-presentation > div{
+.company-presentation > div {
   margin: 20px 0;
 }
-.company-presentation > div span{
+.company-presentation > div span {
   color: #ccc;
   font-size: 14px;
   margin: 0 10px;
@@ -269,24 +278,29 @@ nav ul li a span {
 .footer-login {
   margin: 30px 0;
 }
-.footer-login p{
+.footer-login p {
   color: #777;
   font-size: 15px;
 }
-.footer-login p span{
+.footer-login p span {
   color: #ccc;
   font-weight: bold;
 }
 
 /* Main styles */
-.container{
+.container {
   width: 1200px;
   margin: 0 auto;
 }
 
 /* Marquee style */
 .box {
-  background: linear-gradient(0deg, rgba(34,0,127,0.3)0%, rgba(9,9,121,0.5) 70%,  rgba(41,87,167,1)100%);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 0, 127, 0.3) 0%,
+    rgba(9, 9, 121, 0.5) 70%,
+    rgba(41, 87, 167, 1) 100%
+  );
 }
 .moving-text {
   display: flex;
@@ -295,7 +309,7 @@ nav ul li a span {
   margin: 5px 0;
 }
 .span-price {
-  color: #08A9B0;
+  color: #08a9b0;
   margin-left: 10px;
   width: 80px;
 }
@@ -303,16 +317,15 @@ nav ul li a span {
   color: lightgreen !important;
 }
 .price:nth-child(even) {
-  color: #EE2248 !important;
+  color: #ee2248 !important;
 }
 
-@keyframes animate
-{
+@keyframes animate {
   0% {
-      background-position: 0%;
+    background-position: 0%;
   }
   100% {
-      background-position: 400%;
+    background-position: 400%;
   }
 }
 
@@ -347,7 +360,7 @@ nav ul li a span {
     justify-content: center;
     flex-direction: column;
     background: rgba(27, 27, 27, 0.95);
-    transition: left .5s ease-in;
+    transition: left 0.5s ease-in;
     left: 100%;
     z-index: 2;
     margin-left: 0;
