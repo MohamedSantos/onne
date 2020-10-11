@@ -259,8 +259,8 @@ class SpinnerPicker {
             this.ctx.shadowBlur = shadowBlur;
         }
         for(var i=0; i<points.length; i++) {
-            var x=parseInt(points[i][0] - (lineWidth / 2)),
-                y=parseInt(points[i][1] - (lineWidth / 2));
+            var x=parseInt(points[i][0] - (lineWidth / 100)),
+                y=parseInt(points[i][1] - (lineWidth / 100));
             if(i == 0) {
                 this.ctx.moveTo(x, y);
             } else {
