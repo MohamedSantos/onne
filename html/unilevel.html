@@ -531,12 +531,10 @@
       more.forEach((item, index) => {
         item.addEventListener('click', () => {
           if (li[index].classList.contains('active')) {
-            li.forEach(i => {
-              i.classList.remove('active')
-            })
-            more.forEach(i => {
-              i.classList.remove('active')
-            })
+            li[index].classList.remove('active')
+
+            more[index].classList.remove('active')
+
           } else {
             li[index].classList.add('active')
             more[index].classList.add('active')
