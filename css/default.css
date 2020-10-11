@@ -165,6 +165,9 @@ select {
   display: block;
   animation: show-drop 0.3s;
 }
+.drop-down .drop li{
+  margin: 5px 0;
+}
 .welcome-message {
   color: #08a9b0;
   white-space: nowrap;
@@ -392,6 +395,13 @@ nav ul li a span {
     display: flex;
     top: 30px;
     right: 30px;
+  }
+  .drop-down .drop{
+    position: static;
+  }
+  .drop-down.active .drop {
+    width: max-content;
+    margin: 0 auto;
   }
 }
 
