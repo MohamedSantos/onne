@@ -1,0 +1,23 @@
+amarelo gold: #FFDA3E
+
+azul-claro diamante: #00D6F9
+
+azul-marinho safira: #0044CC
+
+cinza silver : #8C8C8C
+
+laranja triple diamond: #FF7F00
+
+marrom bronze: #8E5B00
+
+preto onix: #000
+
+rosa-claro star: #E67EFC
+
+verde-claro esmeralda: #0DFC00
+
+vermelho rubi: #FF0000
+
+verde escuro/ dm diamond  : #0EBA00
+
+transparente inativo
