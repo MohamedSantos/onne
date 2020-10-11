@@ -52,6 +52,10 @@
   color: #fff;
 }
 
+.list-binary .list .item,.buttonApplyBinary{
+  cursor: pointer;
+}
+
 .radios .font {
   margin-left: 7px;
   color: #fff;
@@ -195,6 +199,31 @@
   .tree-container{
     width: 475px;
   }
+  
+  .binary-volume {
+    display: flex;
+    gap: 8px;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+
+  
+  .binary-volume > div:nth-child(2){
+    order: 3;
+    width: 100%;
+  }
+
+  .binary-volume > div:nth-child(3){
+    order: 2;
+  }
+
+
+  .binary-volume > div:nth-child(1) p, .binary-volume > div:nth-child(3) p{
+    font-size: 22px !important;
+  }
+  .binary-volume > div:nth-child(1) > div p,.binary-volume > div:nth-child(3) > div p{
+    font-size: 34px !important;
+  }
 
   .nivel1 img {
     width: 100px;
@@ -237,11 +266,7 @@
     width: 100%;
   }
 
-  .binary-volume {
-    display: flex;
-    gap: 8px;
-    text-align: center;
-  }
+
 
   .tree-container {
     height: 400px;
@@ -301,4 +326,13 @@
   .nivel4 img {
     width: 22px;
   }
+
+  .binary-volume > div:nth-child(3) p,.binary-volume > div:nth-child(1) p{
+    font-size: 16px !important;
+  }
+  .binary-volume > div:nth-child(3) > div p,.binary-volume > div:nth-child(1) > div p{
+    font-size: 22px !important;
+  }
+
+
 }
