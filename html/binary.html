@@ -6,27 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/binary.css">
-  <title>Onne - Binary Tree</title>
-  <script src="../js/spinner_picker.js"></script>
-  <script>
-    function init() {
-        var selectBinary = ["Bitcoin","Bitcoin Cash","Bitcoin SV","Bitcoin Gold"];
-        new SpinnerPicker(
-            document.getElementById("binary-select"), 
-            function(index) {
-                // Check if the index is in range of the array - Return null if its not the case
-                if(index < 0 || index >= selectBinary.length) {
-                    return null;
-                }
-                console.log(selectBinary[index]);
-                return selectBinary[index];
-            }, { index: 0, selection_color: "transparent", font: "Montserrat"}
-        );
-    }
-</script>
+  <title>Onne</title>
 </head>
 
-<body onload="init()">
+<body>
   <div class="container">
     <header class="header">
       <img class="logo" src="../svg/Logo ONNE.svg" alt="" class="icon-nav">
@@ -64,7 +47,7 @@
             <span>Settings</span>
             <ul class="drop">
               <li class="drop-item">
-                <a class="font" href="#">General Settings</a>
+                <a class="font" href="#">general Settings</a>
               </li>
               <li class="drop-item">
                 <a class="font" href="#">Security</a>
@@ -106,14 +89,14 @@
             <img src="../svg/Replicar barra.svg" alt="">
           </li>
           <li>
-            <a class="font text-nav" href="bank.html">
+            <a class="font text-nav" href="#">
               <img class="icon-nav" src="../svg/icon/IconBank.svg" alt="">
               <span>Bank</span>
             </a>
             <img src="../svg/Replicar barra.svg" alt="">
           </li>
           <li>
-            <a class="font text-nav" href="unilevel.html">
+            <a class="font text-nav" href="#">
               <img class="icon-nav" src="../svg/icon/IconUnilevel.svg" alt=""><span>Unilevel</span>
             </a>
             <img src="../svg/Replicar barra.svg" alt="">
@@ -175,7 +158,6 @@
               </div>
               <br>
               <div class="list-binary">
-<<<<<<< HEAD
                 <ul class="list" style="width:100%">
                   <li class="item">
                     <p class="font">BTC</p>
@@ -223,22 +205,19 @@
                     <p class="font">BTC</p>
                   </li>
                   <li class="item">
-                    <p class="font">Bitcoin</p>
+                    <p class="font">BTC</p>
                   </li>
                 </ul>
-=======
-                <canvas id="binary-select" style="height: 150px;"></canvas>
->>>>>>> 9818d84c55043c680eb0c9925833b849dd707367
               </div>
             </div>
           </div>
           <div class="small-col box" style="width:100%;height: 200px; margin-top:5px">
             <div class="container-binary">
               <div class="titles">
-                <p class="font">CHOOSE A SIDE OF THE TREE</p>
+                <p class="font">POSITION</p>
               </div>
               <form action="" class="form-save" method="post">
-                <div class="radios box">
+                <div class="radios">
                   <div>
                     <input type="radio" value="left" name="direction" id="left"><label class="font"
                       for="left">Left</label>
@@ -260,7 +239,7 @@
               <p class="font">STATUS</p>
             </div>
             <div class="lists">
-              <ul class="list-left-level box">
+              <ul class="list-left-level">
                 <li class="item">
                   <span class="indicator" style="background-color: #fbff17"></span>
                   <p class="font">Star</p>
@@ -282,7 +261,7 @@
                   <p class="font">Rubi</p>
                 </li>
               </ul>
-              <ul class="list-right-level box">
+              <ul class="list-right-level">
                 <li class="item">
                   <span class="indicator" style="background-color: #26c52e"></span>
                   <p class="font">Esmeralda</p>
@@ -307,8 +286,8 @@
             </div>
             <div class="level-max">
               <div class="level-list-max">
-                <div class="item box" >
-                  <span class="indicator" style="background-color: #03eaee;"></span>
+                <div class="item">
+                  <span class="indicator" style="background-color: #03eaee"></span>
                   <p class="font">Triple Diamon</p>
                 </div>
               </div>
