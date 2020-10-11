@@ -72,6 +72,25 @@
   gap: 40px;
 }
 
+/* animation tree */
+.all-animation {
+  display: flex;
+  align-items: center;
+  margin-left: 150px;
+  margin-top: 15px;
+  cursor: pointer;
+  width: 180px;
+}
+
+.animation {
+  width: 75px;
+  height: 65px;
+}
+
+.animation-p {
+  margin-top: 15px;
+}
+
 /* tree */
 
 .tree-container {
@@ -80,8 +99,7 @@
 
 .tree {
   text-align: center;
-  padding: 50px;
-  margin-top: 55px;
+  padding: 10px 50px 50px;
 }
 
 .background {
@@ -96,6 +114,7 @@
 }
 .nivel1 img {
   width: 150px;
+  cursor: pointer;
 }
 
 .nivel2 {
@@ -116,6 +135,7 @@
 }
 .nivel2 img {
   width: 90px;
+  cursor: pointer;
 }
 
 .nivel3 {
@@ -126,6 +146,7 @@
 }
 .nivel3 img {
   width: 70px;
+  cursor: pointer;
 }
 
 .nivel4 {
@@ -136,6 +157,7 @@
 
 .nivel4 img {
   width: 75px;
+  cursor: pointer;
 }
 
 .item {
