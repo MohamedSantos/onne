@@ -19,7 +19,6 @@
   gap: 70px;
   height: 70px;
   padding: 17px;
-  background: url(../img/70%.png);
 }
 
 .level-max{
@@ -34,6 +33,11 @@
   text-align: center;
   padding: 1px 25px 25px;
   margin-bottom: 10px;
+  background-image: url("../img/Cilindrodef.png");
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-position: center;
+  background-position-y: 17px;
 }
 
 .list-binary .list .item .font{
