@@ -20,8 +20,25 @@
 }
 
 .blue{
-    background-color: #2184d4;
-    box-shadow: 5px 5px 10px 0px #2184d4;
+    background-color: #51c8ec;
+    box-shadow: 5px 5px 10px 0px #51c8ec;
+}
+
+.investments {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.portfolios{
+    height: 200px;
+    margin-top: 10px;
+}
+
+.chartContainer{
+    margin-top: 20px;
 }
 
 .green{
@@ -117,9 +134,14 @@
     width: 240px;
 }
 
+
 @media (max-width: 1220px){
     .btns{
         justify-content: center;
+    }
+    
+    .section-bank > div:nth-child(2){
+        width: 100%;
     }
     .box-select{
         justify-content: center;
