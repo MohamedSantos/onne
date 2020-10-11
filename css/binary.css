@@ -35,6 +35,10 @@
   margin-bottom: 30px;
 }
 
+.binary-volume p {
+  text-align: center;
+}
+
 .binary-alpha {
   width: 325px;
 }
