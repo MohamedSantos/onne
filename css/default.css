@@ -24,16 +24,13 @@
   font-family: "Montserrat";
 }
 
-*::-webkit-scrollbar-track {
-  border-radius: 10px;
-  height: 50px;
-}
 *::-webkit-scrollbar {
   background-color: #060422;
-  width: 20px;
+  width: 10px;
+  height: 10px;
 }
 *::-webkit-scrollbar-thumb {
-  border-radius: 10px;
+  border-radius: 20px;
   background: linear-gradient(orange, #f441a5);
 }
 

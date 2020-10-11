@@ -176,6 +176,12 @@
     width: 100%;
   }
 
+  .binary-volume {
+    display: flex;
+    gap: 8px;
+    text-align: center;
+  }
+
   .tree-container {
     height: 400px;
   }
@@ -205,6 +211,10 @@
 
   .tree {
     margin-top: 0;
+  }
+
+  .binary-volume p {
+    font-size: 16px !important;
   }
 
   .nivel1 img {
