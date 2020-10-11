@@ -266,8 +266,9 @@
     width: 100%;
   }
 
-
-
+  .binary-alpha > div:first-child{
+    order: 3;
+  }
   .tree-container {
     height: 400px;
   }
