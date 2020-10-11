@@ -198,12 +198,16 @@
         gap: 10px;
     }
 
+    .investments {
+        width: 100%;
+    }
+
     .value{
         font-size: 35px;
     }
 
     .btns{
-        gap: 50px;
+        gap: 25px;
     }
 
     .btn{
@@ -216,7 +220,7 @@
 
     .bonus-portfolio{
         flex-direction: column;
-        height: 380px;
+        height: max-content;
     }
     
     .container-chart{
