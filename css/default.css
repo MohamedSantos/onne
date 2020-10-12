@@ -57,6 +57,12 @@ ul {
   width: 100%;
 }
 
+.no-wrap-text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 /* Form styles */
 .button-rgb {
   position: relative;
