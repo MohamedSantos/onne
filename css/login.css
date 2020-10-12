@@ -9,7 +9,7 @@
 .logo-size {
   max-width: 300px;
 }
-.welcome-message {
+.welcome {
   color: #ddd;
   text-align: center;
 }
@@ -41,14 +41,14 @@
 .input-password-container .icon-password {
   position: absolute;
   display: block;
-  background: url("../img/show-password.svg") no-repeat center;
+  background: url("../svg/show-password.svg") no-repeat center;
   cursor: pointer;
   right: 10px;
   width: 20px;
   height: 20px;
 }
 .input-password-container .icon-password.active {
-  background-image: url("../img/hide-password.svg") !important;
+  background-image: url("../svg/hide-password.svg") !important;
 }
 .password-options {
   display: flex;
