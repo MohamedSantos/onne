@@ -1,0 +1,90 @@
+p{
+    color: white;
+}
+
+p span{
+    color: #08a9b0;
+}
+
+select{
+    background: #282363;
+    color: #ddd;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+    border-radius: 3px;
+    padding: 10px;
+    margin-left: 20px;
+    width: 70%;
+    height: 40px;
+}
+
+.div-infos{
+    width: 400px;
+}
+
+.title{
+    height: 30px;
+    border-bottom: 1px solid gray;
+}
+
+.profile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+
+.profile-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    height: 250px;
+}
+
+.profile span,a{
+    color: #08a9b0;
+}
+
+.country-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 50px;
+    height: 118px;
+    margin-bottom: 126px;
+}
+
+.social-media{
+    margin-top: 10px;
+    padding: 40px;
+}
+
+.social-media-content{
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+}
+
+.social-list{
+    border-top: 1px solid gray;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.media-li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.button-rgb{
+    width: 100px;
+}
+
+.li-media{
+    border-bottom: 1px solid gray;
+    padding: 10px;
+    margin-top: 15px
+}
