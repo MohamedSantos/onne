@@ -1,12 +1,10 @@
 /* title */
-* {
-  color: #fff;
-  font-size: 18px;
-}
 
 .title {
   display: flex;
   justify-content: space-between;
+  color: #fff;
+  padding: 10px 10px 0px 10px;
 }
 
 /* saq */
@@ -27,9 +25,15 @@
 
 .saq p {
   font-size: 14px;
+  color: #fff;
 }
 
 /* form */
+
+.form {
+  padding: 40px;
+  color: #fff;
+}
 
 .line {
   display: inline-flex;
@@ -44,8 +48,9 @@
 .subject input {
   background-color: rgb(33, 23, 90);
   height: 40px;
-  width: 850px;
+  width: 770px;
   margin-top: 5px;
+  color: #fff;
 }
 
 .textarea {
@@ -56,6 +61,7 @@ textarea {
   width: 100%;
   background-color: rgb(33, 23, 90);
   margin-top: 5px;
+  color: #fff;
 }
 
 button {
