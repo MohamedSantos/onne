@@ -224,6 +224,11 @@ select {
 }
 .accordion img {
   width: 100%;
+  transition: transform 1s;
+}
+
+.accordion.active img{
+  transform: rotate(360deg);
 }
 
 .accordion2 span {
@@ -250,27 +255,23 @@ select {
 }
 .accordion2.active::before {
   align-self: center;
+  top: 8px;
   transform: rotate(135deg);
 }
 .accordion2.active::after {
+  top: 8px;
   align-self: center;
   transform: rotate(45deg);
-}
-.accordion.active {
-  position: fixed;
-  right: 40px;
-  z-index: 5;
 }
 
 .header .accordion2 {
   display: none;
 }
 
-.accordion2.active {
-  position: fixed;
-  right: 40px;
-  z-index: 5;
+.wrapper .accordion{
+  order: -2;
 }
+
 nav {
   background: linear-gradient(
     0deg,
@@ -407,6 +408,12 @@ nav ul li a span {
   .container {
     width: 800px;
   }
+  .header-menu .nav .accordion2{
+    display: flex;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
   .menu-list {
     gap: 30px;
   }
@@ -430,7 +437,8 @@ nav ul li a span {
     );
     align-items: center;
     overflow: auto;
-    transition: 0.5s ease-in;
+    transition: .5s ease-in;
+    flex-direction: column;
   }
   .header-menu.show nav {
     left: 0;
@@ -449,6 +457,10 @@ nav ul li a span {
 @media (max-width: 800px) {
   .container {
     width: 450px;
+  }
+  .header img{
+    height: 32px;
+    order: 2;
   }
   .wrapper {
     position: fixed;
@@ -487,8 +499,11 @@ nav ul li a span {
   }
   .header .accordion2 {
     display: flex;
+    order: 3;
+    position: relative;
   }
-  .header-menu {
+
+  .header-menu{
     padding: 0;
   }
   .header-menu .accordion2 {
@@ -514,7 +529,6 @@ nav ul li a span {
   }
   .accordion {
     position: static;
-    margin-right: 42px;
   }
 }
 
