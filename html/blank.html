@@ -301,6 +301,7 @@
             </div>
           </div>
         </div>
+        <!-- my referral link -->
         <div class="referral-box box">
           <div class="container6">
             <div class="referral-content">
@@ -308,10 +309,10 @@
                 <p class="font">My referral link:</p>
               </div>
               <div>
-                <a class="font link" href="https://www.google.com">www.google.com </a>
+                <a id="link" class="font link" href="https://www.google.com" target="_blank">www.google.com </a>
               </div>
               <div class="div-button" style="width: 100%">
-                <button class="button-rgb">
+                <button onClick="copiarTexto()" class="button-rgb" style="cursor: pointer;">
                   Copy link
                 </button>
               </div>
@@ -444,6 +445,14 @@
 
   </script>
   <script type="module" src="../js/script.js"></script>
+  <script>
+    function copiarTexto() {
+      var textoCopiado = document.getElementById("link");
+      textoCopiado.select();
+      document.execCommand("Copy");
+      alert("Texto Copiado: www.google.com" + textoCopiado.value);
+    }
+  </script>
 </body>
 
 </html>
