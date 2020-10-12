@@ -367,6 +367,11 @@ nav ul li a span {
   padding: 10px 15px;
   max-width: 200px;
 }
+.tooltip a {
+  display: block;
+  pointer-events: all;
+  color:  #08a9b0;
+}
 
 /* Responsive styles */
 @media (max-width: 1220px) {
