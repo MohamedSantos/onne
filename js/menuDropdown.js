@@ -4,8 +4,9 @@ export default () => {
     const list = target.querySelector('ul');
 
     if (list) {
+      const isActived = target.classList.contains('active');
       dropItems.forEach(item => item.classList.remove('active'));
-      target.classList.toggle('active');
+      target.classList[isActived ? 'remove' : 'add']('active');
       window.addEventListener('click', closeMenu);
     }
   }

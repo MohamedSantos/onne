@@ -46,6 +46,7 @@ body {
 
 a {
   text-decoration: none;
+  word-break: break-all;
 }
 
 ul {
@@ -167,7 +168,19 @@ select {
   padding: 10px;
   margin-top: 5px;
   top: 100%;
-  left: 0;
+  left: -50%;
+}
+.drop-down span:after{
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  width: 0; 
+  height: 0; 
+
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid rgb(97, 78, 78);
 }
 .drop-down.active .drop {
   display: block;
@@ -320,6 +333,7 @@ nav ul li a span {
     rgba(41, 87, 167, 1) 100%
   );
 }
+
 .moving-text {
   display: flex;
   align-items: center;
@@ -358,8 +372,27 @@ nav ul li a span {
   }
 }
 
-/* Responsive styles */
+/* Tooltip styles */
+.tooltip {
+  position: absolute;
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgb(9, 9, 121);
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 4;
+  padding: 10px 15px;
+  max-width: 200px;
+}
+.tooltip a {
+  display: block;
+  pointer-events: all;
+  color:  #08a9b0;
+}
 
+/* Responsive styles */
 @media (max-width: 1220px) {
   .container {
     width: 800px;
@@ -428,6 +461,7 @@ nav ul li a span {
   .wrapper .menu-list .drop-down span {
     padding: 10px 0;
   }
+
   .wrapper .welcome-message {
     display: flex;
     flex-direction: column;

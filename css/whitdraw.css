@@ -1,0 +1,135 @@
+@import "./default.css";
+
+.box{
+    display: flex;
+    width: 100%;
+}
+
+.font-legend{
+    color: #dfec22;
+    padding: 15px 5px;
+}
+
+.container-all{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px 100px;
+}
+
+.container-center{
+    display: flex;
+    justify-content:space-between;
+}
+
+.container-first{
+    width: 370px;
+    padding: 18px 0;
+}
+
+.container-second{
+    width: 460px;
+    padding:18px 0;
+}
+
+.container-title{
+    width: 100%;
+    border-bottom: 5px solid rgb(4, 47, 123);
+}
+
+.container-title .font{
+    margin-bottom: 30px;
+}
+
+.step-first, .step-second, .step-third, .step-fourth{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.step-second, .step-third, .step-fourth{
+    margin-top: 80px;
+}
+
+.step-number{
+    background-color: #2cbd0e;
+    font-size: 23px;
+    padding: 8px 15px;
+}
+
+.legend-step{
+    font-size: 20px;
+    color: #08a9b0;
+}
+
+.second-content{
+    display: flex;
+    justify-content: space-around;
+}
+
+.content-amount, .content-available{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-value{
+    font-size:25px;
+    padding: 10px 15px;
+    width: 170px;
+    background: linear-gradient( 0deg, rgba(34, 0, 127, 0.3) 0%, rgba(9, 9, 121, 0.5) 70%, rgba(41, 87, 167, 1) 100% );
+    text-align: center;
+    color: #16ea12;
+}
+
+.note{
+    padding: 15px 10px !important;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.note .font-legend{
+    padding: 5px;
+    font-size: 10px;
+}
+
+.paragraph-important{
+    margin-top: 15px;
+    margin-left: 15px
+}
+
+.line-subtotal{
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-subtotal, .container-second .box{
+    padding: 5px 20px;
+}
+
+.box-subtotal{
+    display: flex;
+    flex-direction: column;
+}
+
+.line-subtotal{
+    border-bottom: 1px solid rgb(84, 13, 216);
+}
+
+.line-subtotal .font-legend{
+    margin-bottom: -10px;
+    margin-top: 10px;
+    font-size:11px;
+}
+
+.btn-confirm{
+    padding: 3px 10px;
+    cursor: pointer;
+    background-color: #dfec22;
+}
+
+.legend-step:before{
+    content: "•";
+}
