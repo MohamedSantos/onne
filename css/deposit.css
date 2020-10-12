@@ -1,0 +1,116 @@
+p{
+    color: #08a9b0;
+    font-family: "Montserrat";
+}
+
+input{
+    height: 22px;
+    width: 170px;
+    color: white;
+    background-color: rgba(23, 4, 189, 1);
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
+input[type=number]::-webkit-inner-spin-button {
+-webkit-appearance: none;
+}
+
+span{
+    color: white;
+}
+
+.div-select{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-border {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 30px;
+width: 180px;
+background-image: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+);
+}
+
+.payment{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.payment-container{
+    width: 90%;
+    height: 150px;
+}
+
+.payment-content{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 35px;
+}
+
+
+.result span{
+    margin: 5px;
+    font-size: 20px;
+    color: white;
+}
+
+.important{
+    display: flex;
+    justify-content: center;
+}
+
+.important-container{
+    width: 90%;
+    height: 280px;
+}
+
+.resume{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 230px;
+}
+
+.wallet{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.transaction-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 175px;
+}
