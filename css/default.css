@@ -340,8 +340,22 @@ nav ul li a span {
   }
 }
 
-/* Responsive styles */
+/* Tooltip styles */
+.tooltip {
+  position: absolute;
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgb(9, 9, 121);
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 4;
+  padding: 10px 15px;
+  max-width: 200px;
+}
 
+/* Responsive styles */
 @media (max-width: 1220px) {
   .container {
     width: 800px;
