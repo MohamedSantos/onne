@@ -48,7 +48,7 @@
             <span>Settings</span>
             <ul class="drop">
               <li class="drop-item">
-                <a class="font" href="#">general Settings</a>
+                <a class="font" href="#">General Settings</a>
               </li>
               <li class="drop-item">
                 <a class="font" href="#">Security</a>
@@ -374,7 +374,14 @@
       </div>
     </div>
   </div>
-
+  <script>
+    function text(){
+      document.getElementById("hoverText").innerHTML = "Texto";
+    }
+    function removeText(){
+      document.getElementById("hoverText").innerHTML = "";
+    }
+  </script>
   <script type="module" src="../js/script.js"></script>
   <script>
     const list = document.querySelectorAll('.list-binary .list .item')
