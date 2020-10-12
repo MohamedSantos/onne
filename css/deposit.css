@@ -50,7 +50,7 @@ background-image: linear-gradient(
 
 .payment-container{
     width: 90%;
-    height: 150px;
+    padding: 10px 0;
 }
 
 .payment-content{
@@ -58,6 +58,7 @@ background-image: linear-gradient(
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .result{
@@ -78,17 +79,20 @@ background-image: linear-gradient(
 .important{
     display: flex;
     justify-content: center;
+    margin-top: 10px;
+    padding: 10px;
 }
 
 .important-container{
     width: 90%;
-    height: 280px;
 }
 
 .resume{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 10px;
+    padding: 17px;
 }
 
 .resume-container{
@@ -96,13 +100,21 @@ background-image: linear-gradient(
     justify-content: space-between;
     align-items: center;
     width: 90%;
-    height: 230px;
+}
+
+.resume-container > div p:nth-child(odd){
+    margin-top: 15px;
 }
 
 .wallet{
     display: flex;
     align-items: center;
     flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.wallet > button{
+    margin: 10px 0;
 }
 
 .transaction-div{
@@ -110,4 +122,25 @@ background-image: linear-gradient(
     flex-direction: column;
     justify-content: space-between;
     height: 175px;
+}
+
+@media (max-width: 800px){
+    .resume-container{
+        flex-direction: column;
+    }
+    .resume-container > div{
+        margin: 15px 0;
+        width: 100%;
+    }
+
+    
+}
+
+@media (max-width: 460px){
+    .payment-content > div{
+        margin: 10px 0;
+    }
+    .div-select{
+        align-items: flex-start;
+    }
 }
