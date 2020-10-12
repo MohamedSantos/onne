@@ -161,6 +161,18 @@ select {
   top: 100%;
   left: 0;
 }
+.drop-down span:after{
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  width: 0; 
+  height: 0; 
+
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid rgb(97, 78, 78);
+}
 .drop-down.active .drop {
   display: block;
   animation: show-drop 0.3s;
@@ -377,6 +389,7 @@ nav ul li a span {
   .wrapper .menu-list .drop-down span {
     padding: 10px 0;
   }
+
   .wrapper .welcome-message {
     display: flex;
     flex-direction: column;
