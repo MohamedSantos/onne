@@ -7,6 +7,19 @@ export default () => {
     return container;
   }
 
+  const position = (target, pageY, pageX) => {
+    if (window.innerWidth > 600) {
+      return {
+        top: `${pageY}px`,
+        left: `${pageX + 20}px`
+      };
+    }
+    return {
+      top: `${target.parentNode.offsetTop}px`,
+      left: `${target.parentNode.offsetLeft + target.clientWidth}px`
+    }
+  }
+
   const handleMouseLeave = {
     handleEvent() {
       this.tooltip.remove();
@@ -16,25 +29,25 @@ export default () => {
   }
 
   const handleMouseMove = {
-    handleEvent({ pageX, pageY }) {
-      this.tooltip.style.top = `${pageY}px`;
-      this.tooltip.style.left = `${pageX + 20}px`;
+    handleEvent({ target, pageX, pageY }) {
+      const { top, left } = position(target, pageY, pageX);
+      this.tooltip.style.top = top;
+      this.tooltip.style.left = left;
     }
   }
 
   const handleMouseOver = ({ target, pageY, pageX }) => {
-    if (window.innerWidth > 600) {
-      const tooltip = createBox(target);
-      tooltip.style.top = `${pageY}px`;
-      tooltip.style.left = `${pageX + 20}px`;
+    const { top, left } = position(target, pageY, pageX);
+    const tooltip = createBox(target);
+    tooltip.style.top = top;
+    tooltip.style.left = left;
 
-      handleMouseLeave.target = target;
-      handleMouseLeave.tooltip = tooltip;
-      target.addEventListener('mouseleave', handleMouseLeave);
+    handleMouseLeave.target = target;
+    handleMouseLeave.tooltip = tooltip;
+    target.addEventListener('mouseleave', handleMouseLeave);
 
-      handleMouseMove.tooltip = tooltip;
-      target.addEventListener('mousemove', handleMouseMove);
-    }
+    handleMouseMove.tooltip = tooltip;
+    target.addEventListener('mousemove', handleMouseMove);
   }
 
   const tooltips = document.querySelectorAll('[data-text]');
