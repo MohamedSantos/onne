@@ -337,11 +337,12 @@
 
 @media (max-width: 460px) {
   .background {
-    height: 256px;
+    width: 290px;
+    margin-left: 5px;
   }
 
   .tree {
-    margin-top: 0;
+    margin-top: 0px;
   }
 
   .binary-volume p {
@@ -350,11 +351,11 @@
 
   .nivel1 img {
     width: 57px;
-    margin-top: 32px;
+    margin-top: 128px;
   }
 
   .nivel2 {
-    gap: 132px;
+    gap: 128px;
     margin-left: 56px;
     margin-bottom: 8px;
   }
@@ -363,14 +364,19 @@
   }
   .nivel3 img {
     width: 25px;
+    margin-bottom: -2px;
   }
   .nivel4 {
     display: flex;
-    justify-content: space-between;
-    margin-top: 9px;
+    gap: 12px;
   }
   .nivel4 img {
     width: 26px;
+  }
+
+  .nivel4 p:nth-child(8) img {
+    position: absolute;
+    left: 3px;
   }
 
   .nivel4 p:nth-child(5),
