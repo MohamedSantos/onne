@@ -1,3 +1,7 @@
+@import "./default.css";
+@import "./style.css";
+@import "./unilvel.css";
+
 /* title */
 
 .title {
@@ -74,4 +78,79 @@ button {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+}
+
+.faq{
+  display:flex;
+  flex-direction:row;
+  gap: 7px;
+}
+
+.filter{
+  padding: 30px;
+  width: 270px;
+}
+
+.questions{
+  padding:30px;
+  width:100%;
+}
+
+.title-section{
+  font-size:15px;
+  border-bottom: 1px solid gray;
+}
+
+.title-questions{
+  display: flex;
+  font-size:13px;
+  justify-content:space-between;
+}
+
+.content-questions{
+  display: flex;
+  flex-direction:column;
+  margin: 40px 0;
+}
+
+.questions .content-questions .question-row .inner-accordion{
+  display:flex;
+  padding: 0 30px 15px 40px;
+}
+
+.questions .content-questions .question-row .inner-accordion .font{
+  display: flex;
+  color: #aab5c2;
+  font-size: 12px;
+  line-height: 1.5;
+  padding-bottom: 10px;
+}
+
+.questions .content-questions .question-row{
+  display: flex;
+  background-color: #2828a5;
+  border: 1px solid gray;
+  margin-bottom: 5px;
+  flex-direction: column;
+}
+
+.btn-accordion{
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.3;
+  padding: 15px 30px 15px 40px;
+  border: 1px solid transparent;
+  transition: all 0.3s;
+}
+
+.btn-section{
+  display:flex;
+  flex-direction:column;
+}
+
+.btn-section .button-rgb{
+  font-size: 11px;
 }

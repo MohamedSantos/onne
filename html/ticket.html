@@ -6,8 +6,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ticket</title>
-  <link rel="stylesheet" href="../css/default.css">
-  <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/ticket.css">
 
 
@@ -159,69 +157,126 @@
       </marquee>
     </div>
 
-    <!-- title -->
-
-    <div class="box">
-
-      <div class="container title">
-        <p>Submit new ticket</p>
-        <p>You can find most of the answersin the FAQ</p>
-      </div>
-
-      <!-- saq -->
-
-      <div class="container saq">
-
-        <p>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        </p>
-      </div>
-    </div>
-    <!-- form -->
-
-    <div class="box" style="margin-top: 15px;">
-      <div class="container form">
-
-        <div class="line">
-          <div class="departament">
-            <p>Departament</p>
-            <select name="departament" id="departament">
-              <option value="">Booster Request</option>
-              <option value="">Booster Request</option>
-              <option value="">Booster Request</option>
-              <option value="">Booster Request</option>
-              <option value="">Booster Request</option>
-              <option value="">Booster Request</option>
-              <option value="">Booster Request</option>
-              <option value="">Booster Request</option>
-            </select>
-          </div>
-
-          <div class="subject">
-            <p>Subject</p>
-            <input type="text" title="subject">
+    <section>
+      <div class="faq">
+        <div class="box" style="height:100%">
+          <div class="filter">
+            <div class="title-section">
+              <p class="font" style="margin-bottom: 10px;">Choose a section</p>
+            </div>
+            <div class="btn-section">
+              <button class="button-rgb"><a href="#">VERIFICATION AND SECURITY</a></button>
+              <button class="button-rgb"><a href="#">VERIFICATION AND SECURITY</a></button>
+              <button class="button-rgb"><a href="#">VERIFICATION AND SECURITY</a></button>
+            </div>
           </div>
         </div>
+        <div class="box" style="width: calc(100% - 274px);">
+          <div class="questions">
+            <div class="title-questions">
+              <p class="font">FREQUENTLY ASKED QUESTIONS</p>
+              <p class="font">Didn't find your question answered? Write our support team.</p>
+            </div>
+            <div class="content-questions">
+              <div class="question-row">
+                <a href="" class="btn-accordion">How soon my account will be verified after submitting the documents?</a>
+                <div class="inner-accordion">
+                  <p class="font">
+                    The aprooval can take up to 24 hours.</p>
+                </div>
+              </div>
+              <div class="question-row">
+                <a href="" class="btn-accordion">Why my documents are not accepted?</a>
+                <div class="inner-accordion">
+                  <p class="font">
+                    There are several possible reasons. The photo of your documents is unreadable, 
+                    or do not match the data of the account owner, or you provided the wrong type of 
+                    document or not a document in principle.</p>
+                </div>
+              </div>
+              <div class="question-row">
+                <a href="" class="btn-accordion">How can I change personal data in my account?</a>
+                <div class="inner-accordion">
+                  <p class="font">
+                    Please create a request to technical support and describe all 
+                    reasons for the changing in your account.</p>
+                </div>
+              </div>
+              <div class="question-row">
+                <a href="" class="btn-accordion">How I can reset my pincode? I forgot it!</a>
+                <div class="inner-accordion">
+                  <p class="font">
+                    If you had any financial transactions on the account or your account is verified - please, verify your account and send us a picture with your new pin with verified document as a background
 
-        <div class="textarea">
-          <p>Describe your problem more specically if you need to attach files</p>
-          <textarea style="resize: none;"></textarea>
-        </div>
-
-
-        <div class="line-btn">
-
-          <div class="file">
-            <p>Attach files</p>
-            <input type="file" accept="image/png, image/jpeg">
-          </div>
-
-          <div class="button">
-            <button class="button-rgb">Create a ticket</button>
+                    If your account is not verified and you don’t have any funds on the account, just make a support request and we will provide you a new pin shorly.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <div class="box">
+
+        <div class="container title">
+          <p>Submit new ticket</p>
+          <p>You can find most of the answersin the FAQ</p>
+        </div>
+  
+        <!-- saq -->
+  
+        <div class="container saq">
+  
+          <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          </p>
+        </div>
+      </div>
+      <!-- form -->
+  
+      <div class="box" style="margin-top: 15px;">
+        <div class="container form">
+  
+          <div class="line">
+            <div class="departament">
+              <p>Departament</p>
+              <select name="departament" id="departament">
+                <option value="">Booster Request</option>
+                <option value="">Booster Request</option>
+                <option value="">Booster Request</option>
+                <option value="">Booster Request</option>
+                <option value="">Booster Request</option>
+                <option value="">Booster Request</option>
+                <option value="">Booster Request</option>
+                <option value="">Booster Request</option>
+              </select>
+            </div>
+  
+            <div class="subject">
+              <p>Subject</p>
+              <input type="text" title="subject">
+            </div>
+          </div>
+  
+          <div class="textarea">
+            <p>Describe your problem more specically if you need to attach files</p>
+            <textarea style="resize: none;"></textarea>
+          </div>
+  
+  
+          <div class="line-btn">
+  
+            <div class="file">
+              <p>Attach files</p>
+              <input type="file" accept="image/png, image/jpeg">
+            </div>
+  
+            <div class="button">
+              <button class="button-rgb">Create a ticket</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <script type="module" src="../js/script.js"></script>
 </body>
 
