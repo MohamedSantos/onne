@@ -181,32 +181,41 @@
 }
 
 .body-table > ul li:nth-child(1){
-    width: 304px;
+    width: 217px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
 .body-table > ul li:nth-child(2){
-    width: 318px;
+    width: 225px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
 .body-table > ul li:nth-child(3){
-    width: 320px;
+    width: 258px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
 .body-table > ul li:nth-child(4){
+    width: 241px;
+}
+
+.body-table > ul li:nth-child(4) span:last-child img {
+    width: 30px;
+    height: 30px;
+}
+
+.body-table > ul li:nth-child(5){
     width: 93px;
     text-align: center;
 }
 
-.body-table > ul li:nth-child(4) span:last-child{
+.body-table > ul li:nth-child(5) span:last-child{
     width: 30px;
     height: 30px;
     display: flex;
@@ -216,6 +225,7 @@
     font-family: 'MontserratBold';
     margin: 0 auto;
 }
+
 
 .footer-table{
     margin-top: 20px;
@@ -240,7 +250,7 @@
     cursor: pointer;
 }
 
-@media (max-width: 800px){
+@media (max-width: 1220px){
     .div-legend{
         display: none;
     }
@@ -257,6 +267,9 @@
     .div-data > div > div span:first-child {
         display: block;
      }
+     .body-table > ul li:nth-child(3) {
+        width: 215px;
+    }
     .div-number{
         margin: 0 auto;
     }
@@ -318,7 +331,7 @@
         display: block;
     }
 
-    .body-table > ul li:nth-child(4) span:last-child{
-        margin: 4px;
+    .body-table > ul li:nth-child(5) span:last-child{
+        margin: 4px 0;
     }
 }

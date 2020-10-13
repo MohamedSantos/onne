@@ -88,3 +88,70 @@ select{
     padding: 10px;
     margin-top: 15px
 }
+
+.box-value{
+    font-size:15px;
+    background: linear-gradient( 0deg, rgba(34, 0, 127, 0.3) 0%, rgba(9, 9, 121, 0.5) 70%, rgba(41, 87, 167, 1) 100% );
+    text-align: center;
+    color: #16ea12;
+    padding: 10px 15px;
+    height: 40px;
+    width: 250px;
+}
+
+@media (max-width: 1220px){
+    .social-media-content select{
+        margin: 15px 0;
+    }
+}
+
+@media (max-width: 800px){
+    .profile {
+        flex-direction: column;
+    }
+    .social-media-content {
+        flex-wrap: wrap;
+    }
+    .social-media-content select{
+        margin: 15px 0;
+    }
+    .social-media-content input{
+        margin: 15px 0 !important;
+        width: 100%;
+    }
+    .media-li {
+        flex-wrap: wrap;
+    }
+    .div-infos {
+       margin: 20px 0;
+    }
+}
+
+@media (max-width: 460px){
+    .div-infos {
+        width: 100%;
+    }
+    .country-info select{
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    .country-info p{
+        margin: 8px 0;
+    }
+    .social-media-content select{
+        width: 100% !important;
+    }
+    .media-li button {
+        margin: 7px 0;
+    }
+    .media-li > div:nth-child(1){
+        display: flex;
+        flex-direction: column;
+    }
+    .media-li > div:nth-child(1) span:nth-child(2){
+        margin: 5px 0 !important;
+    }
+    .media-li > div:nth-child(2){
+        margin: 15px 0;
+    }
+}

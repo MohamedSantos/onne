@@ -16,6 +16,7 @@
             <header class="header">
                 <img class="logo" src="../svg/Logo ONNE.svg" alt="" class="icon-nav">
                 <div class="wrapper">
+                    <div class="accordion"><img src="../img/configuration+settings+icon-1320191040059302570.png" alt=""></div>
                     <ul class="menu-list">
                         <li class="drop-down">
                             <span>EN</span>
@@ -62,18 +63,19 @@
                     </ul>
                     <div class="welcome-message">
                         <span>Be welcome: &nbsp;</span>
-                        <span style="color: #fc9803;"><b>Thiago Alves da Silva</b></span>
+                        <span style="color: #fc9803;"><b>Marcio Caldas Vieira</b></span>
                     </div>
                     <div class="settings">
                         <a href="#" class=><img class="icon-nav" src="../svg/icon/IconMessage.svg"></a>
                         <a href="#"><img class="icon-nav" src="../svg/icon/IconLogout.svg"></a>
                     </div>
                 </div>
-                <div class="accordion"><img src="../svg/icon/iconConfig.svg" alt=""></div>
+                <div class="accordion"><img src="../img/configuration+settings+icon-1320191040059302570.png" alt=""></div>
                 <div class="accordion2"><span></span></div>
             </header>
             <div class="header-menu">
                 <nav class="nav">
+                    <div class="accordion2"><span></span></div>
                     <ul>
                         <li> <a class="font text-nav" href="blank.html">
                                 <img class="icon-nav first" src="../svg/icon/IconDashboard.svg" alt=""><span>Home</span>
@@ -86,7 +88,7 @@
                             <img src="../svg/Replicar barra.svg" alt="">
                         </li>
                         <li>
-                            <a class="font text-nav" href="">
+                            <a class="font text-nav" href="status.html">
                                 <img class="icon-nav" src="../svg/icon/IconStatus.svg" alt=""><span>Status</span>
                             </a>
                             <img src="../svg/Replicar barra.svg" alt="">
@@ -157,8 +159,7 @@
                 <div class="div-infos">
                     <p class="title">Profile</p>
                     <div class="profile-info">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/1024px-Circle-icons-profile.svg.png"
-                            alt="" style="max-width: 100px;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/1024px-Circle-icons-profile.svg.png" alt="" style="max-width: 100px;">
                         <p>Demo Account</p>
                         <p><span>Email: </span> demo@onne.vip</p>
                         <p><span>Phone: </span> +1 1234567890</p>
@@ -428,7 +429,7 @@
                     <div class="social-media-content">
                         <p>
                             <span>Choose your social media: </span>
-                            <select name="social-media" id="media" style="width: 400px; margin-right: 15px;">
+                            <select name="social-media" id="media" style="width: 300px; margin-right: 15px;">
                                 <option value="Facebook">Facebook</option>
                                 <option value="Instagram">Instagram</option>
                                 <option value="VK">VK</option>
@@ -437,6 +438,7 @@
                                 <option value="WhatsApp">WhatsApp</option>
                             </select>
                         </p>
+                        <input type="text" class="box-value" style="margin-left: 10px;margin-right: 92px;">
                         <button class="button-rgb">Add</button>
                     </div>
                     <div class="social-list">
@@ -444,13 +446,14 @@
                             <li class="li-media">
                                 <div class="media-li">
                                     <div>
-                                        <span style="color: white;">Facebook:</span> 
+                                        <span style="color: white;">Facebook:</span>
                                         <span style="margin-left: 10px;">
                                             <a href="https://facebook.com/">www.facebook.com</a>
-                                        </span> 
+                                        </span>
                                     </div>
                                     <div>
-                                        <button class="button-rgb">Edit</button> 
+                                        <span style="color: white;margin-right: 10px;">Define as default</span><input type="radio" name="default" style="margin-right: 10px;">
+                                        <button class="button-rgb">Edit</button>
                                         <button class="button-rgb">Delete</button>
                                     </div>
                                 </div>
@@ -458,13 +461,14 @@
                             <li class="li-media">
                                 <div class="media-li">
                                     <div>
-                                        <span style="color: white;">Facebook:</span> 
+                                        <span style="color: white;">Facebook:</span>
                                         <span style="margin-left: 10px;">
                                             <a href="https://facebook.com/">www.facebook.com</a>
-                                        </span> 
+                                        </span>
                                     </div>
                                     <div>
-                                        <button class="button-rgb">Edit</button> 
+                                        <span style="color: white;margin-right: 10px;">Define as default</span><input type="radio" name="default" style="margin-right: 10px;">
+                                        <button class="button-rgb">Edit</button>
                                         <button class="button-rgb">Delete</button>
                                     </div>
                                 </div>
@@ -477,4 +481,5 @@
     </div>
     <script type="module" src="../js/script.js"></script>
 </body>
+
 </html>
