@@ -1,0 +1,126 @@
+/* title */
+p {
+  color: #08a9b0;
+}
+
+.title {
+  margin-top: 10px;
+  padding: 10px;
+  border: rgba(255, 255, 255, 0.4) solid 1px;
+  border-left: none;
+  border-right: none;
+}
+/* security */
+
+.security {
+  width: 50px;
+  display: flex;
+  text-align: start;
+}
+
+label {
+  font-size: 15px;
+}
+input {
+  height: 30px;
+}
+
+.line-modal {
+  display: flex;
+  flex-direction: column;
+}
+
+label .modal-success {
+  border: 10px solid #367ee2;
+  margin: 0 auto;
+  margin-top: 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  height: 530px;
+  background: linear-gradient(
+    0deg,
+    rgba(34, 0, 127, 1) 0%,
+    rgba(9, 9, 121, 1) 70%,
+    rgba(41, 87, 167, 1) 100%
+  );
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+.button-rgb {
+  padding: 10px 20px;
+}
+
+.line-modal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-pin {
+  width: 50px;
+  text-align: center;
+  height: 50px;
+  font-size: 30px;
+  background: rgba(0, 0, 0, 0);
+  border: 3px solid #46e4cb;
+  color: #46e4cb;
+  font-size: 55px;
+}
+
+.pin {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.modal-success {
+  width: 500px !important;
+  height: 100px !important;
+  text-align: center;
+  margin: auto;
+  border: 5px solid #367ee2;
+}
+
+.modal-success .font-legend {
+  font-size: 23px;
+}
+
+.modal-success a {
+  color: #fff;
+  text-decoration-line: underline;
+}
+
+.modal-content {
+  background: linear-gradient(
+    0deg,
+    rgba(34, 0, 127, 1) 0%,
+    rgba(9, 9, 121, 1) 70%,
+    rgba(41, 87, 167, 1) 100%
+  );
+  width: 400px !important;
+}
+
+.modal-footer {
+  align-self: center;
+  border-top: none !important;
+}
+
+.modal-header {
+  border-bottom: none !important;
+  font-size: 25px;
+  padding-bottom: 0 !important;
+}
+
+.modal-input {
+  flex-direction: column;
+  border-top: 5px solid #000 !important;
+}
