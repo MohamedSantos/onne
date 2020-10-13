@@ -158,7 +158,7 @@ hr{
     }
 }
 
-.modal, .modal-success {
+.modal-success {
     border: 10px solid #367ee2;
     margin: 0 auto;
     margin-top: 20px;
@@ -177,20 +177,10 @@ hr{
     transition: opacity 400ms ease-in;
     pointer-events: none;
   }
-
-  .modal:target, .modal-success:target {
-  opacity: 1;
-  pointer-events: auto;
-}
 .button-rgb {
     padding: 10px 20px;
 }
 
-.modal-content{
-    display: flex;
-    flex-direction: column;
-    padding: 10px 20px;
-}
 
 .line-modal{
     display: flex;
@@ -202,6 +192,10 @@ hr{
     text-align: center;
     height: 50px;
     font-size: 30px;
+    background: rgba(0,0,0,0);
+    border: 3px solid #46e4cb;
+    color: #46e4cb;
+    font-size: 55px;
 }
 
 .pin{
@@ -227,4 +221,25 @@ hr{
 .modal-success a{
     color: #fff;
     text-decoration-line: underline;
+}
+
+.modal-content{
+    background: linear-gradient( 0deg, rgba(34, 0, 127, 1) 0%, rgba(9, 9, 121, 1) 70%, rgba(41, 87, 167, 1) 100% );
+    width: 400px !important;
+}
+
+.modal-footer{
+    align-self: center;
+    border-top: none !important;
+}
+
+.modal-header{
+    border-bottom: none !important;
+    font-size: 25px;
+    padding-bottom: 0 !important;
+}
+
+.modal-input{
+    flex-direction: column;
+    border-top: 5px solid #000 !important;
 }
