@@ -1,18 +1,21 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-  <link rel="stylesheet" href="../css/chartist.css">
-  <link rel="stylesheet" href="../css/status.css">
-  <link rel="stylesheet" type="text/css" href="../css/dashboard-ecommerce.css">
-  <title>Onne</title>
+  <title>Ticket</title>
+  <link rel="stylesheet" href="../css/default.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/ticket.css">
+
+
 </head>
 
 <body>
-  <main class="container">
+
+  <div class="container">
     <header class="header">
       <img class="logo" src="../svg/Logo ONNE.svg" alt="" class="icon-nav">
       <div class="wrapper">
@@ -128,68 +131,98 @@
       <div class="accordion2"><span></span></div>
     </div>
 
-    <!-- END HEADER -->
-
     <div class="box moving-text">
-      <span class="span-price">Prices |</span>
-      <marquee class="marq" behavior="scroll" direction="right">
-        <span class="price">BTC: $10.576,90</span>
+      <span class="font span-price">Prices |</span>
+      <marquee class="font marq" behavior="scroll" direction="left">
+        <label class="price-up">BTC: $10.576,90</label>
 
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;
 
-        <span class="price">ETH: $346,79</span>
+        <label class="price-down">ETH: $346,79</label>
 
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;
 
-        <span class="price">LTC: $45,69</span>
+        <label class="price-up">LTC: $45,69</label>
 
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;
 
-        <span class="price">ZEC: $60,61</span>
+        <label class="price-down">ZEC: $60,61</label>
 
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;
 
-        <span class="price">DASH: $66,47</span>
+        <label class="price-up">DASH: $66,47</label>
 
       </marquee>
     </div>
-    <section class="section-status">
-      <div class="start-date">
-        <div class="initial-date-container">
-          <h2 class="title">Start Date</h2>
-          <p class="initial-date">10/10/2020</p>
+
+    <!-- title -->
+
+    <div class="box">
+
+      <div class="container title">
+        <p>Submit new ticket</p>
+        <p>You can find most of the answersin the FAQ</p>
+      </div>
+
+      <!-- saq -->
+
+      <div class="container saq">
+
+        <p>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+      </div>
+    </div>
+    <!-- form -->
+
+    <div class="box" style="margin-top: 15px;">
+      <div class="container form">
+
+        <div class="line">
+          <div class="departament">
+            <p>Departament</p>
+            <select name="departament" id="departament">
+              <option value="">Booster Request</option>
+              <option value="">Booster Request</option>
+              <option value="">Booster Request</option>
+              <option value="">Booster Request</option>
+              <option value="">Booster Request</option>
+              <option value="">Booster Request</option>
+              <option value="">Booster Request</option>
+              <option value="">Booster Request</option>
+            </select>
+          </div>
+
+          <div class="subject">
+            <p>Subject</p>
+            <input type="text" title="subject">
+          </div>
         </div>
-        <div class="current-status-container">
-          <p class="current-status">Diamond</p>
-          <div class="status-image"></div>
+
+        <div class="textarea">
+          <p>Describe your problem more specically if you need to attach files</p>
+          <textarea style="resize: none;"></textarea>
         </div>
-        <div class="next-status-container">
-          <p class="next-status-title">Next status</p>
-          <p class="next-status">Double Diamont</p>
+
+
+        <div class="line-btn">
+
+          <div class="file">
+            <p>Attach files</p>
+            <input type="file" accept="image/png, image/jpeg">
+          </div>
+
+          <div class="button">
+            <button class="button-rgb">Create a ticket</button>
+          </div>
         </div>
       </div>
-      <div class="status-progress">
-
-      </div>
-      <div class="ranking">
-
-      </div>
-      <div class="partnes">
-
-      </div>
-      <div class="progress-table">
-
-      </div>
-    </section>
-  </main>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
-  <script src="../../node_modules/chartjs-chart-radial-gauge/build/Chart.RadialGauge.umd.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
-  <script type="module" src="../js/script.js"></script>
+    </div>
+    <script type="module" src="../js/script.js"></script>
 </body>
 
 </html>
