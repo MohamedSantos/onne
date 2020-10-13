@@ -363,46 +363,6 @@ nav ul li a span {
   color: #ee2248 !important;
 }
 
-@keyframes animate {
-  0% {
-    background-position: 0%;
-  }
-  100% {
-    background-position: 400%;
-  }
-}
-
-@keyframes show-drop {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-/* Tooltip styles */
-.tooltip {
-  position: absolute;
-  color: #fff;
-  font-size: 13px;
-  font-weight: bold;
-  text-align: center;
-  background-color: rgb(9, 9, 121);
-  border-radius: 4px;
-  pointer-events: none;
-  z-index: 4;
-  padding: 10px 15px;
-  max-width: 200px;
-}
-.tooltip a {
-  display: block;
-  pointer-events: all;
-  color: #08a9b0;
-}
-
 .fade:not(.show) {
   opacity: 0;
 }
@@ -568,7 +528,57 @@ button.close {
   pointer-events: none;
 }
 
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+@keyframes show-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/* Tooltip styles */
+.tooltip {
+  position: absolute;
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgb(9, 9, 121);
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 4;
+  padding: 10px 15px;
+  max-width: 200px;
+}
+.tooltip a {
+  display: block;
+  pointer-events: all;
+  color: #08a9b0;
+}
+
 /* Responsive styles */
+@media (min-width: 576px){
+  .modal-dialog {
+    max-width: 500px;
+    margin: 1.75rem auto;
+  }
+  .modal-dialog-centered {
+    min-height: calc(100% - (1.75rem * 2));
+  }
+}
+
 @media (max-width: 1220px) {
   .container {
     width: 800px;
@@ -694,15 +704,6 @@ button.close {
   }
   .accordion {
     position: static;
-  }
-}
-@media (min-width: 576px){
-  .modal-dialog {
-    max-width: 500px;
-    margin: 1.75rem auto;
-  }
-  .modal-dialog-centered {
-    min-height: calc(100% - (1.75rem * 2));
   }
 }
 
