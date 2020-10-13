@@ -40,13 +40,18 @@
 }
 
 .line {
-  display: inline-flex;
+  display: flex;
   gap: 50px;
+  width: 100%;
 }
 
 .departament {
   width: 300px;
   margin-top: 5px;
+}
+
+.subject{
+  width: 100%;
 }
 
 .subject input {
@@ -55,6 +60,7 @@
   width: 770px;
   margin-top: 5px;
   color: #fff;
+  width: 100%;
 }
 
 .textarea {
@@ -111,10 +117,34 @@ button {
   display: flex;
   flex-direction:column;
   margin: 40px 0;
+  color: white;
 }
 
+.question-row{
+  overflow: hidden;
+  max-height: fit-content;
+}
+
+.question-row dt{
+  padding: 20px 25px ;
+  font-size: 15px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+   user-select: none;
+}
+
+.question-row dd{
+  letter-spacing: .5px;
+  font-size: 14px;
+  color: rgb(210,210,210);
+}
+
+
+
 .questions .content-questions .question-row .inner-accordion{
-  display:flex;
   padding: 0 30px 15px 40px;
 }
 
@@ -132,6 +162,14 @@ button {
   border: 1px solid gray;
   margin-bottom: 5px;
   flex-direction: column;
+}
+
+.inner-accordion{
+  display: none;
+}
+
+.inner-accordion.active{
+  display: flex;
 }
 
 .btn-accordion{
@@ -153,4 +191,35 @@ button {
 
 .btn-section .button-rgb{
   font-size: 11px;
+}
+
+@media (max-width: 800px){
+  .line {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .line-btn{
+    flex-direction: column;
+  }
+  .faq{
+    flex-direction: column;
+  }
+
+  .faq > div:nth-child(2){
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 460px){
+  .departament {
+    width: 100% ;
+  }
+  .file{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .title-questions {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
