@@ -18,8 +18,8 @@
   content: "";
   display: block;
   width: 100%;
-  height: 3px;
-  background: #fff;
+  height: 1px;
+  background: rgb(206, 201, 201);
   margin: 10px auto;
 }
 
@@ -32,10 +32,14 @@
   color: #fff;
 }
 
+.container-saq{
+  padding: 30px
+}
+
 /* form */
 
 .form {
-  padding: 40px;
+  padding: 10px;
   color: #fff;
 }
 
@@ -47,11 +51,18 @@
 
 .departament {
   width: 300px;
-  margin-top: 5px;
+}
+
+.departament p{
+  margin-bottom: 5px;
 }
 
 .subject{
   width: 100%;
+}
+
+.file p{
+  margin-bottom: 5px;
 }
 
 .subject input {
@@ -61,6 +72,7 @@
   margin-top: 5px;
   color: #fff;
   width: 100%;
+  padding: 10px;
 }
 
 .textarea {
@@ -72,6 +84,7 @@ textarea {
   background-color: rgb(33, 23, 90);
   margin-top: 5px;
   color: #fff;
+  padding: 10px;
 }
 
 button {
@@ -211,6 +224,7 @@ button {
 .tickets-table{
   display:flex;
   flex-direction:column;
+  padding-bottom: 30px;
 }
 
 .container-myTickets .tickets-table .list.head-table {
@@ -291,6 +305,30 @@ padding-left: 30px;
   background-color: #262543;
   border: 1px solid #383755;
   margin-bottom: 2px;
+}
+
+.explanation{
+  display: flex;
+  padding: 0 10px;
+}
+
+.container-myTickets .explanation .list{
+  display: flex;	
+  width: 100%;
+}
+
+.container-myTickets .explanation .list-item{
+  display: flex;
+  align-items: center;
+  padding-right: 30px;
+}
+
+.container-myTickets .explanation .list-item span{
+  display: inline-block;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1;
+  padding-top: 5px;
 }
 
 @media (max-width: 800px){

@@ -228,68 +228,90 @@
               <li class="list-item font"><span class="subject">Subject</span><a href="#"></a></li>
               <li class="list-item font"><span class="message">message for adm</span><a href="#"></a></li>
             </ul>
+            <ul class="list">
+              <li class="list-item font"><span class="date">August, 24, 2020</span><a href="#"></a></li>
+              <li class="list-item font"><span class="department">General issues</span><a href="#"></a></li>
+              <li class="list-item font"><span class="subject">Subject</span><a href="#"></a></li>
+              <li class="list-item font"><span class="message">message for adm</span><a href="#"></a></li>
+            </ul>
+            <ul class="list">
+              <li class="list-item font"><span class="date">August, 24, 2020</span><a href="#"></a></li>
+              <li class="list-item font"><span class="department">General issues</span><a href="#"></a></li>
+              <li class="list-item font"><span class="subject">Subject</span><a href="#"></a></li>
+              <li class="list-item font"><span class="message">message for adm</span><a href="#"></a></li>
+            </ul>
+          </div>
+          <div class="explanation">
+            <ul class="list">
+              <li class="list-item"><span>New message</span></li>
+              <li class="list-item"><span>Read message</span></li>
+              <li class="list-item"><span>Ticket closed</span></li>
+            </ul>
           </div>
         </div>
       </div>
 
       <div class="box">
-        <div class="container title" id="createTicket">
-          <p>Submit new ticket</p>
-          <p>You can find most of the answersin the FAQ</p>
-        </div>
-
-        <!-- saq -->
-
-        <div class="container saq">
-
-          <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-          </p>
-        </div>
-      </div>
-      <!-- form -->
-
-      <div class="box" style="margin-top: 15px;">
-        <div class="container form">
-
-          <div class="line">
-            <div class="departament">
-              <p>Departament</p>
-              <select name="departament" id="departament">
-                <option value="">Booster Request</option>
-                <option value="">Booster Request</option>
-                <option value="">Booster Request</option>
-                <option value="">Booster Request</option>
-                <option value="">Booster Request</option>
-                <option value="">Booster Request</option>
-                <option value="">Booster Request</option>
-                <option value="">Booster Request</option>
-              </select>
-            </div>
-
-            <div class="subject">
-              <p>Subject</p>
-              <input type="text" title="subject">
-            </div>
+        <div class="container-saq">
+          <div class="title" id="createTicket">
+            <p>Submit new ticket</p>
+            <p>You can find most of the answersin the FAQ</p>
           </div>
-
-          <div class="textarea">
-            <p>Describe your problem more specically if you need to attach files</p>
-            <textarea style="resize: none;"></textarea>
+  
+          <!-- saq -->
+  
+          <div class="saq">
+  
+            <p style="color: #08a9b0">
+              The Safe Ticket System was created to make the correspondence of our customers 
+              and Gameplex support services truly personal and secure. 
+              Please complete the form below carefully. 
+              Make sure that you include a detailed description of your inquiry in English. 
+              Select the most appropriate department from the list to ensure that 
+              your message is directed correctly.
+            </p>
           </div>
+          <form class="form" method="POST">
 
-
-          <div class="line-btn">
-
-            <div class="file">
-              <p>Attach files</p>
-              <input type="file" accept="image/png, image/jpeg">
+            <div class="line">
+              <div class="departament">
+                <p class="font">Departament</p>
+                <select name="departament" id="departament">
+                  <option value="">Booster Request</option>
+                  <option value="">Booster Request</option>
+                  <option value="">Booster Request</option>
+                  <option value="">Booster Request</option>
+                  <option value="">Booster Request</option>
+                  <option value="">Booster Request</option>
+                  <option value="">Booster Request</option>
+                  <option value="">Booster Request</option>
+                </select>
+              </div>
+  
+              <div class="subject">
+                <p class="font">Subject</p>
+                <input type="text" title="subject">
+              </div>
             </div>
-
-            <div class="button">
-              <button class="button-rgb">Create a ticket</button>
+  
+            <div class="textarea">
+              <p class="font">Describe your problem more specically if you need to attach files</p>
+              <textarea style="resize: none;"></textarea>
             </div>
-          </div>
+  
+  
+            <div class="line-btn">
+  
+              <div class="file">
+                <p class="font">Attach files</p>
+                <input type="file" accept="image/png, image/jpeg">
+              </div>
+  
+              <div class="button">
+                <input type="submit" value="Create a ticket" class="button-rgb">
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </section>
