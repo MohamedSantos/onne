@@ -238,4 +238,8 @@ a {
   .media-li > div:nth-child(2) {
     margin: 15px 0;
   }
+
+  .text-veri h3 {
+    width: 260px;
+  }
 }
