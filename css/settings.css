@@ -17,6 +17,8 @@ select{
     height: 40px;
 }
 
+
+
 .div-infos{
     width: 400px;
 }
@@ -87,4 +89,14 @@ select{
     border-bottom: 1px solid gray;
     padding: 10px;
     margin-top: 15px
+}
+
+.box-value{
+    font-size:15px;
+    background: linear-gradient( 0deg, rgba(34, 0, 127, 0.3) 0%, rgba(9, 9, 121, 0.5) 70%, rgba(41, 87, 167, 1) 100% );
+    text-align: center;
+    color: #16ea12;
+    padding: 10px 15px;
+    height: 40px;
+    width: 250px;
 }
