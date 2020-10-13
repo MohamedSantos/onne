@@ -1,4 +1,5 @@
 @import "./default.css";
+@import "./style.css";
 
 hr{
     height: 5px;
