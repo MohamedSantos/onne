@@ -497,7 +497,6 @@
                         <button class="button-rgb" data-toggle="modal" data-target="#openModal" style="height: 36px;">Update</button>
                     </div>
                 </div>
-
                 <div class="modal fade" id="openModal" tabindex="-1" role="dialog" aria-labelledby="title-modal" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
@@ -540,7 +539,38 @@
                                 <span>For your protection, please choose 2 security questions. This way, we can verify it’s really you if there’s ever a doubt.</span>
                             </div>
                         </div>
-                        <button class="button-rgb" style="height: 36px;">Create</button>
+                        <button class="button-rgb" data-toggle="modal" data-target="#openModal-2" style="height: 36px;">Create</button>
+                    </div>
+                </div>
+                <div class="modal fade" id="openModal-2" tabindex="-1" role="dialog" aria-labelledby="title-modal" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title font-legend" id="title-modal">
+                                    Security Questions
+                                </h2>
+
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div style="padding: 1rem 1rem 0 1rem;">
+                                <p>We'll use these questions as a way to make sure it's your account, like if you need to reset your password</p>
+                            </div>
+                            <div class="modal-body">
+                                <div class="line-modal">
+                                    <label style="color: #46e4cb;">Security question</label>
+                                    <input type="text">
+                                </div>
+                                <div class="line-modal">
+                                    <label style="color: #46e4cb;">Answer</label>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="button-rgb" data-dismiss="modal" data-target="#modal-success">Salvar mudanças</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="security-content">
@@ -552,7 +582,59 @@
                                 <span>Add an extra layer of security to your account by using a one-time security code in addition to your password each time you log in.</span>
                             </div>
                         </div>
-                        <button class="button-rgb" style="height: 36px;">Set up</button>
+                        <button class="button-rgb" data-toggle="modal" data-target="#openModal-3" style="height: 36px;">Set up</button>
+                    </div>
+                </div>
+                <div class="modal fade" id="openModal-3" tabindex="-1" role="dialog" aria-labelledby="title-modal" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header step">
+                                <h2 class="modal-title font-legend" id="title-modal">
+                                    Make your account more secure
+                                </h2>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body step">
+                                <div>
+                                    <p>Enable Two-factor Authentication for your Gameplex account. Protected actions: <span class="color-gold">Login</span> / <span class="color-gold">Withdrawal</span> / <span class="color-gold">Password changing</span> </p>
+                                </div>
+                                <div>
+                                    <h3 class="title-step">Step 1</h3>
+                                    <p>Install Google <span class="color-gold">Authenticator</span> App on your mobile device</p>
+                                    <div class="img-google-app">
+                                        <img src="../img/apple.png" alt="">
+                                        <img src="../img/google.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="step-2">
+                                    <div>
+                                        <h3 class="title-step">Step 2</h3>
+                                        <p>Open Google Authenticator App and input this code manually:</p>
+                                        <span class="color-gold">ENV2IBODJZZXRGMN</span>
+                                    </div>
+                                    <div>
+                                        <p>Or scan QR Code below:</p>
+                                        <img src="../img/qrcode.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p><span class="color-red">IMPORTANT!</span> Write down this code for backup, if you lost your mobile device, you can restore access to your account</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="title-step">Step 3</h3>
+                                    <p>Input SIX-digits number you get in the field below:</p>
+                                    <div class="six-digits">
+                                        <label for="">SIX-digits code</label>
+                                        <input type="text" placeholder="Code..">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="button-rgb" data-dismiss="modal" data-target="#modal-success">Save</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
