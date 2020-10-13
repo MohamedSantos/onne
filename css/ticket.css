@@ -154,3 +154,18 @@ button {
 .btn-section .button-rgb{
   font-size: 11px;
 }
+
+.container-myTickets{
+  display: flex;
+  flex-direction:column;
+  padding: 30px;
+}
+
+.container-myTickets .title-section .font{
+  margin-bottom: 10px;
+}
+
+.container-myTickets .title-section{
+  display:flex;
+  justify-content: space-between;
+}
