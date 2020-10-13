@@ -40,13 +40,18 @@
 }
 
 .line {
-  display: inline-flex;
+  display: flex;
   gap: 50px;
+  width: 100%;
 }
 
 .departament {
   width: 300px;
   margin-top: 5px;
+}
+
+.subject{
+  width: 100%;
 }
 
 .subject input {
@@ -55,6 +60,7 @@
   width: 770px;
   margin-top: 5px;
   color: #fff;
+  width: 100%;
 }
 
 .textarea {
@@ -111,10 +117,34 @@ button {
   display: flex;
   flex-direction:column;
   margin: 40px 0;
+  color: white;
 }
 
+.question-row{
+  overflow: hidden;
+  max-height: fit-content;
+}
+
+.question-row dt{
+  padding: 20px 25px ;
+  font-size: 15px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+   user-select: none;
+}
+
+.question-row dd{
+  letter-spacing: .5px;
+  font-size: 14px;
+  color: rgb(210,210,210);
+}
+
+
+
 .questions .content-questions .question-row .inner-accordion{
-  display:flex;
   padding: 0 30px 15px 40px;
 }
 
@@ -132,6 +162,14 @@ button {
   border: 1px solid gray;
   margin-bottom: 5px;
   flex-direction: column;
+}
+
+.inner-accordion{
+  display: none;
+}
+
+.inner-accordion.active{
+  display: flex;
 }
 
 .btn-accordion{
@@ -168,4 +206,120 @@ button {
 .container-myTickets .title-section{
   display:flex;
   justify-content: space-between;
+}
+
+.tickets-table{
+  display:flex;
+  flex-direction:column;
+}
+
+.container-myTickets .tickets-table .list.head-table {
+  background-color: transparent;
+  border: 0;
+}
+
+.container-myTickets .tickets-table .list.head-table .list-item:first-child{
+padding-left: 30px;
+}
+
+.container-myTickets .tickets-table .list-item:first-child{
+  max-width: 170px;
+  min-width: 170px;
+}
+
+.container-myTickets .tickets-table .list-item:nth-child(2), 
+.container-myTickets .tickets-table .list-item:nth-child(3){
+  max-width: 190px;
+  min-width: 190px;
+}
+
+.container-myTickets .tickets-table .list_item:last-child{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 0;
+}
+
+.container-myTickets .tickets-table .list_item p{
+  display: flex;
+  font-size: 12px;
+  color: #e0dfe9;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.container-myTickets .tickets-table .list-item{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-right: 10px;  
+}
+
+.container-myTickets .tickets-table .list-item .date{
+  display: flex;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.container-myTickets .tickets-table .list-item a{
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid transparent;
+  background-color: transparent;
+  transition: all 0.3s;
+}
+
+.container-myTickets .tickets-table .list-item .department,
+.container-myTickets .tickets-table .list-item .subject,
+.container-myTickets .tickets-table .list-item .message{
+  display: flex;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1;
+}
+
+.container-myTickets .tickets-table .list{
+  display: flex;
+  position: relative;
+  padding: 15px;
+  background-color: #262543;
+  border: 1px solid #383755;
+  margin-bottom: 2px;
+}
+
+@media (max-width: 800px){
+  .line {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .line-btn{
+    flex-direction: column;
+  }
+  .faq{
+    flex-direction: column;
+  }
+
+  .faq > div:nth-child(2){
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 460px){
+  .departament {
+    width: 100% ;
+  }
+  .file{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .title-questions {
+    flex-direction: column;
+    gap: 10px;
+  }
 }

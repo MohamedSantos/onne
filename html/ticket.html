@@ -179,36 +179,31 @@
             </div>
             <div class="content-questions">
               <div class="question-row">
-                <a href="" class="btn-accordion">How soon my account will be verified after submitting the documents?</a>
+                <dt>How soon my account will be verified after submitting the documents?</dt>
                 <div class="inner-accordion">
-                  <p class="font">
-                    The aprooval can take up to 24 hours.</p>
+                  <dd> aprooval can take up to 24 hours.</dd>
                 </div>
               </div>
               <div class="question-row">
-                <a href="" class="btn-accordion">Why my documents are not accepted?</a>
+                <dt>Why my documents are not accepted?</dt>
                 <div class="inner-accordion">
-                  <p class="font">
-                    There are several possible reasons. The photo of your documents is unreadable, 
-                    or do not match the data of the account owner, or you provided the wrong type of 
-                    document or not a document in principle.</p>
+                  <dd>There are several possible reasons. The photo of your documents is unreadable,
+                    or do not match the data of the account owner, or you provided the wrong type of
+                    document or not a document in principle.</dd>
                 </div>
               </div>
               <div class="question-row">
-                <a href="" class="btn-accordion">How can I change personal data in my account?</a>
+                <dt>How can I change personal data in my account?</dt>
                 <div class="inner-accordion">
-                  <p class="font">
-                    Please create a request to technical support and describe all 
-                    reasons for the changing in your account.</p>
+                  <dd>Please create a request to technical support and describe all
+                    reasons for the changing in your account.</dd>
                 </div>
               </div>
               <div class="question-row">
-                <a href="" class="btn-accordion">How I can reset my pincode? I forgot it!</a>
+                <dt>How I can reset my pincode? I forgot it!</dt>
                 <div class="inner-accordion">
-                  <p class="font">
-                    If you had any financial transactions on the account or your account is verified - please, verify your account and send us a picture with your new pin with verified document as a background
-
-                    If your account is not verified and you don’t have any funds on the account, just make a support request and we will provide you a new pin shorly.</p>
+                  <dd>If you had any financial transactions on the account or your account is verified - please, verify your account and send us a picture with your new pin with verified document as a background.
+                    If your account is not verified and you don’t have any funds on the account, just make a support request and we will provide you a new pin shorly.</dd>
                 </div>
               </div>
             </div>
@@ -217,8 +212,23 @@
       </div>
       <div class="box">
         <div class="container-myTickets">
-          <div class="title-section"><p class="font">My tickets</p><p class="font">Problem? Question?
-            <a href="#createTicket" style="color:#f9fd15">Create a new ticket</a></p></div>
+          <div class="title-section"><p class="font" style="color:#fff">My tickets</p><p class="font" style="color:#fff">Problem? Question?
+            <a href="#createTicket" style="color:#f9fd15">Create a new ticket</a></p>
+          </div>
+          <div class="tickets-table">
+            <ul class="list head-table">
+              <li class="list-item font">Date</li>
+              <li class="list-item font">Department</li>
+              <li class="list-item font">Subject</li>
+              <li class="list-item font">Last message</li>
+            </ul>
+            <ul class="list">
+              <li class="list-item font"><span class="date">August, 24, 2020</span><a href="#"></a></li>
+              <li class="list-item font"><span class="department">General issues</span><a href="#"></a></li>
+              <li class="list-item font"><span class="subject">Subject</span><a href="#"></a></li>
+              <li class="list-item font"><span class="message">message for adm</span><a href="#"></a></li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -227,21 +237,21 @@
           <p>Submit new ticket</p>
           <p>You can find most of the answersin the FAQ</p>
         </div>
-  
+
         <!-- saq -->
-  
+
         <div class="container saq">
-  
+
           <p>
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
           </p>
         </div>
       </div>
       <!-- form -->
-  
+
       <div class="box" style="margin-top: 15px;">
         <div class="container form">
-  
+
           <div class="line">
             <div class="departament">
               <p>Departament</p>
@@ -256,26 +266,26 @@
                 <option value="">Booster Request</option>
               </select>
             </div>
-  
+
             <div class="subject">
               <p>Subject</p>
               <input type="text" title="subject">
             </div>
           </div>
-  
+
           <div class="textarea">
             <p>Describe your problem more specically if you need to attach files</p>
             <textarea style="resize: none;"></textarea>
           </div>
-  
-  
+
+
           <div class="line-btn">
-  
+
             <div class="file">
               <p>Attach files</p>
               <input type="file" accept="image/png, image/jpeg">
             </div>
-  
+
             <div class="button">
               <button class="button-rgb">Create a ticket</button>
             </div>
@@ -283,6 +293,16 @@
         </div>
       </div>
     </section>
+    <script>
+      const pergunta = document.querySelectorAll('.question-row dt')
+      const resposta = document.querySelectorAll('.inner-accordion')
+      pergunta.forEach((item, index) => {
+        item.addEventListener('click', () => {
+          let hasChange = resposta[index].classList.contains('active');
+          resposta[index].classList[hasChange ? 'remove' : 'add']('active')
+        })
+      })
+    </script>
     <script type="module" src="../js/script.js"></script>
 </body>
 
