@@ -2,7 +2,7 @@ p{
     color: white;
 }
 
-p span{
+span{
     color: #08a9b0;
 }
 
@@ -98,6 +98,24 @@ select{
     padding: 10px 15px;
     height: 40px;
     width: 250px;
+}
+
+.div-security{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 40px;
+}
+
+.change-password{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid gray;
 }
 
 @media (max-width: 1220px){
