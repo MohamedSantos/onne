@@ -235,7 +235,33 @@
             </div>
             <div class="step-fourth">
               <p class="step-number">4</p>
-              <p class="legend-step"> Fourth step</p> <input class="btn-confirm button-rgb" type="submit" value="Confirm an order">
+              <p class="legend-step"> Fourth step</p> <button class="button-rgb"><a href="#openModal">Confirm an order</a></button> 
+              <div id="openModal" class="modal">
+                <div class="modal-content">
+                  <p  class="font-legend">ORDER SUMARY</p>
+                  <div class="line-modal"><p class="font-legend">ORDER</p><p class="font-legend">xxxx-xx</p></div>
+                  <div class="line-modal"><p class="font-legend">TYPE</p><p class="font-legend">With Drawl</p></div>
+                  <div class="line-modal"><p class="font-legend">DATE</p><p class="font-legend">Feb, 06, 2020/ 17.24H</p></div>
+                  <div class="line-modal"><p class="font-legend">AMOUNT</p><p class="font-legend">0.1273281 BT</p></div>
+                  <div class="line-modal"><p class="font-legend">STATUS</p><p class="font-legend">Waiting Sing</p></div>
+                  <hr>
+                  <p class="font-legend">TO SIGN ORDER ENTER THE PIN</p>
+                  <div class="pin">
+                    <input type="password" class="input-pin" maxlength="1" placeholder="•">
+                    <input type="password" class="input-pin" maxlength="1" placeholder="•">
+                    <input type="password" class="input-pin" maxlength="1" placeholder="•">
+                    <input type="password" class="input-pin" maxlength="1" placeholder="•">
+                  </div>
+                  <div class="line-modal" style="margin-bottom: 40px;">
+                    <button class="button-rgb"><a href="withdraw.html" title="close" class="close">CANCEL ORDER</a></button>
+                    <button class="button-rgb"><a href="#modal-success">SIGN ORDER</a></button>
+                  </div>
+                </div>
+              </div>
+              <div id="modal-success" class="modal-success">
+                <p class="font-legend">The order was successfully completed</p>
+                <a href="withdraw.html">Close</a>
+              </div>
             </div>
             <div class="note box">
               <p class="title" style="font-size: 13px;">IMPORTANT</p>
