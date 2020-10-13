@@ -12,6 +12,11 @@ p {
 }
 /* security */
 
+.font-legend{
+  color: white;
+  font-size: 18px;
+}
+
 .security {
   width: 50px;
   display: flex;
@@ -100,13 +105,13 @@ label .modal-success {
 }
 
 .modal-content {
+  padding: 10px 20px;
   background: linear-gradient(
     0deg,
     rgba(34, 0, 127, 1) 0%,
     rgba(9, 9, 121, 1) 70%,
     rgba(41, 87, 167, 1) 100%
   );
-  width: 400px !important;
 }
 
 .modal-footer {
@@ -123,4 +128,58 @@ label .modal-success {
 .modal-input {
   flex-direction: column;
   border-top: 5px solid #000 !important;
+}
+
+.modal-header.step .font-legend{
+  font-size: 14px;
+}
+
+.modal-body.step p {
+  font-size: 13px;
+  color: white;
+}
+
+.color-gold{
+  color: #fed726;
+}
+
+.color-red{
+  color: #ee0909;
+}
+
+.title-step{
+  font-size: 18px;
+  color: white;
+}
+
+.img-google-app img{
+  height: 40px;
+}
+
+.step-2{
+  margin: 15px 0;
+}
+
+.step-2 > div:last-child{
+  margin-top: 10px;
+}
+
+.six-digits{
+  display: flex;
+  flex-direction: column;
+}
+
+.six-digits label{
+  color: white;
+}
+
+.six-digits input{
+  width: 150px;
+  background: none;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 5px;
+  height: 35px;
+  font-family: 'MontserratLight';
+  letter-spacing: 1px;
 }
