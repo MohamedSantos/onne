@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/register.css">
   <title>Register - ONNE</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="../js/app/common.js"></script>
+  <script src="../js/app/register.js"></script>
 </head>
 
 <body>
@@ -16,12 +19,12 @@
     </div>
     <div class="div-form-register">
       <p class="information-message">General information</p>
-      <form class="form-register" action="#" method="get">
+      <div class="form-register form">
         <div class="container-form">
           <p class="describe">Please use reliable data, as the use of out company services implies user verification</p>
           <div class="input-container">
             <label class="label-form">Gender</label>
-            <select>
+            <select data-field="gender">
               <option value="M">Male</option>
               <option value="F">Female</option>
               <option value="O">Other</option>
@@ -29,15 +32,15 @@
           </div>
           <div class="input-container">
             <label class="label-form">First Name</label>
-            <input class="input-form" type="text" name="1name">
+            <input class="input-form" type="text" name="1name" data-field="firstname">
           </div>
           <div class="input-container">
             <label class="label-form">Last Name</label>
-            <input class="input-form" type="text" name="2name">
+            <input class="input-form" type="text" name="2name" data-field="lastname">
           </div>
           <div class="input-container">
             <label class="label-form">Country</label>
-            <select>
+            <select data-field="country">
               <option value="US">US</option>
               <option value="PT">PT</option>
               <option value="BR">BR</option>
@@ -48,11 +51,11 @@
           <p class="title-container">Contact Details</p>
           <div class="input-container">
             <label class="label-form">Email</label>
-            <input class="input-form" type="text" placeholder="example@domain.com">
+            <input class="input-form" type="text" placeholder="example@domain.com" data-field="email">
           </div>
           <div class="input-container">
             <label class="label-form">Repeat Email</label>
-            <input class="input-form" type="text" placeholder="example@domain.com">
+            <input class="input-form" type="text" placeholder="example@domain.com" data-field="email-confirm">
           </div>
           <br><br>
 
@@ -61,18 +64,18 @@
           <p class="title-container">Set Account Password</p>
           <div class="input-container">
             <label class="label-form">Password</label>
-            <input class="input-form" type="password" name="password" id="password">
+            <input class="input-form" type="password" name="password" id="password" data-field="password">
           </div>
           <div class="password-rules">
             <p class="title-rules">The password must include</p>
-            <p class="rule">@ or more characters</p>
-            <p class="rule">At loast one uppercase and onde lowercase letter</p>
-            <p class="rule">At loast one number or special character(@!#$%*&)</p>
+            <p class="rule">6 or more characters</p>
+            <p class="rule">At least one uppercase and one lowercase letter</p>
+            <p class="rule">At least one number or special character(@!#$%*&)</p>
           </div>
           <span></span>
           <div class="input-container">
             <label class="label-form"> Repeat Password </label>
-            <input class="input-form" type="password" id="rep-password">
+            <input class="input-form" type="password" id="rep-password" data-field="password-confirm">
           </div>
 
         </div>
@@ -82,10 +85,10 @@
           <div class="input-pin-container">
             <label class="label-form">PIN-code</label>
             <div class="inputs-pin-container">
-              <input class="input-form input-pin" type="text" maxlength="1">
-              <input class="input-form input-pin" type="text" maxlength="1">
-              <input class="input-form input-pin" type="text" maxlength="1">
-              <input class="input-form input-pin" type="text" maxlength="1">
+              <input class="input-form input-pin" type="text" maxlength="1" data-field="pin-1">
+              <input class="input-form input-pin" type="text" maxlength="1" data-field="pin-2">
+              <input class="input-form input-pin" type="text" maxlength="1" data-field="pin-3">
+              <input class="input-form input-pin" type="text" maxlength="1" data-field="pin-4">
             </div>
           </div>
         </div>
@@ -94,7 +97,7 @@
           <p class="describe">Enter the email address of the partner of the partner who invited you</p>
           <div class="input-container">
             <label class="label-form">You invited by</label>
-            <input class="input-form" type="text" placeholder="example@domain.com">
+            <input class="input-form" type="text" placeholder="example@domain.com" data-field="referrer">
           </div>
         </div>
         <div class="container-form">
@@ -360,15 +363,15 @@
         </div>
         <div class="checkbox-container">
           <label>
-            <input id="check-1" type="checkbox" class="terms-checkbox">
+            <input id="check-1" type="checkbox" class="terms-checkbox" data-field="terms-1">
             I have need and agree to the terms of service
           </label>
           <label>
-            <input id="check-2" type="checkbox" class="terms-checkbox">
+            <input id="check-2" type="checkbox" class="terms-checkbox" data-field="terms-2">
             I have need the <a color="#ffe456">privacy policy</a>
           </label>
           <label>
-            <input id="check-3" type="checkbox" class="terms-checkbox">
+            <input id="check-3" type="checkbox" class="terms-checkbox" data-field="terms-3">
             I agree to the processing of personal data
           </label>
         </div>
@@ -376,10 +379,10 @@
         <div class="completation-form">
           <div class="captcha-container">CAPTCHA</div>
           <div>
-            <input type="submit" class="submit-button button-rgb" value="CREATE AN ACCOUNT" />
+            <input type="submit" class="submit-button button-rgb" value="CREATE AN ACCOUNT" id="submit" />
           </div>
         </div>
-      </form>
+      </div>
     </div>
     <div class="company-presentation">
       <img src="../svg/Logo ONNE.svg" alt="">
