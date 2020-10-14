@@ -9,6 +9,7 @@
     justify-content:space-between;
     align-items:center;
     border-bottom: 1px solid gray;
+    flex-wrap: wrap;
 }
 
 .title{
@@ -16,6 +17,7 @@
     gap:25px;
     align-items:center;
     margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 
 .container-chat .chat-list{
@@ -132,6 +134,7 @@
     text-transform: uppercase;
     text-decoration: underline;
     padding-right: 2px;
+    word-break: break-word;
 }
 
 .container-chat .chat-list .message-row .message-content .list-file .list-item a{
@@ -203,8 +206,17 @@
 }
 
 .container-chat .chat-functional .row-text p{
-    display: flex;
     font-size: 11px;
     color:#15d6f0
 }
 
+@media (max-width:800px){
+    .chat-form-bottom{
+        flex-direction: column;
+    }
+
+    .container-chat .chat-functional .chat-form-bottom .box-btn {
+        padding: 0;
+        justify-content: flex-start;
+    }
+}
