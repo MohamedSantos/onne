@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ticket</title>
   <link rel="stylesheet" href="../css/ticket.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="../js/app/common.js"></script>
+  <script src="../js/app/ticket.js"></script>
 
 
 </head>
@@ -36,16 +39,16 @@
           <li class="drop-down">
             <span>Support</span>
             <ul class="drop">
-              <li class="drop-item">
-                <a class="font" href="#">FAQ</a>
-              </li>
-              <li class="drop-item">
-                <a class="font" href="#">Create Tickets</a>
-              </li>
-              <li class="drop-item">
-                <a class="font" href="#">My Tickets</a>
-              </li>
-            </ul>
+                <li class="drop-item">
+                  <a class="font" href="/ticket.html">FAQ</a>
+                </li>
+                <li class="drop-item">
+                  <a class="font" href="/ticket.html">Create Tickets</a>
+                </li>
+                <li class="drop-item">
+                  <a class="font" href="/ticket.html">My Tickets</a>
+                </li>
+              </ul>
           </li>
           <li class="drop-down">
             <span>Settings</span>
@@ -64,7 +67,7 @@
         </ul>
         <div class="welcome-message">
           <span>Be welcome: &nbsp;</span>
-          <span style="color: #fc9803;"><b>Marcio Caldas Vieira</b></span>
+          <span style="color: #fc9803;"><b class="user-firstname"></b> <b class="user-lastname"></b> <b class="user-id"></b></span>
         </div>
         <div class="settings">
           <a href="#" class=><img class="icon-nav" src="../svg/icon/IconMessage.svg"></a>
@@ -132,29 +135,24 @@
     <div class="box moving-text">
       <span class="font span-price">Prices |</span>
       <marquee class="font marq" behavior="scroll" direction="left">
-        <label class="price-up">BTC: $10.576,90</label>
+          <label id="quote-BTCUSD">BTC: $0</label>
 
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
 
-        <label class="price-down">ETH: $346,79</label>
+          <label id="quote-BCHUSD">BCH: $0</label>
 
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
 
-        <label class="price-up">LTC: $45,69</label>
+          <label id="quote-BTGUSD">BTG: $0</label>
 
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
 
-        <label class="price-down">ZEC: $60,61</label>
+          <label id="quote-TRXUSD">TRX: $0</label>
 
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;
-
-        <label class="price-up">DASH: $66,47</label>
-
-      </marquee>
+        </marquee>
     </div>
 
     <section>
@@ -307,117 +305,117 @@
         </div>
       </div>
 
-      <div class="box">
-        <div class="container-saq">
-          <div class="title" id="createTicket">
-            <p>Submit new ticket</p>
-            <p>You can find most of the answersin the FAQ</p>
-          </div>
+<!--      <div class="box">-->
+<!--        <div class="container-saq">-->
+<!--          <div class="title" id="createTicket">-->
+<!--            <p>Submit new ticket</p>-->
+<!--            <p>You can find most of the answersin the FAQ</p>-->
+<!--          </div>-->
 
-          <!-- saq -->
+<!--          &lt;!&ndash; saq &ndash;&gt;-->
 
-          <div class="saq">
+<!--          <div class="saq">-->
 
-            <p style="color: #08a9b0">
-              The Safe Ticket System was created to make the correspondence of our customers
-              and Gameplex support services truly personal and secure.
-              Please complete the form below carefully.
-              Make sure that you include a detailed description of your inquiry in English.
-              Select the most appropriate department from the list to ensure that
-              your message is directed correctly.
-            </p>
-          </div>
-          <form class="form" method="POST">
+<!--            <p style="color: #08a9b0">-->
+<!--              The Safe Ticket System was created to make the correspondence of our customers-->
+<!--              and Gameplex support services truly personal and secure.-->
+<!--              Please complete the form below carefully.-->
+<!--              Make sure that you include a detailed description of your inquiry in English.-->
+<!--              Select the most appropriate department from the list to ensure that-->
+<!--              your message is directed correctly.-->
+<!--            </p>-->
+<!--          </div>-->
+<!--          <form class="form" method="POST">-->
 
-            <div class="line">
-              <div class="departament">
-                <p class="font">Departament</p>
-                <select name="departament" id="departament">
-                  <option value="">Booster Request</option>
-                  <option value="">Booster Request</option>
-                  <option value="">Booster Request</option>
-                  <option value="">Booster Request</option>
-                  <option value="">Booster Request</option>
-                  <option value="">Booster Request</option>
-                  <option value="">Booster Request</option>
-                  <option value="">Booster Request</option>
-                </select>
-              </div>
+<!--            <div class="line">-->
+<!--              <div class="departament">-->
+<!--                <p class="font">Departament</p>-->
+<!--                <select name="departament" id="departament">-->
+<!--                  <option value="">Booster Request</option>-->
+<!--                  <option value="">Booster Request</option>-->
+<!--                  <option value="">Booster Request</option>-->
+<!--                  <option value="">Booster Request</option>-->
+<!--                  <option value="">Booster Request</option>-->
+<!--                  <option value="">Booster Request</option>-->
+<!--                  <option value="">Booster Request</option>-->
+<!--                  <option value="">Booster Request</option>-->
+<!--                </select>-->
+<!--              </div>-->
 
-              <div class="subject">
-                <p class="font">Subject</p>
-                <input type="text" title="subject">
-              </div>
-            </div>
+<!--              <div class="subject">-->
+<!--                <p class="font">Subject</p>-->
+<!--                <input type="text" title="subject">-->
+<!--              </div>-->
+<!--            </div>-->
 
-            <div class="textarea">
-              <p class="font">Describe your problem more specically if you need to attach files</p>
-              <textarea style="resize: none;"></textarea>
-            </div>
+<!--            <div class="textarea">-->
+<!--              <p class="font">Describe your problem more specically if you need to attach files</p>-->
+<!--              <textarea style="resize: none;"></textarea>-->
+<!--            </div>-->
 
 
-            <div class="line-btn">
+<!--            <div class="line-btn">-->
 
-              <div class="file">
-                <p class="font">Attach files</p>
-                <input type="file" accept="image/png, image/jpeg">
-              </div>
+<!--              <div class="file">-->
+<!--                <p class="font">Attach files</p>-->
+<!--                <input type="file" accept="image/png, image/jpeg">-->
+<!--              </div>-->
 
-              <div class="button">
-                <input type="submit" value="Create a ticket" class="button-rgb">
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="box">
-        <div class="container-myTickets">
-          <div class="title-section">
-            <p class="font" style="color:#fff">My tickets</p>
-            <p class="font" style="color:#fff">Problem? Question?
-              <a href="#createTicket" style="color:#f9fd15">Create a new ticket</a></p>
-          </div>
-          <div class="tickets-table">
-            <ul class="list head-table">
-              <li class="list-item font">Date</li>
-              <li class="list-item font">Department</li>
-              <li class="list-item font">Subject</li>
-              <li class="list-item font">Last message</li>
-            </ul>
-            <ul class="list">
-              <li class="list-item font"><span>Date</span>
-                <div><i class="icon-mail icon"></i><span class="date">August, 24, 2020</span></div><a href="chat.html"></a>
-              </li>
-              <li class="list-item font"><span>Department</span><span class="department">General issues</span><a href="chat.html"></a></li>
-              <li class="list-item font"><span>Subject</span><span class="subject">Subject</span><a href="chat.html"></a></li>
-              <li class="list-item font"><span>Last message</span> <span class="message">message for adm</span><a href="chat.html"></a></li>
-            </ul>
-            <ul class="list">
-              <li class="list-item font"><span>Date</span>
-                <div> <i class="icon-envelope-open-o icon"></i><span class="date">August, 24, 2020</span></div><a href="chat.html"></a>
-              </li>
-              <li class="list-item font"><span>Department</span> <span class="department">General issues</span><a href="chat.html"></a></li>
-              <li class="list-item font"><span>Subject</span><span class="subject">Subject</span><a href="chat.html"></a></li>
-              <li class="list-item font"><span>Last message</span><span class="message">message for adm</span><a href="chat.html"></a></li>
-            </ul>
-            <ul class="list">
-              <li class="list-item font"><span>Date</span>
-                <div><i class="icon-lock icon"></i><span class="date">August, 24, 2020</span></div><a href="chat.html"></a>
-              </li>
-              <li class="list-item font"><span>Department</span><span class="department">General issues</span><a href="chat.html"></a></li>
-              <li class="list-item font"><span>Subject</span><span class="subject">Subject</span><a href="chat.html"></a></li>
-              <li class="list-item font"><span>Last message</span><span class="message">message for adm</span><a href="chat.html"></a></li>
-            </ul>
-          </div>
-          <div class="explanation">
-            <ul class="list">
-              <li class="list-item"><i class="icon-mail icon"></i><span>New message</span></li>
-              <li class="list-item"><i class="icon-envelope-open-o icon"></i><span>Read message</span></li>
-              <li class="list-item"><i class="icon-lock icon"></i><span>Ticket closed</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+<!--              <div class="button">-->
+<!--                <input type="submit" value="Create a ticket" class="button-rgb">-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </form>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="box">-->
+<!--        <div class="container-myTickets">-->
+<!--          <div class="title-section">-->
+<!--            <p class="font" style="color:#fff">My tickets</p>-->
+<!--            <p class="font" style="color:#fff">Problem? Question?-->
+<!--              <a href="#createTicket" style="color:#f9fd15">Create a new ticket</a></p>-->
+<!--          </div>-->
+<!--          <div class="tickets-table">-->
+<!--            <ul class="list head-table">-->
+<!--              <li class="list-item font">Date</li>-->
+<!--              <li class="list-item font">Department</li>-->
+<!--              <li class="list-item font">Subject</li>-->
+<!--              <li class="list-item font">Last message</li>-->
+<!--            </ul>-->
+<!--            <ul class="list">-->
+<!--              <li class="list-item font"><span>Date</span>-->
+<!--                <div><i class="icon-mail icon"></i><span class="date">August, 24, 2020</span></div><a href="chat.html"></a>-->
+<!--              </li>-->
+<!--              <li class="list-item font"><span>Department</span><span class="department">General issues</span><a href="chat.html"></a></li>-->
+<!--              <li class="list-item font"><span>Subject</span><span class="subject">Subject</span><a href="chat.html"></a></li>-->
+<!--              <li class="list-item font"><span>Last message</span> <span class="message">message for adm</span><a href="chat.html"></a></li>-->
+<!--            </ul>-->
+<!--            <ul class="list">-->
+<!--              <li class="list-item font"><span>Date</span>-->
+<!--                <div> <i class="icon-envelope-open-o icon"></i><span class="date">August, 24, 2020</span></div><a href="chat.html"></a>-->
+<!--              </li>-->
+<!--              <li class="list-item font"><span>Department</span> <span class="department">General issues</span><a href="chat.html"></a></li>-->
+<!--              <li class="list-item font"><span>Subject</span><span class="subject">Subject</span><a href="chat.html"></a></li>-->
+<!--              <li class="list-item font"><span>Last message</span><span class="message">message for adm</span><a href="chat.html"></a></li>-->
+<!--            </ul>-->
+<!--            <ul class="list">-->
+<!--              <li class="list-item font"><span>Date</span>-->
+<!--                <div><i class="icon-lock icon"></i><span class="date">August, 24, 2020</span></div><a href="chat.html"></a>-->
+<!--              </li>-->
+<!--              <li class="list-item font"><span>Department</span><span class="department">General issues</span><a href="chat.html"></a></li>-->
+<!--              <li class="list-item font"><span>Subject</span><span class="subject">Subject</span><a href="chat.html"></a></li>-->
+<!--              <li class="list-item font"><span>Last message</span><span class="message">message for adm</span><a href="chat.html"></a></li>-->
+<!--            </ul>-->
+<!--          </div>-->
+<!--          <div class="explanation">-->
+<!--            <ul class="list">-->
+<!--              <li class="list-item"><i class="icon-mail icon"></i><span>New message</span></li>-->
+<!--              <li class="list-item"><i class="icon-envelope-open-o icon"></i><span>Read message</span></li>-->
+<!--              <li class="list-item"><i class="icon-lock icon"></i><span>Ticket closed</span></li>-->
+<!--            </ul>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
     </section>
     <script>
       const pergunta = document.querySelectorAll('.question-row dt')
