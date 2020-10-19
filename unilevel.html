@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/unilvel.css">
+  <link rel="sortcut icon" href="../img/LOGO ONE 100 X 100.png" type="image/png" />
+  <title>Onne - Unilevel</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="../js/app/common.js"></script>
+  <script src="../js/app/unilevel.js"></script>
+</head>
+
+<body>
+  <class class="section">
+    <div class="container">
+      <header class="header">
+        <img class="logo" src="../svg/Logo ONNE.svg" alt="" class="icon-nav">
+        <div class="wrapper">
+          <div class="accordion"><img src="../img/configuration+settings+icon-1320191040059302570.png" alt=""></div>
+          <ul class="menu-list">
+            <li class="drop-down">
+              <span>EN</span>
+              <ul class="drop">
+                <li class="drop-item">
+                  <a class="font" href="#">RU</a>
+                </li>
+                <li class="drop-item">
+                  <a class="font" href="#">PT</a>
+                </li>
+                <li class="drop-item">
+                  <a class="font" href="#">MS</a>
+                </li>
+              </ul>
+            </li>
+            <li class="drop-down">
+              <span>Support</span>
+              <ul class="drop">
+                <li class="drop-item">
+                  <a class="font" href="/ticket.html">FAQ</a>
+                </li>
+                <li class="drop-item">
+                  <a class="font" href="/ticket.html">Create Tickets</a>
+                </li>
+                <li class="drop-item">
+                  <a class="font" href="/ticket.html">My Tickets</a>
+                </li>
+              </ul>
+            </li>
+            <li class="drop-down">
+              <span>Settings</span>
+              <ul class="drop">
+                <li class="drop-item">
+                  <a class="font" href="./settings.html#profile">General Settings</a>
+                </li>
+                <li class="drop-item">
+                  <a class="font" href="./settings.html#security">Security</a>
+                </li>
+                <li class="drop-item">
+                  <a class="font" href="./settings.html#verification">Verification</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="welcome-message">
+            <span>Be welcome: &nbsp;</span>
+            <span style="color: #fc9803;"><b class="user-firstname"></b> <b class="user-lastname"></b></span>
+          </div>
+          <div class="settings">
+            <a href="#" class=><img class="icon-nav" src="../svg/icon/IconMessage.svg"></a>
+            <a href="#"><img class="icon-nav" src="../svg/icon/IconLogout.svg" id="logout"></a>
+          </div>
+        </div>
+        <div class="accordion"><img src="../img/configuration+settings+icon-1320191040059302570.png" alt=""></div>
+        <div class="accordion2"><span></span></div>
+      </header>
+      <div class="header-menu">
+        <nav class="nav">
+          <div class="accordion2"><span></span></div>
+          <ul>
+            <li> <a class="font text-nav" href="blank.html">
+                <img class="icon-nav first" src="../svg/icon/IconDashboard.svg" alt=""><span>Home</span>
+              </a>
+              <img src="../svg/Replicar barra.svg" alt="">
+            </li>
+            <li> <a class="font text-nav" href="binary.html">
+                <img class="icon-nav" src="../svg/icon/IconBinaryTree.svg" alt=""><span>Binary</span>
+              </a>
+              <img src="../svg/Replicar barra.svg" alt="">
+            </li>
+            <li>
+              <a class="font text-nav" href="status.html">
+                <img class="icon-nav" src="../svg/icon/IconStatus.svg" alt=""><span>Status</span>
+              </a>
+              <img src="../svg/Replicar barra.svg" alt="">
+            </li>
+            <li>
+              <a class="font text-nav" href="bank.html">
+                <img class="icon-nav" src="../svg/icon/IconBank.svg" alt="">
+                <span>Bank</span>
+              </a>
+              <img src="../svg/Replicar barra.svg" alt="">
+            </li>
+            <li>
+              <a class="font text-nav" href="unilevel.html">
+                <img class="icon-nav" src="../svg/icon/IconUnilevel.svg" alt=""><span>Unilevel</span>
+              </a>
+              <img src="../svg/Replicar barra.svg" alt="">
+            </li>
+            <li>
+              <a class="font text-nav" href="#">
+                <img class="icon-nav" src="../svg/icon/IconPromotion.svg" alt=""><span>Promotion</span>
+              </a>
+              <img src="../svg/Replicar barra.svg" alt="">
+            </li>
+            <li>
+              <a class="font text-nav" href="#">
+                <img class="icon-nav" src="../svg/icon/IconMaterial.svg" alt=""><span>Material</span>
+              </a>
+              <img src="../svg/Replicar barra.svg" alt="">
+            </li>
+            <li>
+              <a class="font text-nav last" href="#">
+                <img class="icon-nav" src="../svg/icon/IconRoadMap.svg" alt=""><span>Road Map</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="accordion2"><span></span></div>
+      </div>
+      <div class="box moving-text">
+        <span class="font span-price">Prices |</span>
+        <marquee class="font marq" behavior="scroll" direction="left">
+          <label id="quote-BTCUSD">BTC: $0</label>
+
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+
+          <label id="quote-BCHUSD">BCH: $0</label>
+
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+
+          <label id="quote-BTGUSD">BTG: $0</label>
+
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+
+          <label id="quote-TRXUSD">TRX: $0</label>
+
+        </marquee>
+      </div>
+      <section class="coluns-section">
+        <div class="div-coluns">
+          <div class="div-legend box font">
+            <div><span><b>Nivel</b></span></div>
+            <div><span><b>Rating</b></span></div>
+            <div><span><b>Member</b></span></div>
+          </div>
+          <div class="div-accordion">
+            <div class="box div-accordion-container">
+              <ul class="box ul-accordion">
+                <li class="outside-li box">
+                  <div>
+                    <div class="div-number">
+                      <span class="font number"><b>1</b><small class="number"><b>st</b></small></span>
+                    </div>
+                    <div class="div-data">
+                      <div>
+                        <div><span>Rating</span><span style="color: white;">5%</span></div>
+                        <div><span>Member</span><span style="color: white;"><span></span><span
+                              class="count-level-1">0</span> &#9787</span></div>
+                        <div><span style="cursor: pointer; color:#dcf50e;">More</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-dentro">
+                    <div class="head-table">
+                      <ul>
+                        <li>Date</li>
+                        <li>Name</li>
+                        <li>Status</li>
+                        <li></li>
+                        <li>Binary Tree</li>
+                      </ul>
+                    </div>
+                    <div class="body-table body-table-1">
+
+                    </div>
+                    <div class="footer-table">
+                      <div>
+                        <ul class="paginate-1">
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="outside-li box">
+                  <div>
+                    <div class="div-number">
+                      <span class="font number"><b>2</b><small class="number"><b>st</b></small></span>
+                    </div>
+                    <div class="div-data">
+                      <div>
+                        <div><span>Rating</span><span style="color: white;">2%</span></div>
+                        <div><span>Member</span><span style="color: white;"><span></span><span
+                              class="count-level-2">0</span> &#9787</span></div>
+                        <div><span style="cursor: pointer; color:#dcf50e;">More</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-dentro">
+                    <div class="head-table">
+                      <ul>
+                        <li>Date</li>
+                        <li>Name</li>
+                        <li>Status</li>
+                        <li></li>
+                        <li>Binary Tree</li>
+                      </ul>
+                    </div>
+                    <div class="body-table body-table-2">
+
+                    </div>
+                    <div class="footer-table">
+                      <div>
+                        <ul class="paginate-2">
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="outside-li box">
+                  <div>
+                    <div class="div-number">
+                      <span class="font number"><b>3</b><small class="number"><b>st</b></small></span>
+                    </div>
+                    <div class="div-data">
+                      <div>
+                        <div><span>Rating</span><span style="color: white;">1%</span></div>
+                        <div><span>Member</span><span style="color: white;"><span></span><span
+                              class="count-level-3">0</span> &#9787</span></div>
+                        <div><span style="cursor: pointer; color:#dcf50e;">More</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-dentro">
+                    <div class="head-table">
+                      <ul>
+                        <li>Date</li>
+                        <li>Name</li>
+                        <li>Status</li>
+                        <li></li>
+                        <li>Binary Tree</li>
+                      </ul>
+                    </div>
+                    <div class="body-table body-table-3">
+
+                    </div>
+                    <div class="footer-table">
+                      <div>
+                        <ul class="paginate-3">
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="outside-li box">
+                  <div>
+                    <div class="div-number">
+                      <span class="font number"><b>4</b><small class="number"><b>st</b></small></span>
+                    </div>
+                    <div class="div-data">
+                      <div>
+                        <div><span>Rating</span><span style="color: white;">1%</span></div>
+                        <div><span>Member</span><span style="color: white;"><span></span><span
+                              class="count-level-4">0</span> &#9787</span></div>
+                        <div><span style="cursor: pointer; color:#dcf50e;">More</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-dentro">
+                    <div class="head-table">
+                      <ul>
+                        <li>Date</li>
+                        <li>Name</li>
+                        <li>Status</li>
+                        <li></li>
+                        <li>Binary Tree</li>
+                      </ul>
+                    </div>
+                    <div class="body-table body-table-4">
+
+                    </div>
+                    <div class="footer-table">
+                      <div>
+                        <ul class="paginate-4">
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="outside-li box">
+                  <div>
+                    <div class="div-number">
+                      <span class="font number"><b>5</b><small class="number"><b>st</b></small></span>
+                    </div>
+                    <div class="div-data">
+                      <div>
+                        <div><span>Rating</span><span style="color: white;">1%</span></div>
+                        <div><span>Member</span><span style="color: white;"><span></span><span
+                              class="count-level-5">0</span> &#9787</span></div>
+                        <div><span style="cursor: pointer; color:#dcf50e;">More</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-dentro">
+                    <div class="head-table">
+                      <ul>
+                        <li>Date</li>
+                        <li>Name</li>
+                        <li>Status</li>
+                        <li></li>
+                        <li>Binary Tree</li>
+                      </ul>
+                    </div>
+                    <div class="body-table body-table-5">
+
+                    </div>
+                    <div class="footer-table">
+                      <div>
+                        <ul class="paginate-5">
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script>
+      const more = document.querySelectorAll('.div-data > div > div:last-child')
+      const li = document.querySelectorAll('.outside-li')
+      more.forEach((item, index) => {
+        item.addEventListener('click', () => {
+          if (li[index].classList.contains('active')) {
+            li[index].classList.remove('active')
+
+            more[index].classList.remove('active')
+
+          } else {
+            li[index].classList.add('active')
+            more[index].classList.add('active')
+          }
+
+        })
+      })
+    </script>
+    <script type="module" src="../js/script.js"></script>
+</body>
+
+</html>

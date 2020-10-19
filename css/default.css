@@ -105,6 +105,29 @@ textarea {
   -webkit-font-smoothing: antialiased;
 }
 
+.footer-table{
+  margin-top: 20px;
+}
+
+.footer-table div ul{
+  display: flex;
+}
+
+.footer-table div ul{
+  display: flex;
+}
+
+.footer-table div ul li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 25px;
+  margin: 0 5px;
+  background: #b3f319;
+  cursor: pointer;
+}
+
 /* Form styles */
 .button-rgb {
   position: relative;

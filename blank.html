@@ -2,13 +2,19 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/chartist.css">
+  <link rel="sortcut icon" href="../img/LOGO ONE 100 X 100.png" type="image/png" />
   <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/dashboard-ecommerce.css">
   <title>Onne - Dashboard</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="../js/app/common.js"></script>
+  <script src="../js/app/blank.js"></script>
 </head>
 
 <body>
@@ -37,13 +43,13 @@
               <span>Support</span>
               <ul class="drop">
                 <li class="drop-item">
-                  <a class="font" href="#">FAQ</a>
+                  <a class="font" href="/ticket.html">FAQ</a>
                 </li>
                 <li class="drop-item">
-                  <a class="font" href="#">Create Tickets</a>
+                  <a class="font" href="/ticket.html">Create Tickets</a>
                 </li>
                 <li class="drop-item">
-                  <a class="font" href="#">My Tickets</a>
+                  <a class="font" href="/ticket.html">My Tickets</a>
                 </li>
               </ul>
             </li>
@@ -51,24 +57,24 @@
               <span>Settings</span>
               <ul class="drop">
                 <li class="drop-item">
-                  <a class="font" href="#">General Settings</a>
+                  <a class="font" href="settings.html#profile">General Settings</a>
                 </li>
                 <li class="drop-item">
-                  <a class="font" href="#">Security</a>
+                  <a class="font" href="settings.html#security">Security</a>
                 </li>
                 <li class="drop-item">
-                  <a class="font" href="#">Verification</a>
+                  <a class="font" href="settings.html#verification">Verification</a>
                 </li>
               </ul>
             </li>
           </ul>
           <div class="welcome-message">
             <span>Be welcome: &nbsp;</span>
-            <span style="color: #fc9803;"><b>Marcio Caldas Vieira</b></span>
+            <span style="color: #fc9803;"><b class="user-firstname"></b> <b class="user-lastname"></b> <b class="user-id"></b></span>
           </div>
           <div class="settings">
             <a href="#" class=><img class="icon-nav" src="../svg/icon/IconMessage.svg"></a>
-            <a href="#"><img class="icon-nav" src="../svg/icon/IconLogout.svg"></a>
+            <a href="#"><img class="icon-nav" src="../svg/icon/IconLogout.svg" id="logout"></a>
           </div>
         </div>
         <div class="accordion"><img src="../img/configuration+settings+icon-1320191040059302570.png" alt=""></div>
@@ -131,27 +137,22 @@
       <div class="box moving-text">
         <span class="font span-price">Prices |</span>
         <marquee class="font marq" behavior="scroll" direction="left">
-          <label class="price-up">BTC: $10.576,90</label>
+          <label id="quote-BTCUSD">BTC: $0</label>
 
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;
 
-          <label class="price-down">ETH: $346,79</label>
+          <label id="quote-BCHUSD">BCH: $0</label>
 
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;
 
-          <label class="price-up">LTC: $45,69</label>
+          <label id="quote-BTGUSD">BTG: $0</label>
 
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;
 
-          <label class="price-down">ZEC: $60,61</label>
-
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;
-
-          <label class="price-up">DASH: $66,47</label>
+          <label id="quote-TRXUSD">TRX: $0</label>
 
         </marquee>
       </div>
@@ -165,32 +166,31 @@
 
             <div>
               <sup class="font" style="color:white; font-size: 30px;">$</sup>
-              <strong class="font big-number">158,685.20</strong>
+              <strong class="font big-number user-balance_total_USD">0</strong>
             </div>
 
             <div>
               <span class="font">or</span>
-              <b class="font">140,000.30</b>
+              <b class="font user-balance_total_EUR">0</b>
               <span class="font">EUR</span>
             </div>
 
             <div>
               <span class="font">or</span>
-              <b class="font">10.000000</b>
+              <b class="font user-balance_total_BTC">0</b>
               <span class="font">BTC</span>
             </div>
 
-            <p class="font" style="text-align: center;font-size: 12px; margin-bottom: 16px;">Data presented at the rate
-              on 04/10/2020</p>
+            <p class="font" style="text-align: center;font-size: 12px; margin-bottom: 16px;">Data presented at the rate on <span class="user-rate-today"></span> </p>
 
             <div>
-              <button class="button-rgb">
+              <button class="button-rgb" id="go-bank">
                 Go to my Bank
               </button>
             </div>
 
             <div>
-              <button class="button-rgb">
+              <button class="button-rgb" id="go-binary">
                 Binary Tree
               </button>
             </div>
@@ -219,91 +219,63 @@
                   <li class=" item">
                     <span class="indicator"></span>
                     <p class="font">Amount BTC</p>
-                    <span class="font">$ 0.10000</span>
+                    <span class="font"><span class="user-deposit_BTC"></span></span>
                   </li>
                   <li class=" item">
                     <span class="indicator"></span>
                     <p class="font">Amount BCH</p>
-                    <span class="font">$ 0.10000</span>
+                    <span class="font"><span class="user-deposit_BCH"></span></span>
                   </li>
                   <li class=" item">
                     <span class="indicator"></span>
                     <p class="font">Amount BTG</p>
-                    <span class="font">$ 0.10000</span>
+                    <span class="font"><span class="user-deposit_BTG"></span></span>
                   </li>
                   <li class=" item">
                     <span class="indicator"></span>
-                    <p class="font">Amount BTC</p>
-                    <span class="font">$ 0.10000</span>
-                  </li>
-                  <li class=" item">
-                    <span class="indicator"></span>
-                    <p class="font">Amount BTC</p>
-                    <span class="font">$ 0.10000</span>
-                  </li>
-                  <li class=" item">
-                    <span class="indicator"></span>
-                    <p class="font">Amount BTCSV</p>
-                    <span class="font">$ 0.10000</span>
-                  </li>
-                  <li class=" item">
-                    <span class="indicator"></span>
-                    <p class="font">Amount BTC</p>
-                    <span class="font">$ 0.10000</span>
-                  </li>
-                  <li class=" item">
-                    <span class="indicator"></span>
-                    <p class="font">Amount BTC</p>
-                    <span class="font">$ 0.10000</span>
+                    <p class="font">Amount TRX</p>
+                    <span class="font"><span class="user-deposit_TRX"></span></span>
                   </li>
                 </ul>
               </div>
             </div>
 
           </div>
-
-          <!--<span class="font">My referral link:</span><br>
-                        <a class="font" href="https://www.google.com">https://www.google.com</a>
-                        <button class="font button-copy">Copy Link</button>
-                        <span class="font" >Status:</span>
-                        <span class="font" >Active: Diamond</span>
-                        <span class="font" >Direct referral: 14</span>-->
         </div>
         <div class="progress-bar box">
           <div class="container5">
             <div>
-              <p class="font limit-or-profit">Limit profit &nbsp; <span class="font" style="color: palevioletred;">/</span>&nbsp;&nbsp;<b>Qualification Status:&nbsp;&nbsp;<span class="font" style="color: palevioletred;">300%</span></b></p>
+              <p class="font limit-or-profit">Limit profit &nbsp; <span class="font" style="color: palevioletred;">/</span>&nbsp;&nbsp;<b>Qualification Status:&nbsp;&nbsp;<span class="font user-progress-max" style="color: palevioletred;">300%</span></b></p>
             </div>
 
             <div class="profit">
               <span class="font coin">BTC</span>
               <div class="bar">
-                <div class="progress" style='width: 25%;'><span class="font" style="color: white !important; "><b>25%</b></span></div>
+                <div class="progress progress_BTC-bar" style='width: 0%;'><span class="font" style="color: white !important; "><b class="progress_BTC-pct">0%</b></span></div>
               </div>
             </div>
 
             <div class="profit">
-              <span class="font coin">BTC</span>
+              <span class="font coin">BCH</span>
               <div class="bar">
-                <div class="progress" style='width: 50%;'><span class="font" style="color: white !important; "><b>50%</b></span></div>
+                <div class="progress progress_BCH-bar" style='width: 0%;'><span class="font" style="color: white !important; "><b class="progress_BCH-pct">0%</b></span></div>
               </div>
             </div>
 
             <div class="profit">
-              <span class="font coin">DASH</span>
+              <span class="font coin">BTG</span>
               <div class="bar">
-                <div class="progress" style='width: 100%;'><span class="font" style="color: white !important; "><b>100%</b></span></div>
+                <div class="progress progress_BTG-bar" style='width: 0%;'><span class="font" style="color: white !important; "><b class="progress_BTG-pct">0%</b></span></div>
               </div>
             </div>
             <div class="profit">
-              <span class="font coin">BTCSV</span>
+              <span class="font coin">TRX</span>
               <div class="bar">
-                <div class="progress" style='width: 25%;'><span class="font" style="color: white !important; "><b>25%</b></span></div>
+                <div class="progress progress_TRX-bar" style='width: 0%;'><span class="font" style="color: white !important; "><b class="progress_TRX-pct">0%</b></span></div>
               </div>
             </div>
           </div>
         </div>
-        <!-- my referral link -->
         <div class="referral-box box">
           <div class="container6">
             <div class="referral-content">
@@ -311,10 +283,10 @@
                 <p class="font">My referral link:</p>
               </div>
               <div>
-                <a id="link" class="font link" href="https://www.google.com" target="_blank">www.google.com </a>
+                <a id="link" class="font link user-reflink" href="/" target="_blank">/</a>
               </div>
               <div class="div-button" style="width: 100%">
-                <button onClick="copiarTexto()" class="button-rgb" style="cursor: pointer;">
+                <button onclick="copiarTexto()" class="button-rgb" style="cursor: pointer;">
                   Copy link
                 </button>
               </div>
@@ -322,10 +294,10 @@
                 <p class="font status-border" style="font-size: 25px; width: 100%"><b>Status</b></p>
               </div>
               <div>
-                <p class="font">Active: Diamond</p>
+                <p class="font">Active: <span class="user-status"></span> </p>
               </div>
               <div style="width: 100%">
-                <p class="direct-referral font" style="width:100%">Direct Referral : <span class="font">14</span></p>
+                <p class="direct-referral font" style="width:100%">Direct Referral : <span class="font user-direct_referrals">0</span></p>
               </div>
             </div>
           </div>
@@ -335,23 +307,16 @@
           <div class="container7">
             <div class="box-coin" style="margin-right: 40px; margin-top:-18em">
               <div class="box-select">
-                <select>
-                  <option>USD</option>
-                  <option">BRL</option>
-                    <option>EUR</option>
-                    <option>BTC</option>
-                    <option>CAD</option>
-                    <option>AUS</option>
-                    <option>DNK</option>
-                    <option>UKR</option>
-                    <option>PSA</option>
-                    <option>PSM</option>
-                    <option>XIN</option>
+                <select id="chart-cur">
+                  <option>BTC</option>
+                  <option>BCH</option>
+                  <option>BTG</option>
+                  <option>TRX</option>
                 </select>
               </div>
             </div>
             <div class="row match-height" style="width: 100%;height:100%;">
-              <div class="col-12" style="margin: 20px auto;">
+              <div class="col-12 charts-container" style="margin: 20px auto;">
                 <canvas id="line-chart" style="height:100%; width:100%"></canvas>
               </div>
             </div>
@@ -360,99 +325,19 @@
       </section>
     </div>
   </div>
-  <script>
-    new Chart(document.getElementById("line-chart"), {
-      type: 'line',
-      data: {
-        labels: [1500, 1600, 1700, 1750, 1800, 1850, 1900, 1950, 1999, 2050],
-        datasets: [{
-          data: [86, 114, 106, 106, 107, 420, 133, 221, 783, 2478],
-          label: "Africa",
-          fontColor: '#3e95cd',
-          borderColor: "#3e95cd",
-          fill: false,
-        }, {
-          data: [282, 350, 411, 502, 635, 809, 947, 1402, 3700, 5267],
-          label: "Asia",
-          fontColor: '#3e95cd',
-          borderColor: "#8e5ea2",
-          fill: false
-        }, {
-          data: [168, 170, 178, 190, 203, 276, 408, 547, 675, 734],
-          label: "Europe",
-          fontColor: '#3e95cd',
-          borderColor: "#3cba9f",
-          fill: false
-        }, {
-          data: [40, 20, 10, 16, 24, 38, 74, 167, 508, 784],
-          label: "Latin America",
-          fontColor: '#3e95cd',
-          borderColor: "#e8c3b9",
-          fill: false
-        }, {
-          data: [2000, 247, 2314, 299, 799, 2633, 824, 1723, 312, 433],
-          label: "North America",
-          fontColor: '#3e95cd',
-          borderColor: "#c45850",
-          fill: false
-        }
-        ]
-      },
-      options: {
-        legend: {
-          display: false
-        },
-        responsive: false
-      }
-    });
-
-  </script>
-  <script>
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var chart = new Chart(ctx, {
-      // The type of chart we want to create
-      type: 'doughnut',
-
-      // The data for our dataset
-      data: {
-        datasets: [{
-          data: [0.0030, 0.1, 0.01, 1],
-          backgroundColor: [
-            '#ff6384',
-            '#36a2eb',
-            '#cc65fe',
-            "#fc9803"
-          ],
-          borderColor: ['#ff6384', '#36a2eb', '#cc65fe', "#fc9803"],
-        }],
-        labels: [
-          'BTC',
-          'BTCSV',
-          'BCH',
-          "BTG"
-        ],
-
-      },
-      // These labels appear in the legend and in the tooltips when hovering different arcs
-
-      // Configuration options go here
-      options: {
-        legend: {
-          display: false
-        },
-        cutoutPercentage: 80
-
-      }
-    });
-
-  </script>
   <script type="module" src="../js/script.js"></script>
   <script>
+    const createSelection = (element) => {
+      const selection = window.getSelection();
+      const range = document.createRange();
+      range.selectNodeContents(element);
+      selection.removeAllRanges();
+      selection.addRange(range);
+    }
     function copiarTexto() {
       var textoCopiado = document.getElementById("link");
-      textoCopiado.select();
-      document.execCommand("Copy");
-      alert("Texto Copiado: www.google.com" + textoCopiado.value);
+      createSelection(textoCopiado)
+      document.execCommand("copy");
     }
   </script>
 </body>

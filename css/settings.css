@@ -33,6 +33,10 @@ select {
   padding: 40px;
 }
 
+.modal-content {
+  border: none;
+}
+
 .profile-info {
   display: flex;
   justify-content: space-between;
@@ -105,6 +109,20 @@ a {
   width: 250px;
 }
 
+.icon-veri {
+  display: flex;
+}
+
+.icon-veri > div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-veri img {
+  width: 100px;
+}
+
 .div-security {
   display: flex;
   justify-content: space-between;
@@ -145,6 +163,12 @@ a {
   margin: 10px auto;
 }
 
+.text-veri {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .text-veri h3 {
   padding: 10px;
   width: 350px;
@@ -159,9 +183,6 @@ a {
   height: 1px;
   background: gray;
   margin: 10px auto;
-}
-
-.img-veri {
 }
 
 @media (max-width: 1220px) {
@@ -241,5 +262,11 @@ a {
 
   .text-veri h3 {
     width: 260px;
+  }
+
+  .icon-veri {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
   }
 }

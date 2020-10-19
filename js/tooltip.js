@@ -48,7 +48,10 @@ export default () => {
   }
 
   const handleMouseOver = ({ target, pageY, pageX }) => {
-    const tooltip = createBox(target);
+    let tooltip = document.querySelector('.tooltip');
+    if (tooltip) tooltip.remove();
+
+    tooltip = createBox(target);
     const { top, left } = position(target, pageY, pageX, tooltip);
 
     tooltip.style.left = left;
@@ -63,5 +66,6 @@ export default () => {
   }
 
   const tooltips = document.querySelectorAll('[data-text]');
+  console.log(tooltips);
   tooltips.forEach(item => item.addEventListener('mouseover', handleMouseOver));
 }

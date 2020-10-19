@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="../css/default.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/deposit.css">
+    <link rel="sortcut icon" href="../img/LOGO ONE 100 X 100.png" type="image/png" />
     <title>Onne</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../js/app/common.js"></script>
+    <script src="../js/app/deposit-bank.js"></script>
 </head>
 
 <body>
@@ -35,13 +39,13 @@
                         <span>Support</span>
                         <ul class="drop">
                             <li class="drop-item">
-                                <a class="font" href="#">FAQ</a>
+                                <a class="font" href="/ticket.html">FAQ</a>
                             </li>
                             <li class="drop-item">
-                                <a class="font" href="#">Create Tickets</a>
+                                <a class="font" href="/ticket.html">Create Tickets</a>
                             </li>
                             <li class="drop-item">
-                                <a class="font" href="#">My Tickets</a>
+                                <a class="font" href="/ticket.html">My Tickets</a>
                             </li>
                         </ul>
                     </li>
@@ -49,13 +53,13 @@
                         <span>Settings</span>
                         <ul class="drop">
                             <li class="drop-item">
-                                <a class="font" href="#">General Settings</a>
+                                <a class="font" href="settings.html#profile">General Settings</a>
                             </li>
                             <li class="drop-item">
-                                <a class="font" href="#">Security</a>
+                                <a class="font" href="settings.html#security">Security</a>
                             </li>
                             <li class="drop-item">
-                                <a class="font" href="#">Verification</a>
+                                <a class="font" href="settings.html#verification">Verification</a>
                             </li>
                         </ul>
                     </li>
@@ -129,27 +133,22 @@
         <div class="box moving-text">
             <span class="font span-price">Prices |</span>
             <marquee class="font marq" behavior="scroll" direction="left">
-                <label class="price-up">BTC: $10.576,90</label>
+                <label id="quote-BTCUSD">BTC: $0</label>
 
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;
 
-                <label class="price-down">ETH: $346,79</label>
+                <label id="quote-BCHUSD">BCH: $0</label>
 
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;
 
-                <label class="price-up">LTC: $45,69</label>
+                <label id="quote-BTGUSD">BTG: $0</label>
 
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;
 
-                <label class="price-down">ZEC: $60,61</label>
-
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-
-                <label class="price-up">DASH: $66,47</label>
+                <label id="quote-TRXUSD">TRX: $0</label>
 
             </marquee>
         </div>
@@ -162,18 +161,18 @@
 
                     <div class="div-select">
                         <p style="color: white; margin-bottom: 10px;">Select portfolios</p>
-                        <select name="" id="" style="width: 200px;">
+                        <select name="" id="currency" style="width: 200px;">
                             <option value="BTC">
                                 Bitcoin
                             </option>
                             <option value="BCH">
                                 Bitcoin Cash
                             </option>
-                            <option value="BTCSV">
-                                Bitcoin SV
-                            </option>
                             <option value="BTG">
                                 Bitcoin Gold
+                            </option>
+                            <option value="TRX">
+                                Tron
                             </option>
                         </select>
                     </div>
@@ -181,18 +180,18 @@
                     <div class="div-select">
                         <p style="color: white; margin-bottom: 10px;">Select Amount(USD)</p>
                         <div class="input-border">
-                            <input type="number" placeholder="$">
+                            <input type="number" placeholder="$" id="payment-amount">
                         </div>
                     </div>
                     <div class="div-select">
                         <p style="color: white; margin-bottom: 10px;">Send Value</p>
                         <div class="box result">
 
-                            <span>BTC</span>
-                            <span>0.2100</span>
+                            <span class="currency">BTC</span>
+                            <span class="currency-amount"></span>
                         </div>
                     </div>
-                    <button class="button-rgb" style="width: 150px;">Pay</button>
+                    <button class="button-rgb" style="width: 150px;" id="get-wallet">Pay</button>
                 </div>
             </div>
         </div>
@@ -204,6 +203,8 @@
                 <div style="margin-top: 20px;">
                     <p style="color: red;">
                         Read this before send any amount to our wallets! <br><br>
+
+                        - Minimum deposit is 30 dollars for every transaction, lesser amounts sent WILL NOT be calculated in your dashboard!<br><br>
 
                         - Send the exact amount indicated in the transaction or use the QR Code.<br><br>
 
@@ -219,38 +220,52 @@
                 </div>
             </div>
         </div>
-        <div class="resume box">
+        <div class="resume box" id="payment-box" style="display: none">
             <div class="resume-container">
                 <div>
                     <p style="color:white;">Wallet Type</p>
-                    <p>Crypto currency : Bitcoin</p>
+                    <p>Crypto currency : <span class="currency-name">Bitcoin</span></p>
 
                     <p style="color:white; ">Value to send</p>
-                    <p>0.12502 BTC</p>
+                    <p><span class="currency-amount">0</span> <span class="currency">BTC</span></p>
 
                     <p style="color:white;">Crypto currency wallet for send</p>
                     <div class="wallet">
-                        <p style="margin-right: 10px;">0fxdkiumnitrmokdwa</p>
-                        <button class="button-rgb">Copy</button>
+                        <p style="margin-right: 10px;" id="link" class="address"></p>
+                        <button onclick="copiarTexto()" class="button-rgb">Copy</button>
                     </div>
                 </div>
 
-                <div class="transaction-div">
-                    <p>Confirmations</p>
-                    <span style="color: white;">3/3</span>
-                    <p>Status tx</p>
-                    <span style="color: white;">waiting for funds</span>
-                    <p>Time limit for transaction</p>
-                    <span style="color: white;">03 Hours, 1 minute, 28 seconds</span>
-                </div>
+                <!--                <div class="transaction-div">-->
+                <!--                    <p>Confirmations</p>-->
+                <!--                    <span style="color: white;">3/3</span>-->
+                <!--                    <p>Status tx</p>-->
+                <!--                    <span style="color: white;">waiting for funds</span>-->
+                <!--                    <p>Time limit for transaction</p>-->
+                <!--                    <span style="color: white;">03 Hours, 1 minute, 28 seconds</span>-->
+                <!--                </div>-->
 
                 <div>
-                    <img src="https://news.comschool.com.br/wp-content/uploads/2016/05/como-gerar-qrcode-comschool.png" alt="">
+                    <img class="address-qr" src="" alt="">
                 </div>
             </div>
         </div>
     </div>
     <script src="../js/script.js" type="module"></script>
+    <script>
+        const createSelection = (element) => {
+            const selection = window.getSelection();
+            const range = document.createRange();
+            range.selectNodeContents(element);
+            selection.removeAllRanges();
+            selection.addRange(range);
+        }
+        function copiarTexto() {
+            var textoCopiado = document.getElementById("link");
+            createSelection(textoCopiado)
+            document.execCommand("copy");
+        }
+    </script>
 </body>
 
 </html>

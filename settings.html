@@ -8,10 +8,14 @@
     <link rel="stylesheet" href="../css/default.css">
     <link rel="stylesheet" href="../css/settings.css">
     <link rel="stylesheet" href="../css/security.css">
+    <link rel="sortcut icon" href="../img/LOGO ONE 100 X 100.png" type="image/png" />
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <title>Onne</title>
+    <title>Seetings Account</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../js/app/common.js"></script>
+    <script src="../js/app/settings.js"></script>
 </head>
 
 <body>
@@ -41,13 +45,13 @@
                             <span>Support</span>
                             <ul class="drop">
                                 <li class="drop-item">
-                                    <a class="font" href="#">FAQ</a>
+                                    <a class="font" href="/ticket.html">FAQ</a>
                                 </li>
                                 <li class="drop-item">
-                                    <a class="font" href="#">Create Tickets</a>
+                                    <a class="font" href="/ticket.html">Create Tickets</a>
                                 </li>
                                 <li class="drop-item">
-                                    <a class="font" href="#">My Tickets</a>
+                                    <a class="font" href="/ticket.html">My Tickets</a>
                                 </li>
                             </ul>
                         </li>
@@ -55,20 +59,20 @@
                             <span>Settings</span>
                             <ul class="drop">
                                 <li class="drop-item">
-                                    <a class="font" href="#">General Settings</a>
+                                    <a class="font" href="./settings.html#profile">General Settings</a>
                                 </li>
                                 <li class="drop-item">
-                                    <a class="font" href="#">Security</a>
+                                    <a class="font" href="./settings.html#security">Security</a>
                                 </li>
                                 <li class="drop-item">
-                                    <a class="font" href="#">Verification</a>
+                                    <a class="font" href="./settings.html#verification">Verification</a>
                                 </li>
                             </ul>
                         </li>
                     </ul>
                     <div class="welcome-message">
                         <span>Be welcome: &nbsp;</span>
-                        <span style="color: #fc9803;"><b>Marcio Caldas Vieira</b></span>
+                        <span style="color: #fc9803;"><b class="user-firstname"></b> <b class="user-lastname"></b></span>
                     </div>
                     <div class="settings">
                         <a href="#" class=><img class="icon-nav" src="../svg/icon/IconMessage.svg"></a>
@@ -136,40 +140,114 @@
             <div class="box moving-text">
                 <span class="font span-price">Prices |</span>
                 <marquee class="font marq" behavior="scroll" direction="left">
-                    <label class="price-up">BTC: $10.576,90</label>
+                    <label id="quote-BTCUSD">BTC: $0</label>
 
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;
 
-                    <label class="price-down">ETH: $346,79</label>
+                    <label id="quote-BCHUSD">BCH: $0</label>
 
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;
 
-                    <label class="price-up">LTC: $45,69</label>
+                    <label id="quote-BTGUSD">BTG: $0</label>
 
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;
 
-                    <label class="price-down">ZEC: $60,61</label>
-
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-
-                    <label class="price-up">DASH: $66,47</label>
+                    <label id="quote-TRXUSD">TRX: $0</label>
 
                 </marquee>
             </div>
 
-            <div class="profile box">
+            <div class="profile box" id="profile">
                 <div class="div-infos">
                     <p class="title">Profile</p>
                     <div class="profile-info">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/1024px-Circle-icons-profile.svg.png" alt="" style="max-width: 100px;">
-                        <p>Demo Account</p>
-                        <p><span>Email: </span> demo@onne.vip</p>
-                        <p><span>Phone: </span> +1 1234567890</p>
-                        <a href="">Edit infos</a>
+                        <p><b class="user-firstname"></b> <b class="user-lastname"></b></p>
+                        <p><span>Login: </span> <b class="user-login"></b></p>
+                        <p><span>Email: </span> <b class="user-email"></b></p>
+                        <p><span>Phone: </span> <b class="user-phone"></b></p>
+                        <button type="button" style="background: transparent; border: none; color: #08a9b0;cursor: pointer;" data-toggle="modal" data-target="#modal-edit">Edit infos</button>
+                        <div class="modal fade" id="modal-edit" tabindex="-1" role="dialog" aria-labelledby="title-modal" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <p class="modal-title font-legend" id="title-modal">ORDER SUMARY
+
+                                        </p>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="line-modal">
+                                            <p class="font-legend" style="color: #46e4cb;">PHONE</p>
+                                        </div>
+                                        <div class="line-modal"><input type="text" id="change-personal-phone"></div>
+                                    </div>
+                                    <div class="modal-footer modal-input">
+                                        <p class="font-legend">ENTER YOUR PIN</p>
+                                        <div class="pin" style="margin-top: 10px;">
+                                            <input type="password" class="input-pin" maxlength="1" id="change-personal-pin-1">
+                                            <input type="password" class="input-pin" maxlength="1" id="change-personal-pin-2">
+                                            <input type="password" class="input-pin" maxlength="1" id="change-personal-pin-3">
+                                            <input type="password" class="input-pin" maxlength="1" id="change-personal-pin-4">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="button-rgb" data-toggle="modal" data-target="#modal-success-info" id="change-personal">CONFIRM EDIT</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="modal-success-info" tabindex="-1" role="dialog" aria-labelledby="title-modal" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-success" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <div class="line-modal">
+                                            <p class="font-legend" style="color: #23e25c;">Infos successfully changed</p>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="button-rgb"><a href="settings.html">Back to page</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="profile-modal" tabindex="-1" role="dialog" aria-labelledby="title-modal" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <p class="modal-title font-legend" id="title-modal">Change your password
+                                        </p>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="line-modal">
+                                            <label style="color: #46e4cb;">Confirm your current password</label>
+                                            <input type="password">
+                                        </div>
+                                        <div class="line-modal">
+                                            <label style="color: #46e4cb;">New password</label>
+                                            <input type="password">
+                                        </div>
+                                        <div class="line-modal">
+                                            <label style="color: #46e4cb;">Confirm new password</label>
+                                            <input type="password">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="button-rgb" data-dismiss="modal" data-target="#modal-success">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="div-infos">
@@ -424,8 +502,8 @@
                                 <option value="Zimbabwe">Zimbabwe</option>
                             </select></p>
 
-                        <p><span>Account ID:</span> masteronne</p>
-                        <p><span>Sponsor ID:</span> blasteronne</p>
+                        <p><span>Account ID:</span> <b class="user-id"></b></p>
+                        <p><span>Sponsor ID:</span> <b class="user-referrer"></b></p>
                     </div>
                 </div>
             </div>
@@ -483,7 +561,7 @@
                     </div>
                 </div>
             </div>
-            <div class="box div-security">
+            <div class="box div-security" id="security">
                 <p class="title">Security settings</p>
                 <div class="security-content">
                     <div class="change-password">
@@ -499,7 +577,7 @@
                 </div>
                 <div class="modal fade" id="openModal" tabindex="-1" role="dialog" aria-labelledby="title-modal" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
+                        <div class="modal-content form">
                             <div class="modal-header">
                                 <p class="modal-title font-legend" id="title-modal">Change your password
                                 </p>
@@ -510,22 +588,35 @@
                             <div class="modal-body">
                                 <div class="line-modal">
                                     <label style="color: #46e4cb;">Confirm your current password</label>
-                                    <input type="text">
+                                    <input type="password" style="padding: 10px" data-field="old_password">
 
                                 </div>
                                 <div class="line-modal">
                                     <label style="color: #46e4cb;">New password</label>
-                                    <input type="text">
+                                    <input type="password" style="padding: 10px" data-field="password">
                                 </div>
                                 <div class="line-modal">
                                     <label style="color: #46e4cb;">Confirm new password</label>
-                                    <input type="text">
+                                    <input type="password" style="padding: 10px">
                                 </div>
-
                             </div>
 
                             <div class="modal-footer">
-                                <button type="button" class="button-rgb" data-dismiss="modal" data-target="#modal-success">Salvar mudanças</button>
+                                <button type="button" class="button-rgb" data-toggle="modal" data-target="#modal-success" id="password-change">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modal-success" tabindex="-1" role="dialog" aria-labelledby="title-modal" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-success" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="line-modal">
+                                    <p class="font-legend" style="color: #23e25c;">Password successfully changed</p>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="button-rgb"><a href="settings.html">Back to page</a></button>
                             </div>
                         </div>
                     </div>
@@ -536,10 +627,11 @@
                             <img src="../img/37171.png" alt="" style="max-width: 50px; margin-right: 10px;">
                             <div style="display: flex; justify-content: center; flex-direction: column;">
                                 <p>Security questions</p>
-                                <span>For your protection, please choose 2 security questions. This way, we can verify it’s really you if there’s ever a doubt.</span>
+                                <span>For your protection, please choose 2 security questions. This way, we can verify
+                                    it’s really you if there’s ever a doubt.</span>
                             </div>
                         </div>
-                        <button class="button-rgb" data-toggle="modal" data-target="#openModal-2" style="height: 36px;">Create</button>
+                        <button class="button-rgb" data-toggle="modal" data-target="#openModal-2">Coming Soon</button>
                     </div>
                 </div>
                 <div class="modal fade" id="openModal-2" tabindex="-1" role="dialog" aria-labelledby="title-modal" aria-hidden="true">
@@ -555,7 +647,8 @@
                                 </button>
                             </div>
                             <div style="padding: 1rem 1rem 0 1rem;">
-                                <p>We'll use these questions as a way to make sure it's your account, like if you need to reset your password</p>
+                                <p>We'll use these questions as a way to make sure it's your account, like if you need
+                                    to reset your password</p>
                             </div>
                             <div class="modal-body">
                                 <div class="line-modal">
@@ -568,7 +661,21 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="button-rgb" data-dismiss="modal" data-target="#modal-success">Salvar mudanças</button>
+                                <button type="button" class="button-rgb" data-toggle="modal" data-target="#modal-success-questions">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modal-success-questions" tabindex="-1" role="dialog" aria-labelledby="title-modal" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-success" role="document" style="border: none;">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="line-modal">
+                                    <p class="font-legend" style="color: #23e25c;">Question successfully registered</p>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="button-rgb"><a href="settings.html">Back to page</a></button>
                             </div>
                         </div>
                     </div>
@@ -579,84 +686,115 @@
                             <img src="../img/firewall+lock+shield+icon-1320165909407344998.png" alt="" style="max-width: 50px; margin-right: 10px;">
                             <div style="display: flex; justify-content: center; flex-direction: column;">
                                 <p>2-step verification</p>
-                                <span>Add an extra layer of security to your account by using a one-time security code in addition to your password each time you log in.</span>
+                                <span>Add an extra layer of security to your account by using a one-time security code
+                                    in addition to your password each time you log in.</span>
                             </div>
                         </div>
-                        <button class="button-rgb" data-toggle="modal" data-target="#openModal-3" style="height: 36px;">Set up</button>
+                        <button class="button-rgb" data-toggle="modal" data-target="#openModal-3"">Coming Soon</button>
                     </div>
                 </div>
-                <div class="modal fade" id="openModal-3" tabindex="-1" role="dialog" aria-labelledby="title-modal" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header step">
-                                <h2 class="modal-title font-legend" id="title-modal">
-                                    Make your account more secure
-                                </h2>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
+                <div class=" modal fade" id="openModal-3" tabindex="-1" role="dialog" aria-labelledby="title-modal" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header step">
+                                        <h2 class="modal-title font-legend" id="title-modal">
+                                            Make your account more secure
+                                        </h2>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body step">
+                                        <div>
+                                            <p>Enable Two-factor Authentication for your ONNE Group account. Protected actions:
+                                                <span class="color-gold">Login</span> / <span class="color-gold">Withdrawal</span> / <span class="color-gold">Password
+                                                    changing</span> </p>
+                                        </div>
+                                        <div>
+                                            <h3 class="title-step">Step 1</h3>
+                                            <p>Install Google <span class="color-gold">Authenticator</span> App on your mobile
+                                                device</p>
+                                            <div class="img-google-app">
+                                                <img src="../img/apple.png" alt="">
+                                                <img src="../img/google.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="step-2">
+                                            <div>
+                                                <h3 class="title-step">Step 2</h3>
+                                                <p>Open Google Authenticator App and input this code manually:</p>
+                                                <span class="color-gold">ENV2IBODJZZXRGMN</span>
+                                            </div>
+                                            <div>
+                                                <p>Or scan QR Code below:</p>
+                                                <img src="../img/qrcode.png" alt="">
+                                            </div>
+                                            <div>
+                                                <p><span class="color-red">IMPORTANT!</span> Write down this code for backup, if
+                                                    you lost your mobile device, you can restore access to your account</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h3 class="title-step">Step 3</h3>
+                                            <p>Input SIX-digits number you get in the field below:</p>
+                                            <div class="six-digits">
+                                                <label for="">SIX-digits code</label>
+                                                <input type="text" placeholder="Code..">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="button-rgb" data-toggle="modal" data-target="#modal-success-2step">Save</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="modal-body step">
-                                <div>
-                                    <p>Enable Two-factor Authentication for your Gameplex account. Protected actions: <span class="color-gold">Login</span> / <span class="color-gold">Withdrawal</span> / <span class="color-gold">Password changing</span> </p>
-                                </div>
-                                <div>
-                                    <h3 class="title-step">Step 1</h3>
-                                    <p>Install Google <span class="color-gold">Authenticator</span> App on your mobile device</p>
-                                    <div class="img-google-app">
-                                        <img src="../img/apple.png" alt="">
-                                        <img src="../img/google.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="step-2">
-                                    <div>
-                                        <h3 class="title-step">Step 2</h3>
-                                        <p>Open Google Authenticator App and input this code manually:</p>
-                                        <span class="color-gold">ENV2IBODJZZXRGMN</span>
-                                    </div>
-                                    <div>
-                                        <p>Or scan QR Code below:</p>
-                                        <img src="../img/qrcode.png" alt="">
-                                    </div>
-                                    <div>
-                                        <p><span class="color-red">IMPORTANT!</span> Write down this code for backup, if you lost your mobile device, you can restore access to your account</p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h3 class="title-step">Step 3</h3>
-                                    <p>Input SIX-digits number you get in the field below:</p>
-                                    <div class="six-digits">
-                                        <label for="">SIX-digits code</label>
-                                        <input type="text" placeholder="Code..">
+                            <div class="modal fade" id="modal-success-2step" tabindex="-1" role="dialog" aria-labelledby="title-modal" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-success" role="document" style="border: none;">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <div class="line-modal">
+                                                <p class="font-legend" style="color: #23e25c;">Two-step verification performed successfully</p>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="button-rgb"><a href="settings.html">Back to page</a></button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="button-rgb" data-dismiss="modal" data-target="#modal-success">Save</button>
+                    </div>
+                </div>
+                <!-- verification -->
+                <div class="box verification" id="verification">
+
+                    <div class="h2">
+                        <p>Verify your identity</p>
+                    </div>
+
+                    <div class="text-veri">
+                        <div class="martins">
+                            <p>Choose the type of verification card</p>
+
+                            <h3>
+                                To comply with the government requirements, ONNE.VIP require from all its clients to comply with the KYC(know your customer) procedures sending a passport/ ID card or Driver's license and a selfie to avoid money laundering and suspicious activities
+                            </h3>
+                        </div>
+
+                        <div class="icon-veri">
+                            <div>
+                                <img src="../svg/icon/iconfinder-icon (2).svg" alt="">
+
+                                <p>Passport</p>
+                            </div>
+                            <div>
+                                <img src="../svg/icon/iconfinder-icon (3).svg" alt="">
+                                <p>ID card</p>
+                            </div>
+                            <div>
+                                <img src="../svg/icon/iconfinder-icon (3).svg" alt="">
+                                <p>Driver's license</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <!-- verification -->
-            <div class="box verification">
-
-                <div class="h2">
-                    <p>Verify your identity</p>
-                </div>
-
-                <div class="text-veri">
-                    <p>Choose the type of verification card</p>
-
-                    <h3>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-                    </h3>
-
-                    <div class="icon-veri">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <p>icones aqui</p>
                     </div>
                 </div>
 

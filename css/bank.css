@@ -1,233 +1,232 @@
-@import'./default.css';
-@import'./style.css';
+@import "./default.css";
+@import "./style.css";
 
-.value{
-    font-family: "DS-DIGITAL BOLD";
-    font-size: 50px;
-    color: #fff;
+.value {
+  font-family: "DS-DIGITAL BOLD";
+  font-size: 45px;
+  color: #fff;
 }
 
-.btn{
-    border-radius: 30px;
-    padding: 12px;
-    font-size: 14px;
-    width: 150px;
-    cursor: pointer;
+.btn {
+  border-radius: 30px;
+  padding: 12px;
+  font-size: 14px;
+  width: 150px;
+  cursor: pointer;
 }
 
-.values{
-    display: flex;
+.values {
+  display: flex;
 }
 
-.blue{
-    background-color: #51c8ec;
-    box-shadow: 5px 5px 10px 0px #51c8ec;
+.blue {
+  background-color: #51c8ec;
+  box-shadow: 5px 5px 10px 0px #51c8ec;
 }
 
 .investments {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
 }
 
-.portfolios{
-    height: 200px;
-    margin-top: 10px;
+.portfolios {
+  height: 200px;
+  margin-top: 10px;
 }
 
-.chartContainer{
-    margin-top: 20px;
+.chartContainer {
+  margin-top: 20px;
 }
 
-.green{
-    background-color: #1ace59;
-    box-shadow: 5px 5px 7px 0px #1ace59;
+.green {
+  background-color: #1ace59;
+  box-shadow: 5px 5px 7px 0px #1ace59;
 }
 
-.container-values{
-    display: flex;
-    flex-direction: row;
-    width: 88%;
-    height: 90%;
+.container-values {
+  display: flex;
+  flex-direction: row;
+  width: 88%;
+  height: 90%;
 }
 
-.btns{
-    display: flex;
-    align-items: center;
-    gap: 100px;
-    flex:1;
+.btns {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  flex: 1;
 }
 
-.box-select{
-    gap: 20px;
-    display:flex;
-    margin-left: 20px;
-    align-items:center;
-    flex:1;
+.box-select {
+  gap: 20px;
+  display: flex;
+  margin-left: 20px;
+  align-items: center;
+  flex: 1;
 }
 
-.bitcoin-value{
+.bitcoin-value {
+  width: 100%;
+}
+
+.bitcoin-value > div {
+  padding: 20px 0;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.div-chart {
+  height: fit-content;
+}
+
+.bonus-portfolio {
+  height: 265px;
+  padding: 15px;
+}
+
+.button-rgb {
+  width: 130px;
+}
+
+.container-chart {
+  display: flex;
+  align-items: center;
+  width: 740px;
+  height: 100%;
+}
+
+.container-history {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: #fff;
+}
+
+.dropdown-trans {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title-box {
+  padding: 9px;
+  border-bottom: 1px solid gray;
+}
+
+.drop-transaction {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 10px;
+  align-items: center;
+}
+
+.transactions {
+  padding: 15px 0;
+  font-size: 14px;
+  border-spacing: 63px 22px;
+  width: 100%;
+}
+
+.select-transition {
+  width: 240px;
+}
+
+@media (max-width: 1220px) {
+  .btns {
+    justify-content: center;
+  }
+
+  .section-bank > div:nth-child(2) {
     width: 100%;
-}
+  }
+  .box-select {
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  .value {
+    font-size: 41px;
+  }
 
-.bitcoin-value > div{
-    padding: 20px 0;
+  .bonus-portfolio {
     width: 100%;
-    flex-wrap: wrap;
-}
+  }
 
-.div-chart{
-    height: fit-content;
-}
+  .vela-interface {
+    width: 100%;
+  }
 
-.bonus-portfolio{
-    height: 265px;
-    padding: 15px
-}
-
-.button-rgb{
-    width: 130px
-}
-
-.container-chart{
-    display: flex;
-    align-items: center;
-    width: 740px;
-    height: 100%;
-}
-
-.container-history{
-    display:flex;
-    flex-direction: column;
-    padding: 20px;
-    color: #fff;
-}
-
-.dropdown-trans{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.title-box{
-    padding: 9px;
-    border-bottom: 1px solid gray;
-}
-
-.drop-transaction{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+  .container-candle {
+    width: 100%;
+  }
+  .table-trans {
+    overflow-x: auto;
+  }
+  .container-chart {
+    width: 100%;
+    height: 250px;
     padding: 10px;
-    align-items: center;
+  }
+
+  .container-chart > div > canvas {
+    height: 200px !important;
+  }
 }
 
-.transactions{
-    padding: 15px 0;
-    font-size: 14px;
-    border-spacing: 63px 22px;
+@media (max-width: 800px) {
+  .drop-transaction {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .div-chart {
+    width: 220px;
+  }
+
+  .container-chart > div > canvas {
+    height: 200px !important;
+  }
 }
 
-.select-transition{
-    width: 240px;
-}
+@media (max-width: 460px) {
+  .box-select {
+    flex-direction: column;
+    margin-left: 0;
+    gap: 10px;
+  }
 
+  .investments {
+    width: 100%;
+  }
 
-@media (max-width: 1220px){
-    .btns{
-        justify-content: center;
-    }
-    
-    .section-bank > div:nth-child(2){
-        width: 100%;
-    }
-    .box-select{
-        justify-content: center;
-        margin-bottom: 15px;
-    }
-    .value{
-        font-size: 41px;
-    }
+  .value {
+    font-size: 35px;
+  }
 
-    .bonus-portfolio{
-        width: 100%;
-    }
+  .btns {
+    gap: 25px;
+  }
 
-    .vela-interface{
-        width: 100%;
-    }
+  .btn {
+    width: fit-content;
+  }
 
-    .container-candle{
-        width: 100%;
-    }
-    .table-trans{
-        overflow-x: auto;
-    }
-    .container-chart{
-        width: 100%;
-        height: 250px;
-        padding: 10px;
-    }
+  .select-transition {
+    width: 180px;
+  }
 
-    .container-chart > div > canvas{
-        height: 200px !important;
-    } 
-}
+  .bonus-portfolio {
+    flex-direction: column;
+    height: max-content;
+  }
 
-@media (max-width: 800px){
-    .drop-transaction{
-        flex-direction: column;
-        gap: 15px;
-    }
-    .div-chart{
-        width: 220px;
-    }
+  .container-chart {
+    height: 210px;
+  }
 
-    .container-chart > div > canvas{
-        height: 200px !important;
-    } 
-}
-
-@media (max-width: 460px){
-    
-    .box-select{
-        flex-direction: column;
-        margin-left: 0;
-        gap: 10px;
-    }
-
-    .investments {
-        width: 100%;
-    }
-
-    .value{
-        font-size: 35px;
-    }
-
-    .btns{
-        gap: 25px;
-    }
-
-    .btn{
-        width: fit-content;
-    }
-
-    .select-transition {
-        width: 180px;
-    }
-
-    .bonus-portfolio{
-        flex-direction: column;
-        height: max-content;
-    }
-    
-    .container-chart{
-        height: 210px;
-    }
-
-    .container-chart > div > canvas{
-        height: 180px !important;
-    }
+  .container-chart > div > canvas {
+    height: 180px !important;
+  }
 }

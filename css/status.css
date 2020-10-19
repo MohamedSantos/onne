@@ -18,41 +18,46 @@
 .start-date{
   flex: 0 0 20%;
 }
-.start-date {
+.start-date, .status-progress {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 20px;
   padding: 20px 15px;
 }
-.start-date p, .start-date .title {
+.start-date p, .start-date .title, .status-progress {
   color: #ccc;
 }
 .start-date .initial-date {
   text-align: center;
   font-size: 15px;
 }
-.current-status-container .status-image {
-  background-color: cyan;
+.current-status-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 5px;
   width: 100%;
   height: 90px;
 }
 .current-status, .next-status {
-  display: flex;
-  align-items: center;
   gap: 5px;
 }
 .current-status::before, .start-date .next-status::before {
+  background-color: yellow;
   content: '';
   display: inline-block;
   border-radius: 50%;
   width: 15px;
   height: 15px;
 }
-.current-status::before {
-  background-color: cyan;
+.goal::before{
+  background-color: red;
+  content: '';
+  display: inline-block;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
 }
 .start-date .next-status::before {
   background-color: blue;
@@ -61,7 +66,7 @@
   text-align: center;
   font-weight: bold;
 }
-.start-date h2{
+.start-date h2, .progress h2{
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -72,17 +77,202 @@
   min-height: 270px;
 }
 
+.status-progress{
+  justify-content:unset;
+}
+
+.status-progress .next-status{
+  display: flex;
+  gap: 10px;
+  margin-top: 1.3em;
+}
+
+.score{
+  display: flex;
+  flex-direction: column;
+  gap:10px
+}
+
 .partnes {
-  flex: 1 0 20%;
+  flex: 0 0 20%;
   min-height: 270px;
 }
 .progress-table {
   flex: 1 0 50%;
   min-height: 270px;
 }
+.container-table{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px; 
+  color: #ccc;
+  margin-top: 20px;
+}
+.container-table .list-table .table thead td:before{
+  content: '';
+  display: inline-block;
+  margin-right: 8px;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #25c235;
+}
+
+.table tbody tr td{
+  padding:10px
+}
+
+.container-table .list-table .table tbody{
+  background-color: rgba(10, 10, 80, 1);
+  font-size: 13px;
+}
+
+.container-table .list-table{
+  width: 90%;
+  display: flex;
+  flex-direction:column;
+  align-self: center;
+  margin-top: 20px;
+  overflow: auto;
+}
+
+.table{
+  border-collapse: collapse;
+}
+
+.start_date{
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.partnes-status{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.headProgess{
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container5 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.bodyProgress{
+  overflow: auto;
+  height: 250px;
+}
+
+.bar {
+  display: flex;
+  flex-direction: column;
+  width: 64%;
+  height: 22px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  background-image: url(../img/background-progress-bar.png);
+}
+
+.progress-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  height: 100%;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  animation: animate 8s linear infinite;
+  font-size: 12px;
+}
+
+.profit{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  gap: 5px;
+}
+.name-profit{
+  color: white;
+}
+.profit .price{
+  color: #fff;
+  font-size: 13px;
+}
+
+.chartContainer{
+  position: relative;
+}
+
+.numPartnes{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 116px;
+  top: 42px;
+}
+
+.numPartnes > span:nth-child(1){
+  font-size: 35px;
+  text-transform: uppercase;
+  color: #dbad23;
+  font-weight: bold;
+  text-align: center;
+}
+
+.numPartnes > span:nth-child(2){
+  color: white;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.partnes-status .title, .headProgess .title{
+  text-align: center;
+  color: #ccc;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.current-term {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+}
+
+.current-term p,h2{
+  color: white;
+}
+
 
 @media (max-width: 800px) {
   .section-status {
     flex-direction: column;
+  }
+  
+}
+
+@media (max-width: 460px) {
+  .section-status > div {
+    width: 100%;
   }
 }

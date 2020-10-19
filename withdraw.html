@@ -5,10 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/whitdraw.css">
+  <link rel="sortcut icon" href="../img/LOGO ONE 100 X 100.png" type="image/png" />
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  <title>Onne - Whitdraw</title>
+  <title>Onne - Withdraw</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="../js/app/common.js"></script>
+  <script src="../js/app/withdraw.js"></script>
 </head>
 
 <body>
@@ -36,13 +40,13 @@
             <span>Support</span>
             <ul class="drop">
               <li class="drop-item">
-                <a class="font" href="#">FAQ</a>
+                <a class="font" href="/ticket.html">FAQ</a>
               </li>
               <li class="drop-item">
-                <a class="font" href="#">Create Tickets</a>
+                <a class="font" href="/ticket.html">Create Tickets</a>
               </li>
               <li class="drop-item">
-                <a class="font" href="#">My Tickets</a>
+                <a class="font" href="/ticket.html">My Tickets</a>
               </li>
             </ul>
           </li>
@@ -50,13 +54,13 @@
             <span>Settings</span>
             <ul class="drop">
               <li class="drop-item">
-                <a class="font" href="#">General Settings</a>
+                <a class="font" href="./settings.html#profile">General Settings</a>
               </li>
               <li class="drop-item">
-                <a class="font" href="#">Security</a>
+                <a class="font" href="./settings.html#security">Security</a>
               </li>
               <li class="drop-item">
-                <a class="font" href="#">Verification</a>
+                <a class="font" href="./settings.html#verification">Verification</a>
               </li>
             </ul>
           </li>
@@ -127,39 +131,32 @@
       </nav>
       <div class="accordion2"><span></span></div>
     </div>
-
     <div class="box moving-text">
       <span class="font span-price">Prices |</span>
       <marquee class="font marq" behavior="scroll" direction="left">
-        <label class="price-up">BTC: $10.576,90</label>
+        <label id="quote-BTCUSD">BTC: $0</label>
 
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;
 
-        <label class="price-down">ETH: $346,79</label>
+        <label id="quote-BCHUSD">BCH: $0</label>
 
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;
 
-        <label class="price-up">LTC: $45,69</label>
+        <label id="quote-BTGUSD">BTG: $0</label>
 
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;
 
-        <label class="price-down">ZEC: $60,61</label>
-
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;
-
-        <label class="price-up">DASH: $66,47</label>
+        <label id="quote-TRXUSD">TRX: $0</label>
 
       </marquee>
     </div>
-
     <section class="box">
       <div class="container-all">
         <div class="container-title">
-          <h2 class="font">Whitdraw Funds</h2>
+          <h2 class="font">Withdraw Funds</h2>
         </div>
         <form class="container-center">
           <div class="container-first">
@@ -168,20 +165,12 @@
               <p class="legend-step"> First step</p>
             </div>
             <div>
-              <p class="font-legend">Choose account to whitdraw</p>
-              <select>
-                <option>Bitcoin Cash</option>
-                <option>Ethereum</option>
-                <option>Litecoin</option>
-                <option>Ripple</option>
-                <option>Dash</option>
-                <option>EOS</option>
-                <option>Tether (Omni)</option>
-                <option>Tether (ERC20)</option>
-                <option>USD//C</option>
-                <option>Perfect Money</option>
-                <option>Visa / Mastercard (USD)</option>
-                <option>vISA / mASTERCARD (EUR)</option>
+              <p class="font-legend">Choose account to withdraw</p>
+              <select id="currency">
+                <option value="BTC">Bitcoin</option>
+                <option value="BCH">Bitcoin Cash</option>
+                <option value="BTG">Bitcoin Gold</option>
+                <option value="TRX">Tron</option>
               </select>
             </div>
             <div class="step-second">
@@ -191,11 +180,11 @@
             <div class="second-content">
               <div class="content-amount">
                 <p class="font-legend">Amount</p>
-                <input type="text" onkeypress="return onlynumber();" class="box-value">
+                <input type="text" onkeypress="return onlynumber();" class="box-value" id="amount">
               </div>
               <div class="content-available">
                 <p class="font-legend">Available</p>
-                <label class="box-value">0.14524</label>
+                <label class="box-value" id="current-balance">0</label>
               </div>
             </div>
             <div class="step-third">
@@ -204,7 +193,7 @@
             </div>
             <div>
               <p class="font-legend">Wallet Address</p>
-              <input class="box-value" style="padding: 10px 45px" placeholder="0.klmnogg........................" />
+              <input class="box-value" style="padding: 10px 45px" placeholder="" id="wallet" />
             </div>
             <div>
               <p class="font-legend" style="padding: 50px 0; font-size: 12px">
@@ -221,32 +210,32 @@
               </div>
               <div class="line-subtotal">
                 <p class="font-legend">Wallet</p>
-                <p class="font-legend">0.19584847</p>
+                <p class="font-legend amount">0</p>
               </div>
               <div class="line-subtotal">
                 <p class="font-legend">Method</p>
-                <p class="font-legend">BTC</p>
+                <p class="font-legend currency">BTC</p>
               </div>
               <div class="line-subtotal">
                 <p class="font-legend">Wallet Address</p>
-                <p class="font-legend no-wrap-text">KGMKTHKTNHMTNKGMKTHKTNHMTN</p>
+                <p class="font-legend no-wrap-text wallet"></p>
               </div>
               <div class="line-subtotal">
                 <p class="font-legend">FEE</p>
-                <p class="font-legend">X%</p>
+                <p class="font-legend">2%</p>
               </div>
               <div class="line-subtotal">
                 <p class="font-legend">You receive</p>
-                <p class="font-legend">0.1848484</p>
+                <p class="font-legend receive">0</p>
               </div>
             </div>
             <div class="step-fourth">
               <p class="step-number">4</p>
-              <p class="legend-step"> Fourth step</p> <button type="button" class="button-rgb" data-toggle="modal" data-target="#openModal">Confirm Order</button> 
+              <p class="legend-step"> Fourth step</p> <button type="button" class="button-rgb" data-toggle="modal" data-target="#openModal">Confirm Order</button>
               <div class="note box">
                 <p class="title" style="font-size: 13px;">IMPORTANT</p>
                 <div class="paragraph-important">
-                  <p class="font-legend">-It mai take up to 24 hour to the balance appear in your wallet</p>
+                  <p class="font-legend">-It may take up to 24 hour to the balance appear in your wallet</p>
                   <p class="font-legend">-2% withdrawal fee apply</p>
                   <p class="font-legend">-Please confirm your wallet inputs for withdrawal, the company is not
                     responsible
@@ -267,41 +256,57 @@
                       </button>
                     </div>
                     <div class="modal-body">
-                      <div class="line-modal"><p class="font-legend" style="color: #46e4cb;">ORDER</p> <p class="font-legend" style="color: #0dff21">XXXXX-XX</p></div>
-                      <div class="line-modal"><p class="font-legend" style="color: #46e4cb;">TYPE</p> <p class="font-legend" style="color: #0dff21">With Drawl</p></div>
-                      <div class="line-modal"><p class="font-legend" style="color: #46e4cb;">DATE</p> <p class="font-legend" style="color: #0dff21">Feb, 06, 2020/17:24H</p></div>
-                      <div class="line-modal"><p class="font-legend" style="color: #46e4cb;">AMOUNT</p> <p class="font-legend" style="color: #0dff21">0.12323 BT</p></div>
-                      <div class="line-modal"><p class="font-legend" style="color: #46e4cb;">STATUS</p> <p class="font-legend" style="color: #0dff21">Waiting Sing</p></div>
+                      <div class="line-modal">
+                        <p class="font-legend" style="color: #46e4cb;">ORDER</p>
+                        <p class="font-legend" style="color: #0dff21">ORDER</p>
+                      </div>
+                      <div class="line-modal">
+                        <p class="font-legend" style="color: #46e4cb;">TYPE</p>
+                        <p class="font-legend" style="color: #0dff21">Withdrawal</p>
+                      </div>
+                      <div class="line-modal">
+                        <p class="font-legend" style="color: #46e4cb;">DATE</p>
+                        <p class="font-legend today" style="color: #0dff21"></p>
+                      </div>
+                      <div class="line-modal">
+                        <p class="font-legend" style="color: #46e4cb;">AMOUNT</p>
+                        <p class="font-legend" style="color: #0dff21"> <b class="amount"></b> <b class="currency"></b></p>
+                      </div>
+                      <div class="line-modal">
+                        <p class="font-legend" style="color: #46e4cb;">STATUS</p>
+                        <p class="font-legend" style="color: #0dff21">Waiting Signature</p>
+                      </div>
                     </div>
                     <div class="modal-footer modal-input">
                       <p class="font-legend">TO SING ORDER ENTER YOUR PIN</p>
                       <div class="pin">
-                        <input type="password" class="input-pin" maxlength="1">
-                        <input type="password" class="input-pin" maxlength="1">
-                        <input type="password" class="input-pin" maxlength="1">
-                        <input type="password" class="input-pin" maxlength="1">
+                        <input type="password" class="input-pin" maxlength="1" id="pin-1">
+                        <input type="password" class="input-pin" maxlength="1" id="pin-2">
+                        <input type="password" class="input-pin" maxlength="1" id="pin-3">
+                        <input type="password" class="input-pin" maxlength="1" id="pin-4">
                       </div>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="button-rgb" data-dismiss="modal">CANCEL ORDER </button>
-                      <button type="button" class="button-rgb"  data-toggle="modal" data-target="#modal-success">SIGN ORDER</button>
+                      <button type="button" class="button-rgb" data-toggle="modal" data-target="#modal-success" id="send-withdrawal">SIGN ORDER</button>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="modal fade" id="modal-success" tabindex="-1" role="dialog" aria-labelledby="title-modal" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered modal-success" role="document">
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <div class="line-modal"><p class="font-legend" style="color: #23e25c;">The order was successfully completed</p></div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="button-rgb"><a href="blank.html">Back to Bank</a></button>
+              <div class="modal fade" id="modal-success" tabindex="-1" role="dialog" aria-labelledby="title-modal" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-success" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <div class="line-modal">
+                        <p class="font-legend" style="color: #23e25c;">The order was successfully completed</p>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="button-rgb"><a href="bank.html">Back to Bank</a></button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
             </div>
           </div>
         </form>

@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="../css/chartist.css">
   <link rel="stylesheet" href="../css/status.css">
   <link rel="stylesheet" type="text/css" href="../css/dashboard-ecommerce.css">
-  <title>Onne</title>
+  <title>Onne - Status</title>
+  <link rel="sortcut icon" href="../img/LOGO ONE 100 X 100.png" type="image/png" />
 </head>
 
 <body>
@@ -132,7 +133,7 @@
 
     <div class="box moving-text">
       <span class="span-price">Prices |</span>
-      <marquee class="marq" behavior="scroll" direction="right">
+      <marquee class="marq" behavior="scroll" direction="left">
         <span class="price">BTC: $10.576,90</span>
 
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -164,32 +165,186 @@
           <p class="initial-date">10/10/2020</p>
         </div>
         <div class="current-status-container">
-          <p class="current-status">Diamond</p>
-          <div class="status-image"></div>
+          <p class="current-status">Gold</p>
         </div>
-        <div class="next-status-container">
+        <img src="../img/Gold.png" alt="" style="max-width: 200px;">
+        <!--<div class="next-status-container">
           <p class="next-status-title">Next status</p>
           <p class="next-status">Double Diamont</p>
-        </div>
+        </div>-->
       </div>
       <div class="status-progress">
-
+        <div class="progress">
+          <h2 class="title">Requirements</h2>
+        </div>
+        <div class="next-status">
+          <label>Next - </label>
+          <p class="goal">Ruby</p>
+        </div>
+        <div class="score">
+          <p>✅Referral - 12</p>
+          <p>❌Gold - 2</p>
+          <p>❌Silver - 5</p>
+          <p>Volume - 2 BTC</p>
+        </div>
       </div>
       <div class="ranking">
-
+        <div class="progress-bar box">
+          <div class="container5">
+            <div class="headProgess">
+              <h3 class="title">Progress</h3>
+            </div>
+            <div class="bodyProgress">
+              <div class="profit">
+                <span class="name-profit">Referrals</span>
+                <div class="bar">
+                  <div class="progress-status" style='width: 25%;'><span class="font" style="color: white !important; "><b>25%</b></span></div>
+                </div>  
+              </div>
+              <div class="profit">
+                <span class="name-profit">Silver</span>
+                <div class="bar">
+                  <div class="progress-status" style='width: 50%;'><span class="font" style="color: white !important; "><b>50%</b></span></div>
+                </div>
+              </div>
+              <div class="profit">
+                <span class="name-profit">Bronze</span>
+                <div class="bar">
+                  <div class="progress-status" style='width: 100%;'><span class="font" style="color: white !important; "><b>100%</b></span></div>
+                </div>
+              </div>
+              <div class="profit">
+                <span class="name-profit">Btc lesser leg</span>
+                <div class="bar">
+                  <div class="progress-status" style='width: 25%;'><span class="font" style="color: white !important; "><b>25%</b></span></div>
+                </div>
+              </div>
+              <div class="current-term">
+                <h2 class="title">Current term</h2>
+                <p>Start date: <span class="" style="color: yellow;">20/10/2020</span></p>
+                <p>End date: <span class="" style="color: yellow;">20/10/2020</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="partnes">
-
+      <div class="start_date">
+        <div class="partnes-status">
+          <h4 class="title">Unilevel statistics</h4>
+          <div class="chart-size">
+            <div class="chartContainer">
+              <div class="numPartnes">
+                <span style="margin-left: 8px;">150</span>
+              </div>
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+          <div>
+            <h3 class="title">Partnes</h3>
+          </div>
+        </div>
       </div>
       <div class="progress-table">
-
+        <div class="container-table">
+          <h2 class="font" style="text-align: center;">Downline progress</h2>
+          <!-- <div class="head-table">
+            <p>LOGIN</p>
+            <p>STATUS</p>
+            <p>REFERRAL</p>
+            <p>PROGRESS</p>
+          </div> -->
+          <div class="list-table">
+            <table class="table">
+              <thead>
+                <tr>
+                  <td>LOGIN</td>
+                  <td>STATUS</td>
+                  <td>REFERRAL</td>
+                  <td>PROGRESS</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Diegou</td>
+                  <td>Triple Diamond</td>
+                  <td>4/4</td>
+                  <td>89%</td>
+                </tr>
+                <tr>
+                  <td>Malu10</td>
+                  <td>Diamond</td>
+                  <td>3/4</td>
+                  <td>60%</td>
+                </tr>
+                <tr>
+                  <td>Marin25</td>
+                  <td>Gold</td>
+                  <td>1/4</td>
+                  <td>20%</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- <ul>
+              <li>Jotasul</li>
+              <li>Diamond</li>
+              <li>2/4</li>
+              <li>90%</li>
+            </ul>
+            <ul>
+              <li>Mary10</li>
+              <li>Bronze</li>
+              <li>4/4</li>
+              <li>56%</li>
+            </ul>
+            <ul>
+              <li>Danzo</li>
+              <li>Gold</li>
+              <li>3/4</li>
+              <li>30%</li>
+            </ul> -->
+          </div>
+        </div>
       </div>
     </section>
   </main>
+  <script type="module" src="../js/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
   <script src="../../node_modules/chartjs-chart-radial-gauge/build/Chart.RadialGauge.umd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
-  <script type="module" src="../js/script.js"></script>
+  <script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'doughnut',
+
+      // The data for our dataset
+      data: {
+        datasets: [{
+          data: [150, 100],
+          backgroundColor: [
+            '#dbad23',
+            '#fff',
+          ],
+          borderColor: ['#dbad23', '#fff'],
+        }],
+        labels: [
+          'Partnes',
+        ],
+
+      },
+      // These labels appear in the legend and in the tooltips when hovering different arcs
+
+      // Configuration options go here
+      options: {
+        legend: {
+          display: false
+        },
+        cutoutPercentage: 80
+
+      }
+    });
+
+  </script>
 </body>
 
 </html>

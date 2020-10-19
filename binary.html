@@ -6,8 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/binary.css">
+  <link rel="sortcut icon" href="../img/LOGO ONE 100 X 100.png" type="image/png" />
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  <title>Onne</title>
+  <title>Onne - Binary</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="../js/app/common.js"></script>
+  <script src="../js/app/binary.js" type="module"></script>
 </head>
 
 <body>
@@ -35,13 +39,13 @@
             <span>Support</span>
             <ul class="drop">
               <li class="drop-item">
-                <a class="font" href="#">FAQ</a>
+                <a class="font" href="/ticket.html">FAQ</a>
               </li>
               <li class="drop-item">
-                <a class="font" href="#">Create Tickets</a>
+                <a class="font" href="/ticket.html">Create Tickets</a>
               </li>
               <li class="drop-item">
-                <a class="font" href="#">My Tickets</a>
+                <a class="font" href="/ticket.html">My Tickets</a>
               </li>
             </ul>
           </li>
@@ -49,24 +53,25 @@
             <span>Settings</span>
             <ul class="drop">
               <li class="drop-item">
-                <a class="font" href="#">General Settings</a>
+                <a class="font" href="settings.html#profile">General Settings</a>
               </li>
               <li class="drop-item">
-                <a class="font" href="#">Security</a>
+                <a class="font" href="settings.html#security">Security</a>
               </li>
               <li class="drop-item">
-                <a class="font" href="#">Verification</a>
+                <a class="font" href="settings.html#verification">Verification</a>
               </li>
             </ul>
           </li>
         </ul>
         <div class="welcome-message">
           <span>Be welcome: &nbsp;</span>
-          <span style="color: #fc9803;"><b>Marcio Caldas Vieira</b></span>
+          <span style="color: #fc9803;"><b class="user-firstname"></b> <b class="user-lastname"></b> <b
+              class="user-id"></b></span>
         </div>
         <div class="settings">
           <a href="#" class=><img class="icon-nav" src="../svg/icon/IconMessage.svg"></a>
-          <a href="#"><img class="icon-nav" src="../svg/icon/IconLogout.svg"></a>
+          <a href="#"><img class="icon-nav" src="../svg/icon/IconLogout.svg" id="logout"></a>
         </div>
       </div>
       <div class="accordion"><img src="../img/configuration+settings+icon-1320191040059302570.png" alt=""></div>
@@ -130,27 +135,22 @@
       <div class="box moving-text">
         <span class="font span-price">Prices |</span>
         <marquee class="font marq" behavior="scroll" direction="left">
-          <label class="price-up">BTC: $10.576,90</label>
+          <label id="quote-BTCUSD">BTC: $0</label>
 
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;
 
-          <label class="price-down">ETH: $346,79</label>
+          <label id="quote-BCHUSD">BCH: $0</label>
 
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;
 
-          <label class="price-up">LTC: $45,69</label>
+          <label id="quote-BTGUSD">BTG: $0</label>
 
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;
 
-          <label class="price-down">ZEC: $60,61</label>
-
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;
-
-          <label class="price-up">DASH: $66,47</label>
+          <label id="quote-TRXUSD">TRX: $0</label>
 
         </marquee>
       </div>
@@ -164,30 +164,31 @@
               <br>
               <div class="list-binary box">
                 <ul class="list" style="width:100%">
-                  <li class="item">
+                  <li class="item binary-tree-currency" data-currency="BTC">
                     <p class="font">Bitcoin</p>
                   </li>
-                  <li class="item">
+                  <li class="item binary-tree-currency" data-currency="BCH">
                     <p class="font">Bitcoin Cash</p>
                   </li>
-                  <li class="item">
+                  <li class="item binary-tree-currency" data-currency="BTG">
                     <p class="font">Bitcoin Gold</p>
                   </li>
-                  <li class="item">
-                    <p class="font">Bitcoin SV</p>
-                  </li>
-                  <li class="item">
-                    <p class="font">Etherium</p>
-                  </li>
-                  <li class="item">
+                  <li class="item binary-tree-currency" data-currency="TRX">
                     <p class="font">Tron</p>
-                  </li>
-                  <li class="item">
-                    <p class="font">Ripple</p>
                   </li>
                 </ul>
               </div>
-              <button class="button-rgb buttonApplyBinary">Apply</button>
+              <button class="button-rgb buttonApplyBinary" id="binary-tree-currency-apply">Apply</button>
+            </div>
+          </div>
+          <div class="box total-leg">
+            <div>
+              <p>
+                Total register left: <span style="color: yellow;">25</span>
+              </p>
+              <p>
+                Total register right: <span style="color: yellow;">25</span>
+              </p>
             </div>
           </div>
           <div class="small-col box" style="width:100%;height: 200px; margin-top:5px">
@@ -198,15 +199,17 @@
               <form action="" class="form-save" method="post">
                 <div class="radios box">
                   <div>
-                    <input type="radio" value="left" name="direction" id="left"><label class="font" for="left">Left</label>
+                    <input type="radio" value="left" name="direction" id="left"><label class="font" for="left"
+                      data-direction="0">Left</label>
                   </div>
                   <div>
-                    <input type="radio" value="right" name="direction" id="right"><label class="font" for="right">Right</label>
+                    <input type="radio" value="right" name="direction" id="right"><label class="font" for="right"
+                      data-direction="1">Right</label>
                   </div>
                 </div>
                 <br>
                 <div style="display: flex;justify-content: center;">
-                  <input class="button-rgb" type="submit" value="SAVE">
+                  <input class="button-rgb" type="submit" value="SAVE" id="save-direction">
                 </div>
               </form>
             </div>
@@ -218,7 +221,8 @@
             <div class="lists">
               <ul class="list-left-level box">
                 <li class="item">
-                  <span class="indicator" style="background-color: rgba(255, 255, 255, 0); border: 1px solid gray"></span>
+                  <span class="indicator"
+                    style="background-color: rgba(255, 255, 255, 0); border: 1px solid gray"></span>
                   <p class="font">Inactive</p>
                 </li>
                 <li class="item">
@@ -276,11 +280,13 @@
             <div class="div-search-container">
               <div style="margin-right: 15px;">
                 <p class="font">Search Login |</p>
+                
               </div>
               <div class="input-border">
-                <input type="text" placeholder="masteronne">
+                <input type="text" placeholder="" id="binary-search-val">
               </div>
-              <button class="button-rgb" style="margin-left: 10px">Submit</button>
+              <button class="button-rgb" style="margin-left: 10px" id="binary-search">Submit</button>
+              <p class="font" style="margin-left: 50px;">Bitcoin total register: <span style="color: yellow;">50</span></p>
             </div>
           </div>
           <div class="box" style="width:100%;height:100%">
@@ -289,66 +295,52 @@
                 <div class="container-value">
                   <p class="font" style="font-size: 30px;">Volume Left</p>
                   <div class="box volume-value">
-                    <p class="font" style="font-size: 50px; color: white;">0.00015</p>
+                    <p class="font" style="font-size: 50px; color: white;" id="volume-left">0.0000</p>
                   </div>
                 </div>
                 <div class="container-value">
-                  <p class="font bitText" style="font-size: 30px; color: yellow;">Bitcoin</p>
+                  <p class="font bitText" style="font-size: 30px; color: yellow;" id="binary-currency">Bitcoin</p>
                 </div>
                 <div class="container-value">
                   <p class="font" style="font-size: 30px;">Volume Right</p>
                   <div class="box volume-value">
-                    <p class="font" style="font-size: 50px; color: white;">0.00025</p>
+                    <p class="font" style="font-size: 50px; color: white;" id="volume-right">0.0000</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="all-animation">
-              <lottie-player class="animation" src="https://assets9.lottiefiles.com/packages/lf20_wekupmdo.json" mode="bounce" background="transparent" speed="1" hover loop></lottie-player>
+            <div class="all-animation" id="go-top">
+              <lottie-player class="animation" src="https://assets9.lottiefiles.com/packages/lf20_wekupmdo.json"
+                mode="bounce" background="transparent" speed="1" hover loop></lottie-player>
               <p class="font animation-p" style="color: white;">Back to Top</p>
             </div>
             <div class="tree">
               <div class="background">
                 <div class="nivel1">
-                  <p><img src="../svg/Botão Laranja Forte.svg" data-text="Login: bla bla&#013;Volume Left: 0.001&#013;Volume right: 0.02&#013;Direct Referrals: 14">
-                  </p>
+                  <p data-binary-id="1"></p>
                 </div>
 
                 <div class="nivel2">
-                  <p><img src="../svg/Botão Roxo.svg" data-text="Login: bla bla&#013;Volume Left: 0.001&#013;Volume right: 0.02&#013;Direct Referrals: 14">
-                  </p>
-                  <p><img src="../svg/Botão Azul Claro.svg" data-text="Login: bla bla&#013;Volume Left: 0.001&#013;Volume right: 0.02&#013;Direct Referrals: 14">
-                  </p>
+                  <p data-binary-id="2"></p>
+                  <p data-binary-id="3"></p>
                 </div>
 
                 <div class="nivel3">
-                  <p><img src="../svg/Botão Preto.svg" data-text="Login: bla bla&#013;Volume Left: 0.001&#013;Volume right: 0.02&#013;Direct Referrals: 14">
-                  </p>
-                  <p><img src="../svg/Botão Azul Marinho.svg" data-text="Login: bla bla&#013;Volume Left: 0.001&#013;Volume right: 0.02&#013;Direct Referrals: 14">
-                  </p>
-                  <p><img src="../svg/Verde Claro Limão.svg" data-text="Login: bla bla&#013;Volume Left: 0.001&#013;Volume right: 0.02&#013;Direct Referrals: 14">
-                  </p>
-                  <p><img src="../svg/Botão Vermelho Forte.svg" data-text="Login: bla bla&#013;Volume Left: 0.001&#013;Volume right: 0.02&#013;Direct Referrals: 14">
-                  </p>
+                  <p data-binary-id="4"></p>
+                  <p data-binary-id="5"></p>
+                  <p data-binary-id="6"></p>
+                  <p data-binary-id="7"></p>
                 </div>
 
                 <div class="nivel4">
-                  <p><img src="../svg/Botão Amarelo Claro.svg" data-text="Login: bla bla&#013;Volume Left: 0.001&#013;Volume right: 0.02&#013;Direct Referrals: 14">
-                  </p>
-                  <p><img src="../svg/Botão Cinza Onix.svg" data-text="Login: bla bla&#013;Volume Left: 0.001&#013;Volume right: 0.02&#013;Direct Referrals: 14">
-                  </p>
-                  <p><img src="../svg/Botão Marrom.svg" data-text="Login: bla bla&#013;Volume Left: 0.001&#013;Volume right: 0.02&#013;Direct Referrals: 14">
-                  </p>
-                  <p><img src="../svg/Botão Rosa Claro.svg" data-text="Login: bla bla&#013;Volume Left: 0.001&#013;Volume right: 0.02&#013;Direct Referrals: 14">
-                  </p>
-                  <p><img src="../svg/Botão Transparente.svg" data-text="Login: bla bla&#013;Volume Left: 0.001&#013;Volume right: 0.02&#013;Direct Referrals: 14">
-                  </p>
-                  <p><img src="../svg/Botão Transparente.svg" data-text="Login: bla bla&#013;Volume Left: 0.001&#013;Volume right: 0.02&#013;Direct Referrals: 14">
-                  </p>
-                  <p><img src="../svg/Botão Transparente.svg" data-text="Login: bla bla&#013;Volume Left: 0.001&#013;Volume right: 0.02&#013;Direct Referrals: 14">
-                  </p>
-                  <p><img src="../svg/Botão Transparente.svg" data-text="Login: bla bla&#013;Volume Left: 0.001&#013;Volume right: 0.02&#013;Direct Referrals: 14">
-                  </p>
+                  <p data-binary-id="8"></p>
+                  <p data-binary-id="9"></p>
+                  <p data-binary-id="10"></p>
+                  <p data-binary-id="11"></p>
+                  <p data-binary-id="12"></p>
+                  <p data-binary-id="13"></p>
+                  <p data-binary-id="14"></p>
+                  <p data-binary-id="15"></p>
                 </div>
               </div>
             </div>
@@ -357,15 +349,8 @@
       </div>
     </div>
   </div>
-  <script>
-    function text() {
-      document.getElementById("hoverText").innerHTML = "Texto";
-    }
-    function removeText() {
-      document.getElementById("hoverText").innerHTML = "";
-    }
-  </script>
-  <script type="module" src="../js/script.js"></script>
+
+  <script type="module" src="../js/script.js" defer></script>
   <script>
     const list = document.querySelectorAll('.list-binary .list .item')
     const bitText = document.querySelector('.bitText')
