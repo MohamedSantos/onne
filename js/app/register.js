@@ -107,7 +107,11 @@ $(() => {
 
         app.apiPost('/users', fields)
             .then(() => {
+<<<<<<< HEAD
                 window.location = '/login.html'
+=======
+                //window.location = '/login.html'
+>>>>>>> 6ba88dfad041b9d49f65c68d3274fd5fb7ff4dc7
             })
             .catch(err => {
                 if (err === 'USER_REGISTERED') {

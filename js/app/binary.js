@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import tooltip from '../tooltip.js';
 
 (() => {
+=======
+$(() => {
+>>>>>>> 6ba88dfad041b9d49f65c68d3274fd5fb7ff4dc7
     let activeCur = 'BTC',
         binaryStruct = {},
         lastRates = {}
@@ -30,7 +34,11 @@ import tooltip from '../tooltip.js';
     const updateRates = () => {
         app.apiGet('/rates')
             .then(rates => {
+<<<<<<< HEAD
                 for (let sym in rates) {
+=======
+                for(let sym in rates) {
+>>>>>>> 6ba88dfad041b9d49f65c68d3274fd5fb7ff4dc7
                     let dir = 0
 
                     if (lastRates[sym] === undefined) {
@@ -43,7 +51,11 @@ import tooltip from '../tooltip.js';
                         dir = 0
                     }
 
+<<<<<<< HEAD
                     $('#quote-' + sym).text(sym + ': $' + rates[sym]).removeClass('price-up price-down').addClass(dir > 0 ? 'price-up' : (dir < 0 ? 'price-down' : ''))
+=======
+                    $('#quote-'+sym).text(sym+': $'+rates[sym]).removeClass('price-up price-down').addClass(dir > 0 ? 'price-up' : (dir < 0 ? 'price-down' : ''))
+>>>>>>> 6ba88dfad041b9d49f65c68d3274fd5fb7ff4dc7
 
                     lastRates[sym] = rates[sym]
                 }
@@ -61,6 +73,7 @@ import tooltip from '../tooltip.js';
         }
 
         if (id == 1) {
+<<<<<<< HEAD
             $('#volume-left').text(struct.data['binary_left_' + activeCur])
             $('#volume-right').text(struct.data['binary_right_' + activeCur])
         }
@@ -79,6 +92,26 @@ import tooltip from '../tooltip.js';
 
         if (struct.right > 0) {
             drawBinary(struct.right_node, id * 2 + 1)
+=======
+            $('#volume-left').text(struct.data['binary_left_'+activeCur])
+            $('#volume-right').text(struct.data['binary_right_'+activeCur])
+        }
+
+        let el = $(`<img src="${levelImg[struct.data.status]}" data-text="Login: ${struct.data.email}&#013;Volume Left: ${struct.data['binary_left_'+activeCur]}&#013;Volume right: ${struct.data['binary_right_'+activeCur]}&#013;Direct Referrals: ${struct.data.direct_referrals}">`)
+
+        el.click(() => {
+            searchAndBuild(struct.data.email)
+        })
+
+        $('[data-binary-id='+id+']').html(el)
+
+        if (struct.left > 0) {
+           drawBinary(struct.left_node, id*2)
+        }
+
+        if (struct.right > 0) {
+            drawBinary(struct.right_node, id*2+1)
+>>>>>>> 6ba88dfad041b9d49f65c68d3274fd5fb7ff4dc7
         }
     }
 
@@ -89,16 +122,25 @@ import tooltip from '../tooltip.js';
             .then(struct => {
                 binaryStruct = struct
 
+<<<<<<< HEAD
                 for (let i = 1; i <= 15; i++) {
                     $('[data-binary-id=' + i + ']').html(`<img src="${levelImg[0]}" data-text="Login: -&#013;Volume Left: 0&#013;Volume right: 0&#013;Direct Referrals: 0">`)
                 }
                 drawBinary(struct);
                 setTimeout(tooltip, 1000);
+=======
+                for(let i=1; i<=15; i++) {
+                    $('[data-binary-id='+i+']').html(`<img src="${levelImg[0]}" data-text="Login: -&#013;Volume Left: 0&#013;Volume right: 0&#013;Direct Referrals: 0">`)
+                }
+
+                drawBinary(struct)
+>>>>>>> 6ba88dfad041b9d49f65c68d3274fd5fb7ff4dc7
             })
     }
 
     app.checkLogin()
         .then(user => {
+<<<<<<< HEAD
             searchAndBuild(app.data.user.email)
 
             $(user.binary_direction ? '#right' : '#left').attr('checked', 'checked')
@@ -109,6 +151,21 @@ import tooltip from '../tooltip.js';
 
         drawBinary(binaryStruct)
     })
+=======
+            app.apiGet('/users/'+user.id+'/binary')
+                .then(struct => {
+                    binaryStruct = struct
+
+                    for(let i=1; i<=15; i++) {
+                        $('[data-binary-id='+i+']').html(`<img src="${levelImg[0]}" data-text="Login: -&#013;Volume Left: 0&#013;Volume right: 0&#013;Direct Referrals: 0">`)
+                    }
+
+                    drawBinary(struct)
+                })
+
+            $(user.binary_direction ? '#right' : '#left').attr('checked', 'checked')
+        })
+>>>>>>> 6ba88dfad041b9d49f65c68d3274fd5fb7ff4dc7
 
     $('.binary-tree-currency').click(e => {
         let el = $(e.target)
@@ -118,6 +175,13 @@ import tooltip from '../tooltip.js';
         }
 
         activeCur = el.data('currency')
+<<<<<<< HEAD
+=======
+
+        $('#binary-currency').text(currencies[activeCur])
+
+        drawBinary(binaryStruct)
+>>>>>>> 6ba88dfad041b9d49f65c68d3274fd5fb7ff4dc7
     })
 
     $('#save-direction').click(e => {
@@ -136,4 +200,8 @@ import tooltip from '../tooltip.js';
     $('#go-top').click(() => {
         searchAndBuild(app.data.user.email)
     })
+<<<<<<< HEAD
 })();
+=======
+})
+>>>>>>> 6ba88dfad041b9d49f65c68d3274fd5fb7ff4dc7

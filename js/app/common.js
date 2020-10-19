@@ -364,10 +364,17 @@ window.app = {
     config: {
         server: {
             rest: {
+<<<<<<< HEAD
                 host: 'https://api.onne.vip'
             }
         },
         domain: 'https://i.onne.vip'
+=======
+                host: 'https://mlm-api.test.naxtrader.com'
+            }
+        },
+        domain: 'https://mlm.test.naxtrader.com'
+>>>>>>> 6ba88dfad041b9d49f65c68d3274fd5fb7ff4dc7
     }
 }
 

@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="../css/bank.css">
   <link rel="stylesheet" type="text/css" href="../css/dashboard-ecommerce.css">
   <title>Onne - Bank</title>
-  <link rel="sortcut icon" href="../img/LOGO ONE 100 X 100.png" type="image/png" />
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="../js/app/common.js"></script>
   <script src="../js/app/bank.js"></script>
@@ -21,7 +20,6 @@
       <header class="header">
         <img class="logo" src="../svg/Logo ONNE.svg" alt="" class="icon-nav">
         <div class="wrapper">
-          <div class="accordion"><img src="../img/configuration+settings+icon-1320191040059302570.png" alt=""></div>
           <ul class="menu-list">
             <li class="drop-down">
               <span>EN</span>
@@ -68,19 +66,18 @@
           </ul>
           <div class="welcome-message">
             <span>Be welcome: &nbsp;</span>
-            <span style="color: #fc9803;"><b class="user-firstname"></b> <b class="user-lastname"></b> <b class="user-id"></b></span>
+            <span style="color: #fc9803;"><b class="user-firstname"></b> <b class="user-lastname"></b> <b
+                class="user-id"></b></span>
           </div>
           <div class="settings">
             <a href="#" class=><img class="icon-nav" src="../svg/icon/IconMessage.svg"></a>
             <a href="#"><img class="icon-nav" src="../svg/icon/IconLogout.svg" id="logout"></a>
           </div>
         </div>
-        <div class="accordion"><img src="../img/configuration+settings+icon-1320191040059302570.png" alt=""></div>
-        <div class="accordion2"><span></span></div>
+        <div class="accordion"><span></span></div>
       </header>
-      <div class="header-menu">
+      <div class="header">
         <nav class="nav">
-          <div class="accordion2"><span></span></div>
           <ul>
             <li> <a class="font text-nav" href="blank.html">
                 <img class="icon-nav first" src="../svg/icon/IconDashboard.svg" alt=""><span>Home</span>
@@ -130,52 +127,66 @@
             </li>
           </ul>
         </nav>
-        <div class="accordion2"><span></span></div>
       </div>
 
       <div class="box moving-text">
         <span class="font span-price">Prices |</span>
         <marquee class="font marq" behavior="scroll" direction="left">
           <label id="quote-BTCUSD">BTC: $0</label>
+          <<<<<<< HEAD:bank.html=======&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <label
+            id="quote-BCHUSD">BCH: $0</label>
+            >>>>>>> 6ba88dfad041b9d49f65c68d3274fd5fb7ff4dc7:html/bank.html
 
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;
 
-          <label id="quote-BCHUSD">BCH: $0</label>
+            <<<<<<< HEAD:bank.html <label id="quote-BCHUSD">BCH: $0</label>
+              =======
+              <label id="quote-BTGUSD">BTG: $0</label>
+              >>>>>>> 6ba88dfad041b9d49f65c68d3274fd5fb7ff4dc7:html/bank.html
 
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
 
-          <label id="quote-BTGUSD">BTG: $0</label>
+              <<<<<<< HEAD:bank.html <label id="quote-BTGUSD">BTG: $0</label>
 
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
 
-          <label id="quote-TRXUSD">TRX: $0</label>
+                =======
+                >>>>>>> 6ba88dfad041b9d49f65c68d3274fd5fb7ff4dc7:html/bank.html
+                <label id="quote-TRXUSD">TRX: $0</label>
         </marquee>
       </div>
       <section class="flex-section bitcoin-value">
         <div class="container-values box">
           <div class="box-select" id="account-currency-display">
-            <select onChange="changeColor()">
-              <option>USD</option>
-              <option>EUR</option>
-              <option>BRL</option>
-              <option>AUD</option>
-              <option>DKK</option>
-              <option>TRY</option>
-              <option>PLN</option>
-              <option>MXN</option>
-              <option>INR</option>
-              <option>IDR</option>
-            </select>
-            <div class="values">
-              <span class="value valueColor user-balance_total_USD">0</span>
-            </div>
+            <<<<<<< HEAD:bank.html <select onChange="changeColor()">
+              =======
+              <select>
+                >>>>>>> 6ba88dfad041b9d49f65c68d3274fd5fb7ff4dc7:html/bank.html
+                <option>USD</option>
+                <option>EUR</option>
+                <option>BRL</option>
+                <option>AUD</option>
+                <option>DKK</option>
+                <option>TRY</option>
+                <option>PLN</option>
+                <option>MXN</option>
+                <option>INR</option>
+                <option>IDR</option>
+              </select>
+              <div class="values">
+                <span class="value valueColor user-balance_total_USD">0</span>
+              </div>
           </div>
           <div class="btns">
-            <a href="./deposit-bank.html"><button class="button-rgb">Deposit</button></a>
-            <a href="./withdraw.html"> <button class="button-rgb">Withdraw</button></a>
+            <<<<<<< HEAD:bank.html <a href="./deposit-bank.html"><button class="button-rgb">Deposit</button></a>
+              <a href="./withdraw.html"> <button class="button-rgb">Withdraw</button></a>
+              =======
+              <a href="#"><button class="button-rgb">Deposit</button></a>
+              <a href="#"> <button class="button-rgb">Withdraw</button></a>
+              >>>>>>> 6ba88dfad041b9d49f65c68d3274fd5fb7ff4dc7:html/bank.html
           </div>
         </div>
       </section>
@@ -195,22 +206,34 @@
                 <li class=" item">
                   <span class="indicator"></span>
                   <p class="font">Amount BTC</p>
-                  <span class="font"><span class="user-balance_BTC"></span></span>
+                  <<<<<<< HEAD:bank.html <span class="font"><span class="user-balance_BTC"></span></span>
+                    =======
+                    <span class="font">$ <span class="user-balance_BTCUSD"></span></span>
+                    >>>>>>> 6ba88dfad041b9d49f65c68d3274fd5fb7ff4dc7:html/bank.html
                 </li>
                 <li class=" item">
                   <span class="indicator"></span>
                   <p class="font">Amount BCH</p>
-                  <span class="font"><span class="user-balance_BCH"></span></span>
+                  <<<<<<< HEAD:bank.html <span class="font"><span class="user-balance_BCH"></span></span>
+                    =======
+                    <span class="font">$ <span class="user-balance_BCHUSD"></span></span>
+                    >>>>>>> 6ba88dfad041b9d49f65c68d3274fd5fb7ff4dc7:html/bank.html
                 </li>
                 <li class=" item">
                   <span class="indicator"></span>
                   <p class="font">Amount BTG</p>
-                  <span class="font"><span class="user-balance_BTG"></span></span>
+                  <<<<<<< HEAD:bank.html <span class="font"><span class="user-balance_BTG"></span></span>
+                    =======
+                    <span class="font">$ <span class="user-balance_BTGUSD"></span></span>
+                    >>>>>>> 6ba88dfad041b9d49f65c68d3274fd5fb7ff4dc7:html/bank.html
                 </li>
                 <li class=" item">
                   <span class="indicator"></span>
                   <p class="font">Amount TRX</p>
-                  <span class="font"><span class="user-balance_TRX"></span></span>
+                  <<<<<<< HEAD:bank.html <span class="font"><span class="user-balance_TRX"></span></span>
+                    =======
+                    <span class="font">$ <span class="user-balance_TRXUSD"></span></span>
+                    >>>>>>> 6ba88dfad041b9d49f65c68d3274fd5fb7ff4dc7:html/bank.html
                 </li>
               </ul>
             </div>
@@ -277,7 +300,25 @@
       </section>
     </div>
   </div>
-  <script type="module" src="../js/script.js"></script>
+  <<<<<<< HEAD:bank.html=======<script>
+    let numBranco;
+    let numCor;
+    const color = document.querySelector('.valueColor');
+    color.innerHTML.split('').find((item, index) => {
+    if (item > 0) {
+    numCor = color.innerHTML.substr(index, color.innerHTML.length);
+    numBranco = color.innerHTML.substr(0, index);
+    console.log(numCor);
+    console.log(numBranco);
+    }
+    return item > 0;
+    })
+    let span = document.createElement('span');
+    span.innerHTML = numCor; span.style.color = '#c71caa'; span.classList.add('value');
+    color.innerHTML = numBranco; color.appendChild(span);
+    </script>
+    >>>>>>> 6ba88dfad041b9d49f65c68d3274fd5fb7ff4dc7:html/bank.html
+    <script type="module" src="../js/script.js"></script>
 </body>
 
 </html>

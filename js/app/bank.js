@@ -80,6 +80,7 @@ $(() => {
             $('.user-balance_'+n+'USD').text(Number(accountBalanceUSD[n].toFixed(2)).toLocaleString())
         }
 
+<<<<<<< HEAD
         let renewal = []
 
         for(let n in accountBalanceBTC) {
@@ -88,6 +89,8 @@ $(() => {
 
         $('.user-renewal').text(renewal.join(' | '))
 
+=======
+>>>>>>> 6ba88dfad041b9d49f65c68d3274fd5fb7ff4dc7
         let chart = new Chart(document.getElementById('myChart').getContext('2d'), {
             type: 'doughnut',
             data: {

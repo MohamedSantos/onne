@@ -48,6 +48,13 @@ $(() => {
     const updateChart = currency => {
         app.apiGet('/charts')
             .then(chartData => {
+<<<<<<< HEAD
+=======
+                if (charts !== null) {
+                    charts.destroy()
+                    $('#charts-container').html('<canvas id="line-chart" style="height:100%; width:100%"></canvas>')
+                }
+>>>>>>> 6ba88dfad041b9d49f65c68d3274fd5fb7ff4dc7
 
                 charts = new Chart(document.getElementById("line-chart"), {
                     type: 'line',
@@ -78,6 +85,7 @@ $(() => {
             BCH: app.data.user.deposit_BCH*lastRates['BCHBTC'],
             BTG: app.data.user.deposit_BTG*lastRates['BTGBTC'],
             TRX: app.data.user.deposit_TRX*lastRates['TRXBTC']
+<<<<<<< HEAD
         },
             accountAvailableBTC = {
                 BTC: app.data.user.balance_BTC,
@@ -88,12 +96,20 @@ $(() => {
 
         let accountBalanceUSD = {},
             accountAvailableUSD = {},
+=======
+        }
+
+        let accountBalanceUSD = {},
+>>>>>>> 6ba88dfad041b9d49f65c68d3274fd5fb7ff4dc7
             total = 0
 
         for (let n in accountBalanceBTC) {
             total += accountBalanceBTC[n]
             accountBalanceUSD[n] = accountBalanceBTC[n]*lastRates['BTCUSD']
+<<<<<<< HEAD
             accountAvailableUSD[n] = accountAvailableBTC[n]*lastRates['BTCUSD']
+=======
+>>>>>>> 6ba88dfad041b9d49f65c68d3274fd5fb7ff4dc7
         }
 
         $('.user-balance_total_BTC').text(Number(total.toFixed(6)).toLocaleString())
@@ -108,7 +124,11 @@ $(() => {
             type: 'doughnut',
             data: {
                 datasets: [{
+<<<<<<< HEAD
                     data: [accountAvailableUSD.BTC, accountAvailableUSD.BCH, accountAvailableUSD.BTG, accountAvailableUSD.TRX],
+=======
+                    data: [accountBalanceUSD.BTC, accountBalanceUSD.BCH, accountBalanceUSD.BTG, accountBalanceUSD.TRX],
+>>>>>>> 6ba88dfad041b9d49f65c68d3274fd5fb7ff4dc7
                     backgroundColor: [
                         '#ff6384',
                         '#36a2eb',
