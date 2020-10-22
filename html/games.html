@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Games</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/games.css">
+
+</head>
+
+<body>
+  <class class="section">
+    <div class="container">
+
+      <header class="header">
+        <img class="logo" src="../svg/Logo ONNE.svg" alt="" class="icon-nav">
+        <div class="wrapper">
+          <div class="accordion"><img src="../img/configuration+settings+icon-1320191040059302570.png" alt=""></div>
+          <ul class="menu-list">
+            <li class="drop-down">
+              <span>EN</span>
+              <ul class="drop">
+                <li class="drop-item">
+                  <a class="font" href="#">RU</a>
+                </li>
+                <li class="drop-item">
+                  <a class="font" href="#">PT</a>
+                </li>
+                <li class="drop-item">
+                  <a class="font" href="#">MS</a>
+                </li>
+              </ul>
+            </li>
+            <li class="drop-down">
+              <span>Support</span>
+              <ul class="drop">
+                <li class="drop-item">
+                  <a class="font" href="/ticket.html">FAQ</a>
+                </li>
+                <li class="drop-item">
+                  <a class="font" href="/ticket.html">Create Tickets</a>
+                </li>
+                <li class="drop-item">
+                  <a class="font" href="/ticket.html">My Tickets</a>
+                </li>
+              </ul>
+            </li>
+            <li class="drop-down">
+              <span>Settings</span>
+              <ul class="drop">
+                <li class="drop-item">
+                  <a class="font" href="#">General Settings</a>
+                </li>
+                <li class="drop-item">
+                  <a class="font" href="#">Security</a>
+                </li>
+                <li class="drop-item">
+                  <a class="font" href="#">Verification</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="welcome-message">
+            <span>Be welcome: &nbsp;</span>
+            <span style="color: #fc9803;"><b class="user-firstname"></b> <b class="user-lastname"></b> <b class="user-id"></b></span>
+          </div>
+          <div class="settings">
+            <a href="#" class=><img class="icon-nav" src="../svg/icon/IconMessage.svg"></a>
+            <a href="#"><img class="icon-nav" src="../svg/icon/IconLogout.svg" id="logout"></a>
+          </div>
+        </div>
+        <div class="accordion"><img src="../img/configuration+settings+icon-1320191040059302570.png" alt=""></div>
+        <div class="accordion2"><span></span></div>
+      </header>
+      <div class="header-menu">
+        <nav class="nav">
+          <div class="accordion2"><span></span></div>
+          <ul>
+            <li> <a class="font text-nav" href="blank.html">
+                <img class="icon-nav first" src="../svg/icon/IconDashboard.svg" alt=""><span>Home</span>
+              </a>
+              <img src="../svg/Replicar barra.svg" alt="">
+            </li>
+            <li> <a class="font text-nav" href="binary.html">
+                <img class="icon-nav" src="../svg/icon/IconBinaryTree.svg" alt=""><span>Binary</span>
+              </a>
+              <img src="../svg/Replicar barra.svg" alt="">
+            </li>
+            <li>
+              <a class="font text-nav" href="status.html">
+                <img class="icon-nav" src="../svg/icon/IconStatus.svg" alt=""><span>Status</span>
+              </a>
+              <img src="../svg/Replicar barra.svg" alt="">
+            </li>
+            <li>
+              <a class="font text-nav" href="bank.html">
+                <img class="icon-nav" src="../svg/icon/IconBank.svg" alt="">
+                <span>Bank</span>
+              </a>
+              <img src="../svg/Replicar barra.svg" alt="">
+            </li>
+            <li>
+              <a class="font text-nav" href="unilevel.html">
+                <img class="icon-nav" src="../svg/icon/IconUnilevel.svg" alt=""><span>Unilevel</span>
+              </a>
+              <img src="../svg/Replicar barra.svg" alt="">
+            </li>
+            <li>
+              <a class="font text-nav" href="#">
+                <img class="icon-nav" src="../svg/icon/IconPromotion.svg" alt=""><span>Promotion</span>
+              </a>
+              <img src="../svg/Replicar barra.svg" alt="">
+            </li>
+            <li>
+              <a class="font text-nav" href="#">
+                <img class="icon-nav" src="../svg/icon/IconMaterial.svg" alt=""><span>Material</span>
+              </a>
+              <img src="../svg/Replicar barra.svg" alt="">
+            </li>
+            <li>
+              <a class="font text-nav last" href="#">
+                <img class="icon-nav" src="../svg/icon/IconRoadMap.svg" alt=""><span>Road Map</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="accordion2"><span></span></div>
+      </div>
+      <div class="box moving-text">
+        <span class="font span-price">Prices |</span>
+        <marquee class="font marq" behavior="scroll" direction="left">
+          <label id="quote-BTCUSD">BTC: $0</label>
+
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+
+          <label id="quote-BCHUSD">BCH: $0</label>
+
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+
+          <label id="quote-BTGUSD">BTG: $0</label>
+
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+
+          <label id="quote-TRXUSD">TRX: $0</label>
+
+        </marquee>
+      </div>
+
+
+      <section class="section-game">
+
+
+        <!-- buy-credit -->
+        <div class="box buy-credit">
+          <p class="linha">BUY CREDIT!</p>
+          <p>WE ACCEPT ONLY BTC</p>
+          <div class="input-game">
+            <input type="text" placeholder="(USD)">
+            <input type="text" placeholder="(BTC)">
+          </div>
+
+          <button class="btn-game button-rgb">pay</button>
+        </div>
+        <!-- avaliable credits -->
+        <div class="box avaliable-credits">
+          <p>AVAILABLE CREDITS</p>
+          <p>Good lucky and enjoy</p>
+          <div>
+            <label>BTC </label>
+            <input type="number">
+          </div>
+        </div>
+
+        <!-- SLOT MACHINE RULES -->
+        <div class="box machine-rules">
+          <p>SLOT MACHINE</p>
+          <div class="rules">
+            <p>Rules:</p>
+            <p>Play for a chance to increase your daily ROI bonus</p>
+
+
+            <div class="list">
+
+              <div class="left">
+
+                <ul>
+                  <li>ONNE 1% </li>
+                  <li>Bitcoin 0.75%</li>
+                  <li>Ethereum 0.5%</li>
+                  <li>Tron 0.25%</li>
+                  <li>Dash 0.1%</li>
+                </ul>
+              </div>
+              <div class="right">
+                <ul>
+                  <li>Monero 0.075%</li>
+                  <li>0.05%</li>
+                  <li>0.025%</li>
+                  <li>0.01%</li>
+                  <li>0.0075%</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- game -->
+
+        <div class="box game">
+          <h1>SLOT MACHINE AQUi</h1>
+
+
+        </div>
+
+      </section>
+    </div>
+  </class>
+
+
+</body>
+
+</html>
