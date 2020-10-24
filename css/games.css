@@ -78,10 +78,114 @@ input[type="number"] {
 
 .game {
   width: 100%;
-  height: 400px;
 }
 
 .game h1 {
   text-align: center;
   color: #fff;
+}
+
+.slot-machine{
+display: flex;
+padding: 20px;
+gap: 25px;
+height: 410px
+}
+
+.container-machine{
+  display: flex;
+  flex-direction: column;
+}
+.container-machine img, .slot-machine-img{
+  width: 350px
+}
+
+.play-machine{
+  display: flex;
+  align-items: flex-end;
+  margin-left: 20px;
+}
+
+.play-machine .button-rgb{
+  height: 50px;
+  width: 140px;
+  font-size: 20px;
+}
+
+.slot-machine .container-machine:nth-child(1){
+    text-align: center;
+    background: url(../img/MaskSlotMachine.png) no-repeat 50% 80px;
+    background-position-x: 0;
+    background-size: 350px;
+    min-height: 580px;
+}
+
+.slotMachine{
+  width: 19%;
+  height: 131px;
+  display: inline-block;
+  margin-block-start: 2.6em;
+  background: white;
+  border-radius: 6px;
+  box-shadow: inset 1px 1px 16px 2px;
+  padding: 5px 0;
+}
+
+.slot-machine-container{
+  transition: all 1s ease-out 0s;
+  transform: matrix(1, 0, 0, 1, 0, -300);
+}
+
+.slot-items{
+  display: flex;
+    gap: 14px;
+    justify-content: center;
+}
+
+.slotMachine .slot{
+  height: 110px;
+  background-position-x: 50%;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size: 55px;
+}
+
+.slot1{
+  background-image: url(../img/IconsMenuSlotMachine/BITCOIN.svg);
+}
+
+.slot2{
+  background-image: url(../img/IconsMenuSlotMachine/DASH.svg);
+}
+
+.slot3{
+  background-image: url(../img/IconsMenuSlotMachine/MONERO.svg);
+}
+
+.slot4{
+  background-image: url(../img/IconsMenuSlotMachine/ETHEREUM.svg);
+}
+
+.slot5{
+  background-image: url(../img/IconsMenuSlotMachine/LITECOIN.svg);
+}
+
+.slot6{
+  background-image: url(../img/IconsMenuSlotMachine/ONNE.svg);
+}
+
+.slot7{
+  background-image: url(../img/IconsMenuSlotMachine/RIPPLE.svg);
+}
+
+.slot8{
+  background-image: url(../img/IconsMenuSlotMachine/TETHER.svg);
+}
+
+.slot9{
+  background-image: url(../img/IconsMenuSlotMachine/TRON.svg);
+}
+
+.slot10{
+  background-image: url(../img/IconsMenuSlotMachine/ZCASH.svg);
 }
