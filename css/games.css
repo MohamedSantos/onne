@@ -189,6 +189,73 @@ height: 450px
   font-size: 33px;
 }
 
+.modal-content{
+  background: linear-gradient( 0deg, rgba(34, 0, 127, 1) 0%, rgba(9, 9, 121, 1) 70%, rgba(41, 87, 167, 1) 100% );
+  width: 400px;
+  padding: 10px
+}
+
+.modal-content label{
+  background: linear-gradient( 0deg, rgba(34, 0, 127, 1) 0%, rgba(9, 9, 121, 1) 70%, rgba(41, 87, 167, 1) 100% );
+  padding: 10px;
+  color: #f0ec1c
+}
+
+.line-modal p:before{
+  content: "•";
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.line-modal p{
+  font-size:20px
+}
+
+.currency p:before{
+  content: url(../img/IconsMenuSlotMachine/BITCOIN.svg)
+}
+
+.modal-footer{
+  align-self: center;
+  border-top: none !important;
+}
+
+.modal-header{
+  border-bottom: none !important;
+  font-size: 25px;
+  padding-bottom: 0 !important;
+}
+
+.modal-input{
+  flex-direction: column;
+  border-top: 5px solid #000 !important;
+}
+
+.modal-body{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px
+}
+
+.line-modal{
+  display: flex;
+  gap: 15px;
+  align-items:center
+}
+
+.img-win{
+  overflow-y: hidden !important;
+}
+
+.modal-dialog-centered{
+  justify-content:center;
+}
+
+.img-win img{
+  width: 520px
+}
+
 .slot1{
   background-image: url(../img/IconsMenuSlotMachine/BITCOIN.svg);
 }

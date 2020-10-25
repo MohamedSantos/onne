@@ -4,12 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Games</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/games.css">
   <link rel="stylesheet" href="../node_modules/jquery-slotmachine/dist/jquery.slotmachine.css" type="text/css" media="screen" />
   <script  src="../node_modules/jquery-slotmachine/dist/slotmachine.min.js"></script>
   <script  src="../node_modules/jquery-slotmachine/dist/jquery.slotmachine.min.js"></script>
+  <link rel="sortcut icon" href="../img/LOGO ONE 100 X 100.png" type="image/png" />
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <title>Onne - Games</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 
 <body>
@@ -257,7 +262,8 @@
               </div>
             </div>
             <div class="play-machine">
-              <button id="casinoShuffle" type="button" class="button-rgb"> PLAY! </button>
+              <button id="casinoShuffle" type="button" data-toggle="modal" data-target="#win-img" class="button-rgb"> PLAY! </button>
+              <button type="button" class="button-rgb" data-toggle="modal" data-target="#openModal"> OPEN</button>
             </div>
             <div class="messages-machine">
               <img src="../img/SlotArtBBB.png" alt="BBB" style="width: 450px;">
@@ -269,6 +275,46 @@
                   <div class="row-win"><p>END DATE</p> <label> 02.12.2021 </label></div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="modal fade" id="openModal" tabindex="-1" role="dialog" aria-labelledby="title-modal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <p class="modal-title font-legend" id="title-modal" style="color: #dad620; font-weight: bold;">BUY CREDIT
+
+                  </p>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="line-modal currency">
+                    <p class="font-legend" style="color: #46e4cb;">BITCOIN</p>
+                  </div>
+                  <div class="line-modal">
+                    <p class="font-legend" style="color: #46e4cb;">SEND AMOUNT</p>
+                  </div>
+                  <div class="line-modal">
+                    <label>0.12455</label>
+                  </div>
+                  <div class="line-modal">
+                    <p class="font-legend" style="color: #46e4cb;">SEND TO THIS ADDRESS</p>
+                  </div>
+                  <div class="line-modal">
+                    <p class="font-legend" style="color: #46e4cb;">BTC</p>
+                    <label>ALHSUAUSUA</label>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="button-rgb" data-toggle="modal" data-target="#win-img" id="send-withdrawal">SIGN ORDER</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade img-win" id="win-img" tabindex="-1" role="dialog" aria-labelledby="title-modal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <img src="../img/YOUWIN.png" alt="">
             </div>
           </div>
           <script id="codeScript5">
