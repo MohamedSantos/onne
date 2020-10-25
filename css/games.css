@@ -1,6 +1,4 @@
-p {
-  color: #fff;
-}
+
 .section-game {
   display: flex;
   flex-wrap: wrap;
@@ -25,6 +23,8 @@ input {
   margin: 10px;
   height: 30px;
   padding: 10px;
+  border-radius: 2px;
+  background: linear-gradient( 0deg, rgba(34, 0, 127, 0.8) 0%, rgba(9, 9, 121, 0.9) 70%, rgba(41, 87, 167, 1) 100% );
 }
 
 /* avaliable credits */
@@ -35,10 +35,6 @@ input {
   flex-direction: column;
   gap: 20px;
   padding: 20px 15px;
-}
-
-label {
-  color: #fff;
 }
 
 input[type="number"]::-webkit-inner-spin-button {
@@ -89,7 +85,7 @@ input[type="number"] {
 display: flex;
 padding: 20px;
 gap: 25px;
-height: 410px
+height: 450px
 }
 
 .container-machine{
@@ -148,6 +144,49 @@ height: 410px
   background-position-y: center;
   background-repeat: no-repeat;
   background-size: 55px;
+}
+
+.messages-machine{
+  display: flex;
+  flex-direction:column;
+  margin-block-start: -7em;
+  text-align: center;
+  margin-left: 40px;
+}
+
+.win, .win-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.win{
+  margin-top: -35px;
+}
+
+.win-container{
+  padding: 20px 40px;
+  gap: 7px;
+  font-size:11px;
+}
+
+.row-win{
+  display: flex;
+  justify-content: space-between;
+  color: #ddeb1c;
+  align-items:center;
+}
+
+.row-win label{
+  background: linear-gradient( 0deg, rgba(34, 0, 127, 0.8) 0%, rgba(9, 9, 121, 0.9) 70%, rgba(41, 87, 167, 1) 100% );
+  padding: 10px;
+  width: 100px;
+  text-align: initial;
+}
+
+.win-header{
+  color: #8c28c5;
+  margin-bottom: 10px;
+  font-size: 33px;
 }
 
 .slot1{
