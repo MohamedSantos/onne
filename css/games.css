@@ -95,7 +95,8 @@ input[type="number"] {
 
 .list ul li {
   color: #ddeb1c;
-  font-size: 10px;
+  font-size: 11px;
+  white-space: nowrap;
 }
 
 .list div {
