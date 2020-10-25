@@ -89,8 +89,8 @@ input[type="number"] {
   display: flex;
   justify-content: center;
   gap: 30px;
-  margin-top: 50px;
   padding: 5px;
+  height: max-content;
 }
 
 .list ul li {
@@ -141,6 +141,7 @@ input[type="number"] {
   display: flex;
   align-items: flex-end;
   margin-left: 20px;
+  gap: 10px;
 }
 
 .play-machine .button-rgb {
@@ -351,4 +352,80 @@ input[type="number"] {
 
 .slot10 {
   background-image: url(../img/IconsMenuSlotMachine/ZCASH.svg);
+}
+
+@media (max-width: 1220px){
+  .machine-rules {
+    width: 100%;
+  }
+
+  .slot-machine {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+
+  .slot-machine .container-machine:nth-child(1) {
+    min-height: 400px;
+  }
+
+  .messages-machine {
+    margin-block-start: 0em;
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 800px){
+  .buy-credit,
+  .avaliable-credits  {
+    width: 100%;
+  }
+  .img-win img {
+    width: 415px;
+  }
+}
+
+@media (max-width: 460px){
+  .machine-rules {
+    max-height: max-content;
+  }
+  .list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .messages-machine > img{
+    width: 100% !important;
+  }
+  .play-machine {
+    margin-left: 0px;
+    flex-direction: column;
+  }
+  .container-machine > img{
+    width: 250px;
+  }
+  .slot-machine .container-machine:nth-child(1) {
+    background-size: 250px;
+  }
+  .slot-items {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  .slotMachine {
+    height: 93px;
+    margin-block-start: 3.3em;
+    border-radius: 1px;
+  }
+  .slotMachine .slot {
+    background-size: 40px;
+  }
+  .slot-machine .container-machine:nth-child(1) {
+    min-height: 320px;
+  }
+  .win-container {
+    padding: 20px 20px;
+  }
+  .img-win img {
+    width: 280px;
+  }
 }
